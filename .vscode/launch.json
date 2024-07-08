@@ -1,0 +1,82 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'rust-leetcode'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=rust-leetcode",
+					"--package=rust-leetcode"
+				],
+				"filter": {
+					"name": "rust-leetcode",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'rust-leetcode'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=rust-leetcode",
+					"--package=rust-leetcode"
+				],
+				"filter": {
+					"name": "rust-leetcode",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable '0001-two_sum'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=0001-two_sum",
+					"--package=rust-leetcode"
+				],
+				"filter": {
+					"name": "0001-two_sum",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable '0001-two_sum'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=0001-two_sum",
+					"--package=rust-leetcode"
+				],
+				"filter": {
+					"name": "0001-two_sum",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		}
+	]
+}
