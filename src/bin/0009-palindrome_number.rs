@@ -1,4 +1,4 @@
-/// https://leetcode.com/problems/palindrome-number/description/
+/// https://leetcode.com/problems/palindrome-number/
 /// Easy - [math]
 /// Given an integer x, return true if x is a palindrome, and false otherwise.
 pub struct Solution {}
