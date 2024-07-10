@@ -30,10 +30,6 @@ impl Solution {
     }
 }
 
-fn main() {
-    assert!(Solution::two_sum(vec![2, 7, 11, 15], 9) == vec![2, 0]);
-}
-
 #[cfg(test)]
 
 mod tests {
