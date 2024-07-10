@@ -11,9 +11,9 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |  | Difficulty | Solved |
 |--|------------|--------|
 |🟢| Easy | 9 |
-|🟡| Medium | 3 |
+|🟡| Medium | 5 |
 |🔴| Hard | 0 |
-|  | **Total** | **12** |
+|  | **Total** | **14** |
 
 ## Problem list
 
@@ -26,8 +26,10 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |🟡| 0011 | [Container with the most water](https://leetcode.com/problems/container-with-most-water/) | Medium | array, two pointers, greedy |
 |🟢| 0013 | [Roman to integers](https://leetcode.com/problems/roman-to-integer/) | Easy | hash table, math, string |
 |🟢| 0014 | [Longest common prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | string, trie |
+|🟡| 0015 | [3Sum](https://leetcode.com/problems/3sum/) | Medium | array, two pointers, sorting |
 |🟢| 0020 | [Valid parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | string, stack |
 |🟢| 0021 | [Merge two sorted lists]() | Easy | linked list, recursion |
 |🟢| 0026 | [Remove duplicates from sorted array](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | array, two pointers |
 |🟢| 0027 | [Remove elements](https://leetcode.com/problems/remove-element/) | Easy | array, two pointers |
+|🟡| 0167 | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium | array, two pointers, binary search |
 |🟢| 1518 | [Water bottles](https://leetcode.com/problems/water-bottles/) | Easy | math simulation |
