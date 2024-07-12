@@ -29,7 +29,7 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |🟡| 0015 | [3Sum](https://leetcode.com/problems/3sum/) | Medium | array, two pointers, sorting |
 |🟡| 00175 | [Letter combinations of a phone number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Medium | hash table, string, backtracking |
 |🟢| 0020 | [Valid parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | string, stack |
-|🟢| 0021 | [Merge two sorted lists]() | Easy | linked list, recursion |
+|🟢| 0021 | [Merge two sorted lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | linked list, recursion |
 |🟢| 0026 | [Remove duplicates from sorted array](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | array, two pointers |
 |🟢| 0027 | [Remove elements](https://leetcode.com/problems/remove-element/) | Easy | array, two pointers |
 |🟡| 0167 | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium | array, two pointers, binary search |
