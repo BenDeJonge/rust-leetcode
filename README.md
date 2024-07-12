@@ -11,9 +11,9 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |  | Difficulty | Solved |
 |--|------------|--------|
 |🟢| Easy | 9 |
-|🟡| Medium | 5 |
+|🟡| Medium | 6 |
 |🔴| Hard | 0 |
-|  | **Total** | **14** |
+|  | **Total** | **15** |
 
 ## Problem list
 
@@ -27,6 +27,7 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |🟢| 0013 | [Roman to integers](https://leetcode.com/problems/roman-to-integer/) | Easy | hash table, math, string |
 |🟢| 0014 | [Longest common prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | string, trie |
 |🟡| 0015 | [3Sum](https://leetcode.com/problems/3sum/) | Medium | array, two pointers, sorting |
+|🟡| 00175 | [Letter combinations of a phone number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Medium | hash table, string, backtracking |
 |🟢| 0020 | [Valid parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | string, stack |
 |🟢| 0021 | [Merge two sorted lists]() | Easy | linked list, recursion |
 |🟢| 0026 | [Remove duplicates from sorted array](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | array, two pointers |

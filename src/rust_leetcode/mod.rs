@@ -6,6 +6,7 @@ mod s0011_container_with_most_water;
 mod s0013_roman_to_integer;
 mod s0014_longest_common_prefix;
 mod s0015_3sum;
+mod s0017_letter_combinations_of_a_phone_number;
 mod s0020_valid_parentheses;
 mod s0021_merge_two_sorted_lists;
 mod s0026_remove_duplicates_from_sorted_array;
