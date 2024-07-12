@@ -11,9 +11,9 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |  | Difficulty | Solved |
 |--|------------|--------|
 |🟢| Easy | 9 |
-|🟡| Medium | 6 |
+|🟡| Medium | 7 |
 |🔴| Hard | 0 |
-|  | **Total** | **15** |
+|  | **Total** | **16** |
 
 ## Problem list
 
@@ -30,6 +30,7 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |🟡| 00175 | [Letter combinations of a phone number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Medium | hash table, string, backtracking |
 |🟢| 0020 | [Valid parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | string, stack |
 |🟢| 0021 | [Merge two sorted lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | linked list, recursion |
+|🟡| 0022 | [Generate parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | string, dynamic programming, backtracking |
 |🟢| 0026 | [Remove duplicates from sorted array](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | array, two pointers |
 |🟢| 0027 | [Remove elements](https://leetcode.com/problems/remove-element/) | Easy | array, two pointers |
 |🟡| 0167 | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium | array, two pointers, binary search |
