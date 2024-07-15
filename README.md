@@ -12,8 +12,8 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |--|------------|--------|
 |🟢| Easy | 9 |
 |🟡| Medium | 7 |
-|🔴| Hard | 1 |
-|  | **Total** | **17** |
+|🔴| Hard | 2 |
+|  | **Total** | **18** |
 
 ## Problem list
 
@@ -31,6 +31,7 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |🟢| 0020 | [Valid parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | string, stack |
 |🟢| 0021 | [Merge two sorted lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | linked list, recursion |
 |🟡| 0022 | [Generate parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | string, dynamic programming, backtracking |
+|🔴| 0023 | [Merge k sorted lists](https://leetcode.com/problems/merge-k-sorted-lists/) | Hard | linked list, divide and conquer, heap (priority queue), merge sort |
 |🟢| 0026 | [Remove duplicates from sorted array](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | array, two pointers |
 |🟢| 0027 | [Remove elements](https://leetcode.com/problems/remove-element/) | Easy | array, two pointers |
 |🔴| 0032 | [Longest valid parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | string, dynamic programming, stack |
