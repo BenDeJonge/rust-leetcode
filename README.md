@@ -33,5 +33,6 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |🟡| 0022 | [Generate parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | string, dynamic programming, backtracking |
 |🟢| 0026 | [Remove duplicates from sorted array](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | array, two pointers |
 |🟢| 0027 | [Remove elements](https://leetcode.com/problems/remove-element/) | Easy | array, two pointers |
+|🔴| 0032 | [Longest valid parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | string, dynamic programming, stack |
 |🟡| 0167 | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium | array, two pointers, binary search |
 |🟢| 1518 | [Water bottles](https://leetcode.com/problems/water-bottles/) | Easy | math simulation |
