@@ -56,3 +56,9 @@ impl Ord for ListNode {
         other.val.cmp(&self.val)
     }
 }
+
+impl Default for ListNode {
+    fn default() -> Self {
+        ListNode::new(0)
+    }
+}
