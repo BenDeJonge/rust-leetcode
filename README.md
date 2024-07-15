@@ -12,8 +12,8 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |--|------------|--------|
 |🟢| Easy | 9 |
 |🟡| Medium | 7 |
-|🔴| Hard | 0 |
-|  | **Total** | **16** |
+|🔴| Hard | 1 |
+|  | **Total** | **17** |
 
 ## Problem list
 
