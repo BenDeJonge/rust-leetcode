@@ -2,47 +2,8 @@
 /// Hard - [linked list, divide and conquer, heap (priority queue), merge sort]
 /// You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
 /// Merge all the linked-lists into one sorted linked-list and return it.
+use crate::util::singly_linked_list::ListNode;
 use std::collections::BinaryHeap;
-
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-
-    // Convenience method to allow parsing of vecs.
-    fn from_vec(vec: &Vec<i32>) -> Option<Box<ListNode>> {
-        let mut dummy = ListNode::new(0);
-        let mut current = &mut dummy;
-        for &v in vec {
-            let node = ListNode::new(v);
-            current.next = Some(Box::new(node));
-            current = current.next.as_mut().unwrap();
-        }
-        dummy.next
-    }
-}
-
-// This implementation is needed for Ord.
-impl PartialOrd<ListNode> for ListNode {
-    fn partial_cmp(&self, other: &ListNode) -> Option<std::cmp::Ordering> {
-        Some(other.val.cmp(&self.val))
-    }
-}
-
-// This implementation is needed to allow sorting of ListNodes on a BinaryHeap.
-impl Ord for ListNode {
-    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
-        other.val.cmp(&self.val)
-    }
-}
 
 pub struct Solution {}
 
@@ -78,7 +39,6 @@ impl Solution {
 
 mod tests {
     use super::{ListNode, Solution};
-
     #[test]
     fn test_0023() {
         assert_eq!(

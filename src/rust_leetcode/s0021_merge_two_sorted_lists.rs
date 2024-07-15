@@ -3,22 +3,8 @@
 /// You are given the heads of two sorted linked lists list1 and list2.
 /// Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
 /// Return the head of the merged linked list.
-
+use crate::util::singly_linked_list::ListNode;
 pub struct Solution {}
-
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-// impl ListNode {
-//     #[inline]
-//     fn new(val: i32) -> Self {
-//         ListNode { next: None, val }
-//     }
-// }
 
 impl Solution {
     pub fn merge_two_lists(
@@ -49,4 +35,28 @@ impl Solution {
         }
     }
 }
-fn main() {}
+
+#[cfg(test)]
+
+mod tests {
+    use super::{ListNode, Solution};
+
+    #[test]
+    fn test_0021() {
+        assert_eq!(
+            Solution::merge_two_lists(
+                ListNode::from_vec(&vec![1, 2, 4]),
+                ListNode::from_vec(&vec![1, 3, 4])
+            ),
+            ListNode::from_vec(&vec![1, 1, 2, 3, 4, 4])
+        );
+        assert_eq!(
+            Solution::merge_two_lists(ListNode::from_vec(&vec![]), ListNode::from_vec(&vec![])),
+            ListNode::from_vec(&vec![])
+        );
+        assert_eq!(
+            Solution::merge_two_lists(ListNode::from_vec(&vec![]), ListNode::from_vec(&vec![0])),
+            ListNode::from_vec(&vec![0])
+        );
+    }
+}
