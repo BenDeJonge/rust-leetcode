@@ -11,15 +11,16 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |  | Difficulty | Solved |
 |--|------------|--------|
 |🟢| Easy | 9 |
-|🟡| Medium | 7 |
+|🟡| Medium | 8 |
 |🔴| Hard | 2 |
-|  | **Total** | **18** |
+|  | **Total** | **19** |
 
 ## Problem list
 
 |  | Index | Name | Difficulty | Tags |
 |--|-------|------|------------|------|
 |🟢| 0001 | [Two sum](https://leetcode.com/problems/two-sum/) | Easy | array, hash table |
+|🟡| 0002 | [Add two numbers](https://leetcode.com/problems/add-two-numbers/) | Medium | linked list, math, recursion |
 |🟡| 0003 | [Longest substring without repeating characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Medium | hash table, string, sliding window |
 |🟡| 0005 | [Longest palindromic substring](https://leetcode.com/problems/longest-palindromic-substring/) | Medium | two pointers, string, dynamic programming |
 |🟢| 0009 | [Palindrome numbers](https://leetcode.com/problems/palindrome-number/) | Easy | math |
