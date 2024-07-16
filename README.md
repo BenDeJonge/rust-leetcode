@@ -10,10 +10,10 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 
 |  | Difficulty | Solved |
 |--|------------|--------|
-|🟢| Easy | 12 |
+|🟢| Easy | 13 |
 |🟡| Medium | 8 |
 |🔴| Hard | 2 |
-|  | **Total** | **22** |
+|  | **Total** | **23** |
 
 ## Problem list
 
@@ -38,6 +38,7 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |🟢| 0028 | [Find the index of the first occurence in a string](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Easy | two pointers, string, string matching |
 |🔴| 0032 | [Longest valid parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | string, dynamic programming, stack |
 |🟢| 0035 | [Search insert position](https://leetcode.com/problems/search-insert-position/) | Easy | array, binary search |
+|🟢| 0070 | [Climbing stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | math, dynamic programming, memoization |
 |🟡| 0167 | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium | array, two pointers, binary search |
 |🟢| 0704 | [Binary search](https://leetcode.com/problems/binary-search/) | Easy | array, binary search |
 |🟢| 1518 | [Water bottles](https://leetcode.com/problems/water-bottles/) | Easy | math, simulation |

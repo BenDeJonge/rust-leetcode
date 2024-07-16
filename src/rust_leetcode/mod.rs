@@ -17,6 +17,7 @@ mod s0027_remove_element;
 mod s0028_index_of_first_occurence_in_string;
 mod s0032_longest_valid_parentheses;
 mod s0035_search_insert_position;
+mod s0070_climbing_stairs;
 mod s0167_two_sum_ii;
 mod s0704_binary_search;
 mod s1518_water_bottles;
