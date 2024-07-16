@@ -56,8 +56,8 @@ impl Solution {
         // j  .  .  .  .  .
         //    0  0  .  1  0
         //    0  0  .  0  1
-        for i in 0..s.len() {
-            cache[i][i] = true;
+        for (i, el) in cache.iter_mut().enumerate() {
+            el[i] = true;
         }
         // Special case of length 2 substrings. Below, we will check if adding two outer characters keeps the slice a
         // palindrome. However, for even lengthts, we then first need to know which pairs of two are palindromic.
