@@ -15,5 +15,6 @@ mod s0023_merge_k_sorted_lists;
 mod s0026_remove_duplicates_from_sorted_array;
 mod s0027_remove_element;
 mod s0032_longest_valid_parentheses;
+mod s0035_search_insert_position;
 mod s0167_two_sum_ii;
 mod s1518_water_bottles;
