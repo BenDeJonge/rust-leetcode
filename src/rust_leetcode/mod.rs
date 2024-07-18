@@ -22,5 +22,6 @@ mod s0118_pascals_triangle;
 mod s0121_best_time_to_buy_and_sell_stock;
 mod s0136_single_number;
 mod s0167_two_sum_ii;
+mod s0169_majority_element;
 mod s0704_binary_search;
 mod s1518_water_bottles;

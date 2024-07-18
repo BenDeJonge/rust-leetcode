@@ -10,10 +10,10 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 
 |  | Difficulty | Solved |
 |--|------------|--------|
-|🟢| Easy | 16 |
+|🟢| Easy | 17 |
 |🟡| Medium | 8 |
 |🔴| Hard | 2 |
-|  | **Total** | **25** |
+|  | **Total** | **27** |
 
 ## Problem list
 
@@ -41,7 +41,7 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |🟢| 0070 | [Climbing stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | math, dynamic programming, memoization |
 |🟢| 0118 | [Pascals triangle](https://leetcode.com/problems/pascals-triangle/) | Easy | array, dynamic programming |
 |🟢| 0121 | [Best time to buy and sell stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | array, dynamic programming |
-|🟢| 0136 | [Single number](https://leetcode.com/problems/single-number/) | Easy | array, bit manipulation |
 |🟡| 0167 | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium | array, two pointers, binary search |
+|🟢| 0169 | [Majority element](https://leetcode.com/problems/majority-element/) | Easy | array, hash table, divide and conquer, sorting, counting |
 |🟢| 0704 | [Binary search](https://leetcode.com/problems/binary-search/) | Easy | array, binary search |
 |🟢| 1518 | [Water bottles](https://leetcode.com/problems/water-bottles/) | Easy | math, simulation |
