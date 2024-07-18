@@ -10,10 +10,10 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 
 |  | Difficulty | Solved |
 |--|------------|--------|
-|🟢| Easy | 17 |
+|🟢| Easy | 18 |
 |🟡| Medium | 8 |
 |🔴| Hard | 2 |
-|  | **Total** | **27** |
+|  | **Total** | **28** |
 
 ## Problem list
 
