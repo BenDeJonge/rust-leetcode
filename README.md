@@ -28,7 +28,6 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |🟢| 0013 | [Roman to integers](https://leetcode.com/problems/roman-to-integer/) | Easy | hash table, math, string |
 |🟢| 0014 | [Longest common prefix](https://leetcode.com/problems/longest-common-prefix/) | Easy | string, trie |
 |🟡| 0015 | [3Sum](https://leetcode.com/problems/3sum/) | Medium | array, two pointers, sorting |
-|🟡| 00175 | [Letter combinations of a phone number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Medium | hash table, string, backtracking |
 |🟢| 0020 | [Valid parentheses](https://leetcode.com/problems/valid-parentheses/) | Easy | string, stack |
 |🟢| 0021 | [Merge two sorted lists](https://leetcode.com/problems/merge-two-sorted-lists/) | Easy | linked list, recursion |
 |🟡| 0022 | [Generate parentheses](https://leetcode.com/problems/generate-parentheses/) | Medium | string, dynamic programming, backtracking |
@@ -43,6 +42,7 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |🟢| 0121 | [Best time to buy and sell stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | array, dynamic programming |
 |🟡| 0167 | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium | array, two pointers, binary search |
 |🟢| 0169 | [Majority element](https://leetcode.com/problems/majority-element/) | Easy | array, hash table, divide and conquer, sorting, counting |
+|🟡| 00175 | [Letter combinations of a phone number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/) | Medium | hash table, string, backtracking |
 |🟢| 0283 | [Move zeroes](https://leetcode.com/problems/move-zeroes/) | Easy | array, two pointer |
 |🟢| 0704 | [Binary search](https://leetcode.com/problems/binary-search/) | Easy | array, binary search |
 |🟢| 1518 | [Water bottles](https://leetcode.com/problems/water-bottles/) | Easy | math, simulation |
