@@ -10,10 +10,10 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 
 |  | Difficulty | Solved |
 |--|------------|--------|
-|🟢| Easy | 18 |
+|🟢| Easy | 19 |
 |🟡| Medium | 8 |
 |🔴| Hard | 2 |
-|  | **Total** | **28** |
+|  | **Total** | **29** |
 
 ## Problem list
 
@@ -38,6 +38,7 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |🔴| 0032 | [Longest valid parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | string, dynamic programming, stack |
 |🟢| 0035 | [Search insert position](https://leetcode.com/problems/search-insert-position/) | Easy | array, binary search |
 |🟢| 0070 | [Climbing stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | math, dynamic programming, memoization |
+|🟢| 0094 | [Binary tree inorder traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Easy | stack, tree, depth-first search, binary tree |
 |🟢| 0118 | [Pascals triangle](https://leetcode.com/problems/pascals-triangle/) | Easy | array, dynamic programming |
 |🟢| 0121 | [Best time to buy and sell stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | Easy | array, dynamic programming |
 |🟡| 0167 | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | Medium | array, two pointers, binary search |

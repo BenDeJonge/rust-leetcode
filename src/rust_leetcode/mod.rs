@@ -18,6 +18,7 @@ mod s0028_index_of_first_occurence_in_string;
 mod s0032_longest_valid_parentheses;
 mod s0035_search_insert_position;
 mod s0070_climbing_stairs;
+mod s0094_binary_tree_inorder_traversal;
 mod s0118_pascals_triangle;
 mod s0121_best_time_to_buy_and_sell_stock;
 mod s0136_single_number;
