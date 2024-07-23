@@ -17,6 +17,8 @@ mod s0027_remove_element;
 mod s0028_index_of_first_occurence_in_string;
 mod s0032_longest_valid_parentheses;
 mod s0035_search_insert_position;
+mod s0051_n_queens;
+mod s0052_n_queens_ii;
 mod s0070_climbing_stairs;
 mod s0094_binary_tree_inorder_traversal;
 mod s0101_symmetric_tree;

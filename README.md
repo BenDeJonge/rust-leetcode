@@ -12,8 +12,8 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |--|------------|--------|
 |🟢| Easy | 20 |
 |🟡| Medium | 8 |
-|🔴| Hard | 2 |
-|  | **Total** | **30** |
+|🔴| Hard | 4 |
+|  | **Total** | **32** |
 
 ## Problem list
 
@@ -37,6 +37,8 @@ Just solvin' some LeetCode problems on the side in the best language in the worl
 |🟢| 0028 | [Find the index of the first occurence in a string](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Easy | two pointers, string, string matching |
 |🔴| 0032 | [Longest valid parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | Hard | string, dynamic programming, stack |
 |🟢| 0035 | [Search insert position](https://leetcode.com/problems/search-insert-position/) | Easy | array, binary search |
+|🔴| 0051 | [N-Queens](https://leetcode.com/problems/n-queens/) | Hard | array, backtracking |
+|🔴| 0052 | [N-Queens II](https://leetcode.com/problems/n-queens-ii/) | Hard | backtracking |
 |🟢| 0070 | [Climbing stairs](https://leetcode.com/problems/climbing-stairs/) | Easy | math, dynamic programming, memoization |
 |🟢| 0094 | [Binary tree inorder traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) | Easy | stack, tree, depth-first search, binary tree |
 |🟢| 0101 | [Symmetric tree](https://leetcode.com/problems/symmetric-tree/) | Easy | tree, depth-first search, breadth-first search, binary tree |
