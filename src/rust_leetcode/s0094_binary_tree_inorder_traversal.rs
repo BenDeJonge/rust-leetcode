@@ -5,8 +5,8 @@ use crate::util::binary_tree::OptNode;
 pub struct Solution {}
 
 impl Solution {
-    pub fn inorder_traversal(root: OptNode) -> Vec<i32> {
-        let mut result = <Vec<i32>>::new();
+    pub fn inorder_traversal<T: Copy>(root: OptNode<T>) -> Vec<T> {
+        let mut result = <Vec<T>>::new();
         Self::inorder_traversal_helper(&root, &mut result);
         result
     }
@@ -34,7 +34,7 @@ impl Solution {
     /// - Visit leftmost subtree
     /// - visit root
     /// - visit other subtrees left to right
-    pub fn inorder_traversal_helper(node: &OptNode, v: &mut Vec<i32>) {
+    pub fn inorder_traversal_helper<T: Copy>(node: &OptNode<T>, v: &mut Vec<T>) {
         if let Some(n) = node {
             let b = n.borrow();
             Self::inorder_traversal_helper(&b.left, v);
@@ -54,40 +54,20 @@ impl Solution {
 mod tests {
     use super::Solution;
     use crate::util::binary_tree::TreeNode;
-    use std::cell::RefCell;
-    use std::rc::Rc;
 
     #[test]
     fn test_0094() {
-        assert_eq!(
-            // 1
-            //  \
-            //   2
-            //    \
-            //     3
-            Solution::inorder_traversal(Some(Rc::new(RefCell::new(TreeNode {
-                val: 1,
-                left: None,
-                right: Some(Rc::new(RefCell::new(TreeNode {
-                    val: 2,
-                    left: Some(Rc::new(RefCell::new(TreeNode {
-                        val: 3,
-                        left: None,
-                        right: None
-                    }))),
-                    right: None,
-                })))
-            })))),
-            vec![1, 3, 2]
-        );
-        assert_eq!(
-            Solution::inorder_traversal(Some(Rc::new(RefCell::new(TreeNode {
-                val: 1,
-                left: None,
-                right: None
-            })))),
-            vec![1]
-        );
-        assert_eq!(Solution::inorder_traversal(None), <Vec<i32>>::new());
+        let tree1 = TreeNode::from_vec(&[
+            Some(1), // 1
+            None,    //  \
+            Some(2), //   2
+            Some(3), //  /
+                     // 3
+        ]);
+        assert_eq!(Solution::inorder_traversal(tree1), vec![1, 3, 2]);
+        let tree2 = TreeNode::from_vec(&[Some(1)]);
+        assert_eq!(Solution::inorder_traversal(tree2), vec![1]);
+        let tree3 = TreeNode::<i32>::from_vec(&[]);
+        assert_eq!(Solution::inorder_traversal::<i32>(tree3), <Vec<i32>>::new());
     }
 }
