@@ -12,6 +12,7 @@ use std::cell::RefCell;
 use std::fmt::Debug;
 use std::rc::Rc;
 pub type TreeNodeRef<T> = Rc<RefCell<TreeNode<T>>>;
+/// Abbreviation of `Option<Rc<RefCell<TreeNode<T>>>`.
 pub type OptNode<T> = Option<TreeNodeRef<T>>;
 
 #[derive(Debug, PartialEq, Eq)]
