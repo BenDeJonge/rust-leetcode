@@ -30,5 +30,6 @@ mod s0167_two_sum_ii;
 mod s0169_majority_element;
 mod s0226_invert_binary_tree;
 mod s0283_move_zeroes;
+mod s0543_diameter_of_a_binary_tree;
 mod s0704_binary_search;
 mod s1518_water_bottles;
