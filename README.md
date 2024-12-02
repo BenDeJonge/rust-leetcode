@@ -12,7 +12,7 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 22     |
-| 🟡  | Medium     | 8      |
+| 🟡  | Medium     | 9      |
 | 🔴  | Hard       | 4      |
 |     | **Total**  | **34** |
 
@@ -40,6 +40,7 @@ world (fight me). Hopefully learning some DSA along the way!
 | 🟢  | 0035  | [Search insert position](https://leetcode.com/problems/search-insert-position/)                                                        | Easy       | array, binary search                                               |
 | 🔴  | 0051  | [N-Queens](https://leetcode.com/problems/n-queens/)                                                                                    | Hard       | array, backtracking                                                |
 | 🔴  | 0052  | [N-Queens II](https://leetcode.com/problems/n-queens-ii/)                                                                              | Hard       | backtracking                                                       |
+| 🟡  | 0055  | [Jump game](https://leetcode.com/problems/jump-game/)                                                                                  | Medium     | array, dynamic programming, greedy                                 |
 | 🟢  | 0070  | [Climbing stairs](https://leetcode.com/problems/climbing-stairs/)                                                                      | Easy       | math, dynamic programming, memoization                             |
 | 🟢  | 0094  | [Binary tree inorder traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)                                          | Easy       | stack, tree, depth-first search, binary tree                       |
 | 🟢  | 0101  | [Symmetric tree](https://leetcode.com/problems/symmetric-tree/)                                                                        | Easy       | tree, depth-first search, breadth-first search, binary tree        |
