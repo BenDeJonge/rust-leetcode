@@ -12,9 +12,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 22     |
-| 🟡  | Medium     | 9      |
+| 🟡  | Medium     | 10     |
 | 🔴  | Hard       | 4      |
-|     | **Total**  | **34** |
+|     | **Total**  | **36** |
 
 ## Problem list
 
@@ -38,6 +38,7 @@ world (fight me). Hopefully learning some DSA along the way!
 | 🟢  | 0028  | [Find the index of the first occurence in a string](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | Easy       | two pointers, string, string matching                              |
 | 🔴  | 0032  | [Longest valid parentheses](https://leetcode.com/problems/longest-valid-parentheses/)                                                  | Hard       | string, dynamic programming, stack                                 |
 | 🟢  | 0035  | [Search insert position](https://leetcode.com/problems/search-insert-position/)                                                        | Easy       | array, binary search                                               |
+| 🟡  | 0045  | [Jump game II](https://leetcode.com/problems/jump-game-ii/)                                                                            | Medium     | array, dynamic programming, greedy                                 |
 | 🔴  | 0051  | [N-Queens](https://leetcode.com/problems/n-queens/)                                                                                    | Hard       | array, backtracking                                                |
 | 🔴  | 0052  | [N-Queens II](https://leetcode.com/problems/n-queens-ii/)                                                                              | Hard       | backtracking                                                       |
 | 🟡  | 0055  | [Jump game](https://leetcode.com/problems/jump-game/)                                                                                  | Medium     | array, dynamic programming, greedy                                 |
