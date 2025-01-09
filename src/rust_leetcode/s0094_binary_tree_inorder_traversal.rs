@@ -30,7 +30,7 @@ impl Solution {
     /// ```
     /// 8 -> 4 -> 9 -> 2 -> 5 -> 6 -> 10 -> 3 -> 11 -> 7 -> 12
     /// - Traverse clockwise (left-center-right)
-    /// OR
+    ///   OR
     /// - Visit leftmost subtree
     /// - visit root
     /// - visit other subtrees left to right
@@ -50,7 +50,6 @@ impl Solution {
 }
 
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
     use crate::util::binary_tree::TreeNode;

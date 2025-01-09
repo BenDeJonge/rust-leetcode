@@ -13,6 +13,7 @@ impl Solution {
     /// - If the element is the majority, increment the counter.
     /// - If not, decrement the counter.
     /// - If the counter reaches 0, set the current element as the majority.
+    ///
     /// When a majority is guaranteed, no second confirming loop is needed.
     pub fn majority_element(nums: Vec<i32>) -> i32 {
         let mut majority = nums.first().expect("nums is empty");
@@ -33,7 +34,6 @@ impl Solution {
 }
 
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
 

@@ -44,6 +44,7 @@ impl Solution {
     }
 }
 
+#[cfg(test)]
 mod tests {
     use super::Solution;
     use crate::util::binary_tree::TreeNode;
