@@ -1,6 +1,6 @@
-/// https://leetcode.com/problems/generate-parentheses/
-/// Medium - [string, dynamic programming, backtracking]
-/// Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+//! https://leetcode.com/problems/generate-parentheses/
+//! Medium - [string, dynamic programming, backtracking]
+//! Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 
 const P_OPEN: char = '(';
 const P_CLOSED: char = ')';
@@ -97,7 +97,6 @@ impl Solution {
 }
 
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
     #[test]

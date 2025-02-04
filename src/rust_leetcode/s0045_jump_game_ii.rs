@@ -1,9 +1,9 @@
-/// https://leetcode.com/problems/jump-game-ii/
-/// Medium - [array, dynamic programming, greedy]
-/// Given an array of integers, determine the mimimum number of jumps to reach
-/// the final index starting from the first.
-/// It is guaranteed that the destination is reachable.
-/// Every array element represents the current maximal jump size.
+//! https://leetcode.com/problems/jump-game-ii/
+//! Medium - [array, dynamic programming, greedy]
+//! Given an array of integers, determine the mimimum number of jumps to reach
+//! the final index starting from the first.
+//! It is guaranteed that the destination is reachable.
+//! Every array element represents the current maximal jump size.
 
 pub struct Solution {}
 

@@ -1,7 +1,9 @@
-/// https://leetcode.com/problems/binary-tree-inorder-traversal/
-/// Easy - [stack, tree, depth-first search, binary tree]
-/// Given the root of a binary tree, return the inorder of its nodes' values.
+//! https://leetcode.com/problems/binary-tree-inorder-traversal/
+//! Easy - [stack, tree, depth-first search, binary tree]
+//! Given the root of a binary tree, return the inorder of its nodes' values.
+
 use crate::util::binary_tree::OptNode;
+
 pub struct Solution {}
 
 impl Solution {

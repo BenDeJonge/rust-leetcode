@@ -1,6 +1,7 @@
-/// https://leetcode.com/problems/invert-binary-tree/
-/// Easy - [tree, depth-first search, breadth-first search, binary tree]
-/// Given the root of a binary tree, invert the tree, and return its root.
+//! https://leetcode.com/problems/invert-binary-tree/
+//! Easy - [tree, depth-first search, breadth-first search, binary tree]
+//! Given the root of a binary tree, invert the tree, and return its root.
+
 use crate::util::binary_tree::OptNode;
 
 pub struct Solution {}
@@ -27,7 +28,6 @@ impl Solution {
 }
 
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
     use crate::util::binary_tree::TreeNode;

@@ -1,9 +1,12 @@
-/// https://leetcode.com/problems/symmetric-tree/
-/// Easy - [tree, depth-first search, breadth-first search, binary tree]
-/// Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
+//! https://leetcode.com/problems/symmetric-tree/
+//! Easy - [tree, depth-first search, breadth-first search, binary tree]
+//! Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
+
 use crate::util::binary_tree::{OptNode, TreeNode};
-pub struct Solution {}
 use std::cell::Ref;
+
+pub struct Solution {}
+
 impl Solution {
     pub fn is_symmetric<T: std::cmp::PartialEq>(root: OptNode<T>) -> bool {
         if let Some(r) = &root {
@@ -39,7 +42,6 @@ impl Solution {
 }
 
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
     use crate::util::binary_tree::TreeNode;

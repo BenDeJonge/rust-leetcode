@@ -1,8 +1,9 @@
-/// https://leetcode.com/problems/diameter-of-binary-tree//problems/move-zeroes/
-/// Easy - [tree, depth-first search, binary tree]
-/// Given the root of a binary tree, return the diameter of the tree.
-/// The diameter is defined as the longest path, counted as the number of edges,
-/// between any two nodes which may or may not pass through the root.
+//! https://leetcode.com/problems/diameter-of-binary-tree//problems/move-zeroes/
+//! Easy - [tree, depth-first search, binary tree]
+//! Given the root of a binary tree, return the diameter of the tree.
+//! The diameter is defined as the longest path, counted as the number of edges,
+//! between any two nodes which may or may not pass through the root.
+
 use crate::util::binary_tree::OptNode;
 use std::cmp::max;
 

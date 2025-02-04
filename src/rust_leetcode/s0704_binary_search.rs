@@ -1,8 +1,9 @@
-/// https://leetcode.com/problems/binary-search/
-/// Easy - [array, binary search]
-/// Given an array of integers nums which is sorted in ascending order, and an integer target,
-/// write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
-/// You must write an algorithm with O(log n) runtime complexity.
+//! https://leetcode.com/problems/binary-search/
+//! Easy - [array, binary search]
+//! Given an array of integers nums which is sorted in ascending order, and an integer target,
+//! write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.
+//! You must write an algorithm with O(log n) runtime complexity.
+
 use std::cmp::Ordering;
 pub struct Solution {}
 
@@ -36,7 +37,6 @@ impl Solution {
 }
 
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
 

@@ -1,7 +1,7 @@
-// https://leetcode.com/problems/longest-valid-parentheses/
-/// Hard - [string, dynamic programming, stack]
-/// Given a string containing just the characters '(' and ')'
-/// return the length of the longest valid (well-formed) parentheses substring.
+//! https://leetcode.com/problems/longest-valid-parentheses/
+//! Hard - [string, dynamic programming, stack]
+//! Given a string containing just the characters '(' and ')'
+//! return the length of the longest valid (well-formed) parentheses substring.
 
 #[derive(PartialEq, Eq)]
 pub enum Parenthesis {
@@ -100,7 +100,6 @@ impl Solution {
 }
 
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
 

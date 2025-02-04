@@ -1,6 +1,7 @@
-/// https://leetcode.com/problems/longest-substring-without-repeating-characters/
-/// Medium - [hash table, string, sliding window]
-/// Given a string s, find the length of the longest substring without repeating characters.
+//! https://leetcode.com/problems/longest-substring-without-repeating-characters/
+//! Medium - [hash table, string, sliding window]
+//! Given a string s, find the length of the longest substring without repeating characters.
+
 use std::collections::HashSet;
 
 pub struct Solution {}
@@ -52,10 +53,7 @@ impl Solution {
     }
 }
 
-fn main() {}
-
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
 

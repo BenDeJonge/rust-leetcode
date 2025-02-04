@@ -1,8 +1,9 @@
-/// https://leetcode.com/problems/move-zeroes/
-/// Easy - [array, two pointer]
-/// Given an integer array nums, move all 0's to the end of it
-/// while maintaining the relative order of the non-zero elements.
-/// Note that you must do this in-place without making a copy of the array.
+//! https://leetcode.com/problems/move-zeroes/
+//!/ Easy - [array, two pointer]
+//!/ Given an integer array nums, move all 0's to the end of it
+//!/ while maintaining the relative order of the non-zero elements.
+//!/ Note that you must do this in-place without making a copy of the array.
+
 pub struct Solution {}
 
 impl Solution {
@@ -50,7 +51,6 @@ impl Solution {
 }
 
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
 

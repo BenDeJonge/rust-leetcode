@@ -1,10 +1,10 @@
-use std::cmp;
+//! https://leetcode.com/problems/jump-game/
+//! Medium - [array, dynamic programming, greedy]
+//! Given an array of integers, determine if you can reach the final index
+//! starting from the first.
+//! Every array element represents the current maximal jump size.
 
-/// https://leetcode.com/problems/jump-game/
-/// Medium - [array, dynamic programming, greedy]
-/// Given an array of integers, determine if you can reach the final index
-/// starting from the first.
-/// Every array element represents the current maximal jump size.
+use std::cmp;
 
 pub struct Solution {}
 

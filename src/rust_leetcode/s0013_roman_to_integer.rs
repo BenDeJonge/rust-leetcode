@@ -1,7 +1,8 @@
-/// https://leetcode.com/problems/roman-to-integer/
-/// Easy - [hash table, math, string]
-/// Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
-/// Given a roman numeral, convert it to an integer.
+//! https://leetcode.com/problems/roman-to-integer/
+//! Easy - [hash table, math, string]
+//! Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
+//! Given a roman numeral, convert it to an integer.
+
 use std::cmp::{Ord, Ordering};
 
 pub struct Solution {}
@@ -55,12 +56,7 @@ impl Solution {
     }
 }
 
-fn main() {
-    Solution::roman_to_int("iv".to_string());
-}
-
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
     #[test]

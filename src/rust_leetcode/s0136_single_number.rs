@@ -1,8 +1,9 @@
-/// https://leetcode.com/problems/single-number
-/// Easy - [array, bit manipulation]
-/// Given a non-empty array of integers nums, every element appears twice except for one.
-/// Find that single one.
-/// You must implement a solution with a linear runtime complexity and use only constant extra space.
+//! https://leetcode.com/problems/single-number
+//! Easy - [array, bit manipulation]
+//! Given a non-empty array of integers nums, every element appears twice except for one.
+//! Find that single one.
+//! You must implement a solution with a linear runtime complexity and use only constant extra space.
+
 pub struct Solution {}
 
 impl Solution {
@@ -24,7 +25,6 @@ impl Solution {
 }
 
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
 

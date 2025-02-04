@@ -1,9 +1,11 @@
-/// https://leetcode.com/problems/merge-two-sorted-lists/
-/// Easy - [linked list, recursion]
-/// You are given the heads of two sorted linked lists list1 and list2.
-/// Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
-/// Return the head of the merged linked list.
+//! https://leetcode.com/problems/merge-two-sorted-lists/
+//! Easy - [linked list, recursion]
+//! You are given the heads of two sorted linked lists list1 and list2.
+//! Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+//! Return the head of the merged linked list.
+
 use crate::util::singly_linked_list::ListNode;
+
 pub struct Solution {}
 
 impl Solution {
@@ -37,7 +39,6 @@ impl Solution {
 }
 
 #[cfg(test)]
-
 mod tests {
     use super::{ListNode, Solution};
 

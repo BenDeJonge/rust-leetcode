@@ -1,7 +1,8 @@
-/// https://leetcode.com/problems/longest-common-prefix/
-/// Easy - [string, trie]
-/// Write a function to find the longest common prefix string amongst an array of strings.
-/// If there is no common prefix, return an empty string "".
+//! https://leetcode.com/problems/longest-common-prefix/
+//! Easy - [string, trie]
+//! Write a function to find the longest common prefix string amongst an array of strings.
+//! If there is no common prefix, return an empty string "".
+
 pub struct Solution {}
 
 impl Solution {
@@ -47,10 +48,7 @@ impl Solution {
     }
 }
 
-fn main() {}
-
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
 

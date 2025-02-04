@@ -1,9 +1,11 @@
+//! https://leetcode.com/problems/search-insert-position/
+//! Easy - [array, binary search]
+//! Given a sorted array of distinct integers and a target value, return the index if the target is found.
+//! If not, return the index where it would be if it were inserted in order.
+//! You must write an algorithm with O(log n) runtime complexity.
+
 use std::cmp::Ordering;
-/// https://leetcode.com/problems/search-insert-position/
-/// Easy - [array, binary search]
-/// Given a sorted array of distinct integers and a target value, return the index if the target is found.
-/// If not, return the index where it would be if it were inserted in order.
-/// You must write an algorithm with O(log n) runtime complexity.
+
 pub struct Solution {}
 
 impl Solution {
@@ -30,7 +32,6 @@ impl Solution {
 }
 
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
 

@@ -1,9 +1,11 @@
-/// https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
-/// Easy - [two pointers, string, string matching]
-/// Given two strings needle and haystack,
-/// return the index of the first occurrence of needle in haystack,
-/// or -1 if needle is not part of haystack.
+//! https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
+//! Easy - [two pointers, string, string matching]
+//! Given two strings needle and haystack,
+//! return the index of the first occurrence of needle in haystack,
+//! or -1 if needle is not part of haystack.
+
 use crate::util::strings::char_windows;
+
 pub struct Solution {}
 
 impl Solution {
@@ -22,7 +24,6 @@ impl Solution {
 }
 
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
 

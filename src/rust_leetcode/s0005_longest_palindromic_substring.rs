@@ -1,6 +1,6 @@
-/// https://leetcode.com/problems/longest-palindromic-substring/
-/// Medium - [two pointers, string, dynamic programming]
-/// Given a string s, return the longest palindromic substring in s.
+//! https://leetcode.com/problems/longest-palindromic-substring/
+//! Medium - [two pointers, string, dynamic programming]
+//! Given a string s, return the longest palindromic substring in s.
 
 pub struct Palindrome {
     i_start: usize,
@@ -88,10 +88,7 @@ impl Solution {
     }
 }
 
-fn main() {}
-
 #[cfg(test)]
-
 mod tests {
     use super::Solution;
 
