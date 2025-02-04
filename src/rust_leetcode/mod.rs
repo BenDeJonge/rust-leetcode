@@ -18,6 +18,7 @@ mod s0028_index_of_first_occurence_in_string;
 mod s0032_longest_valid_parentheses;
 mod s0035_search_insert_position;
 mod s0045_jump_game_ii;
+mod s0048_rotate_image;
 mod s0051_n_queens;
 mod s0052_n_queens_ii;
 mod s0055_jump_game;
