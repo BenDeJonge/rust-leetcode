@@ -12,9 +12,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 22     |
-| 🟡  | Medium     | 12     |
+| 🟡  | Medium     | 14     |
 | 🔴  | Hard       | 4      |
-|     | **Total**  | **38** |
+|     | **Total**  | **40** |
 
 ## Problem list
 
@@ -39,6 +39,8 @@ world (fight me). Hopefully learning some DSA along the way!
 | 🔴  | 0032  | [Longest valid parentheses](https://leetcode.com/problems/longest-valid-parentheses/)                                                  | Hard       | string, dynamic programming, stack                                 |
 | 🟢  | 0035  | [Search insert position](https://leetcode.com/problems/search-insert-position/)                                                        | Easy       | array, binary search                                               |
 | 🟡  | 0045  | [Jump game II](https://leetcode.com/problems/jump-game-ii/)                                                                            | Medium     | array, dynamic programming, greedy                                 |
+| 🟡  | 0046  | [Permutations](https://leetcode.com/problems/permutations/)                                                                            | Medium     | array, backtracking                                                |
+| 🟡  | 0047  | [Permutations II](https://leetcode.com/problems/permutations-ii/)                                                                      | Medium     | array, backtracking                                                |
 | 🟡  | 0048  | [Rotate image](https://leetcode.com/problems/rotate-image/)                                                                            | Medium     | array, math, matrix                                                |
 | 🟡  | 0049  | [Group anagrams](https://leetcode.com/problems/group-anagrams/)                                                                        | Medium     | array, hash table, string, sorting                                 |
 | 🔴  | 0051  | [N-Queens](https://leetcode.com/problems/n-queens/)                                                                                    | Hard       | array, backtracking                                                |
