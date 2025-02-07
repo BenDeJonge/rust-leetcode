@@ -1,5 +1,5 @@
 //! https://leetcode.com/problems/spiral-matrix/
-//! Medium - array, matrix, simulation
+//! Medium - [array, matrix, simulation]
 //! Given an n x m matrix, return all elements in clockwise spiral order.
 
 enum Direction {

@@ -1,5 +1,5 @@
 //! https://leetcode.com/problems/group-anagrams/
-//! Medium - array, hash table, string, sorting
+//! Medium - [array, hash table, string, sorting]
 //! Given an array of strings, group the anagrams together.
 
 use std::collections::HashMap;

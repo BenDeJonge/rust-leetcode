@@ -1,5 +1,5 @@
 //! https://leetcode.com/problems/permutations/
-//! Medium - array, backtracking
+//! Medium - [array, backtracking]
 //! Given an array of 1 to 6 unique numbers between -10 and 10,
 //! compute all permutations.
 
