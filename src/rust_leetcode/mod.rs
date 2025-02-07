@@ -24,6 +24,7 @@ mod s0048_rotate_image;
 mod s0049_group_anagrams;
 mod s0051_n_queens;
 mod s0052_n_queens_ii;
+mod s0054_spiral_matrix;
 mod s0055_jump_game;
 mod s0070_climbing_stairs;
 mod s0094_binary_tree_inorder_traversal;

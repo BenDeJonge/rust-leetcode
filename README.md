@@ -12,9 +12,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 22     |
-| 🟡  | Medium     | 14     |
+| 🟡  | Medium     | 15     |
 | 🔴  | Hard       | 4      |
-|     | **Total**  | **40** |
+|     | **Total**  | **41** |
 
 ## Problem list
 
@@ -45,6 +45,7 @@ world (fight me). Hopefully learning some DSA along the way!
 | 🟡  | 0049  | [Group anagrams](https://leetcode.com/problems/group-anagrams/)                                                                        | Medium     | array, hash table, string, sorting                                 |
 | 🔴  | 0051  | [N-Queens](https://leetcode.com/problems/n-queens/)                                                                                    | Hard       | array, backtracking                                                |
 | 🔴  | 0052  | [N-Queens II](https://leetcode.com/problems/n-queens-ii/)                                                                              | Hard       | backtracking                                                       |
+| 🟡  | 0054  | [Spiral matrix](https://leetcode.com/problems/spiral-matrix/)                                                                          | Medium     | array, matrix, simulation                                          |
 | 🟡  | 0055  | [Jump game](https://leetcode.com/problems/jump-game/)                                                                                  | Medium     | array, dynamic programming, greedy                                 |
 | 🟢  | 0070  | [Climbing stairs](https://leetcode.com/problems/climbing-stairs/)                                                                      | Easy       | math, dynamic programming, memoization                             |
 | 🟢  | 0094  | [Binary tree inorder traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)                                          | Easy       | stack, tree, depth-first search, binary tree                       |
