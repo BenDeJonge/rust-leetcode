@@ -11,8 +11,8 @@ world (fight me). Hopefully learning some DSA along the way!
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 23     |
 | 🟡  | Medium     | 15     |
-| 🔴  | Hard       | 4      |
-|     | **Total**  | **42** |
+| 🔴  | Hard       | 5      |
+|     | **Total**  | **43** |
 
 ## Problem list
 
@@ -70,5 +70,6 @@ world (fight me). Hopefully learning some DSA along the way!
 | ----- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | 0023  | [Merge k sorted lists](https://leetcode.com/problems/merge-k-sorted-lists/)           | linked list, divide and conquer, heap (priority queue), merge sort |
 | 0032  | [Longest valid parentheses](https://leetcode.com/problems/longest-valid-parentheses/) | string, dynamic programming, stack                                 |
+| 0042  | [Longest valid parentheses](https://leetcode.com/problems/trapping-rain-water/)       | array, two pointer, dynamic programming, stack, monotonic stack    |
 | 0051  | [N-Queens](https://leetcode.com/problems/n-queens/)                                   | array, backtracking                                                |
 | 0052  | [N-Queens II](https://leetcode.com/problems/n-queens-ii/)                             | backtracking                                                       |
