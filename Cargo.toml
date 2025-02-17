@@ -5,3 +5,16 @@ authors = ["Ben De Jonge"]
 edition = "2021"
 
 [dependencies]
+reqwest = { version = "0.12.12", features = ["json"] }
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.138"
+tokio = { version = "1.43.0", features = ["macros", "rt-multi-thread"] }
+voca_rs = "1.15.2"
+
+[[bin]]
+name = "fetch"
+path = "src/rust_leetcode/fetcher/mod.rs"
+
+[features]
+# Avoid expensive unit tests of the fetcher when testing Leetcode solutions.
+fetcher = []
