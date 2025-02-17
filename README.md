@@ -16,9 +16,9 @@ world (fight me). Hopefully learning some DSA along the way!
 
 ## Fetcher
 
-An
+A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
-is available to make web requests to LeetCode and automatically pull in question
+is available to make web requests to LeetCode to automatically pull in question
 data and create local resources.
 
 ```
