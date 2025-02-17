@@ -47,7 +47,7 @@ mod test {
     use super::fetch_question_async;
 
     const Q_NAME: &str = "jump-game";
-    const Q_FILE: &str = "src/rust_leetcode/fetcher/test_resources/s0055_question.json";
+    const Q_FILE: &str = "src/fetcher/test_resources/s0055_question.json";
 
     #[tokio::test]
     #[cfg_attr(not(feature = "fetcher"), ignore)]

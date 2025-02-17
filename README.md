@@ -14,6 +14,17 @@ world (fight me). Hopefully learning some DSA along the way!
 | 🔴  | Hard       | 6      |
 |     | **Total**  | **44** |
 
+## Fetcher
+
+An
+[fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
+is available to make web requests to LeetCode and automatically pull in question
+data and create local resources.
+
+```
+$ cargo run fetch <problem-name>
+```
+
 ## Problem list
 
 ### 🟢 Easy

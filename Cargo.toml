@@ -13,7 +13,7 @@ voca_rs = "1.15.2"
 
 [[bin]]
 name = "fetch"
-path = "src/rust_leetcode/fetcher/mod.rs"
+path = "src/fetcher/mod.rs"
 
 [features]
 # Avoid expensive unit tests of the fetcher when testing Leetcode solutions.

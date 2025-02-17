@@ -227,7 +227,7 @@ mod test {
         super::difficulty::Difficulty, super::question::Question, CodeDefinition, TopicTags,
     };
 
-    const Q_FILE: &str = "src/rust_leetcode/fetcher/test_resources/s0055_question.json";
+    const Q_FILE: &str = "src/fetcher/test_resources/s0055_question.json";
 
     #[test]
     #[cfg_attr(not(feature = "fetcher"), ignore)]

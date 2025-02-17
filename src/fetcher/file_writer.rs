@@ -10,7 +10,7 @@ const FOLDER_EASY: &str = "src/rust_leetcode/easy";
 const FOLDER_MEDIUM: &str = "src/rust_leetcode/medium";
 const FOLDER_HARD: &str = "src/rust_leetcode/hard";
 
-const STRUCT_SOLUTION: &str = "pub struct Solution { }";
+const STRUCT_SOLUTION: &str = "pub struct Solution {}";
 const FUNCTION_DEF: &str = "pub fn ";
 
 const README: &str = "README.md";
@@ -233,7 +233,11 @@ fn get_docs(question: &Question) -> String {
 }
 
 fn format_content(content: &str) -> String {
-    voca_rs::strip::strip_tags(content).replace("\n", "\n//! ")
+    voca_rs::strip::strip_tags(content)
+        .lines()
+        .filter(|l| !l.is_empty())
+        .collect::<Vec<&str>>()
+        .join("\n//! ")
 }
 
 fn format_url(question: &Question) -> String {
@@ -246,13 +250,23 @@ fn format_url(question: &Question) -> String {
 
 fn get_code_definition(question: &Question) -> String {
     format!(
-        "{}\n\n{}",
+        "{}\n\n{}\n",
         STRUCT_SOLUTION,
-        question.code_definition.0.clone().unwrap_or_default()
+        question
+            .code_definition
+            .0
+            .clone()
+            .unwrap_or_default()
+            .replace(
+                "{
+        
+    }",
+                "{}"
+            )
     )
 }
 
-fn unit_test_formatter(id: usize, fn_name: &str, test_arg: &str) -> String {
+fn unit_test_formatter(id: usize, fn_name: &str) -> String {
     format!(
         "#[cfg(test)]
 mod tests {{
@@ -260,11 +274,11 @@ mod tests {{
 
     #[test]
     fn test_{:>04}() {{
-        assert_eq!(Solution::{}({}), todo!(\"output\"));
+        assert_eq!(Solution::{}(todo!(\"input\")), todo!(\"output\"));
     }}
 }}
 ",
-        id, fn_name, test_arg
+        id, fn_name
     )
 }
 
@@ -284,11 +298,7 @@ fn get_fn_name(question: &Question) -> String {
 }
 
 fn get_unit_tests(question: &Question) -> String {
-    unit_test_formatter(
-        question.id,
-        &get_fn_name(question),
-        &question.sample_test_case,
-    )
+    unit_test_formatter(question.id, &get_fn_name(question))
 }
 
 #[cfg(test)]
@@ -303,8 +313,8 @@ mod tests {
 
     use super::super::question::Question;
 
-    const Q_FILE: &str = "src/rust_leetcode/fetcher/test_resources/s0055_question.json";
-    const RUST_FILE: &str = "src/rust_leetcode/fetcher/test_resources/s0055_jump_game.rs";
+    const Q_FILE: &str = "src/fetcher/test_resources/s0055_question.json";
+    const RUST_FILE: &str = "src/fetcher/test_resources/s0055_jump_game.rs";
 
     #[test]
     #[cfg_attr(not(feature = "fetcher"), ignore)]
