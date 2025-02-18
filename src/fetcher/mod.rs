@@ -25,7 +25,7 @@ fn unpack_args(args: &[String]) -> Result<&str, ArgCountError> {
 #[tokio::main]
 async fn main() -> Result<(), reqwest::Error> {
     let args: Vec<String> = env::args().collect();
-    let name = unpack_args(&args).unwrap();
+    let name = unpack_args(&args).expect("expected 1 argument: <problem-name>");
     println!("Querrying {name}");
     match fetch::fetch_question_async(name).await {
         Ok(q) => {
