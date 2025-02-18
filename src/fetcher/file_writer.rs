@@ -100,17 +100,6 @@ fn replace_readme_counter(contents: &str) -> String {
 fn count_files_in_folder(path: &Path, ext: Option<&str>) -> usize {
     let folder = fs::read_dir(path).expect("cannot read folder");
     if let Some(e) = ext {
-        // let mut ctr = 0;
-        // for file in folder {
-        //     let fname = file.expect("cannot read path").path();
-        //     dbg!(&fname);
-        //     dbg!(&fname.extension());
-        //     dbg!(fname.extension().unwrap() == e);
-        //     if fname.extension().map(|ext| ext == e).unwrap_or(false) {
-        //         ctr += 1;
-        //     }
-        // }
-        // ctr
         folder
             .filter(|p| {
                 p.as_ref()
@@ -150,30 +139,38 @@ fn format_readme_overview() -> String {
 
 fn get_readme_line(question: &Question, contents: &str) -> Option<usize> {
     let line_idx = None;
-    let mut data_block = false;
+    let mut header_found = false;
+    let mut data_block_started = false;
     for (i, line) in contents.lines().enumerate() {
-        if line.is_empty() {
-            continue;
-        }
-        if !data_block
+        if !header_found
             && line.trim().starts_with(README_CHAPTER_HEADER)
             && line
                 .to_uppercase()
                 .contains(&question.difficulty.to_string().to_uppercase())
         {
-            data_block = true;
+            header_found = true;
             continue;
         }
-        if data_block {
-            if let Some(idx_block) = line.split(README_COL_SEP).nth(1) {
-                if let Ok(id) = idx_block.trim().parse::<usize>() {
-                    if id > question.id {
-                        return Some(i);
-                    }
+        // No data block yet.
+        if !header_found {
+            continue;
+        }
+        // Iterate through the data block.
+        if let Some(idx_block) = line.split(README_COL_SEP).nth(1) {
+            if let Ok(id) = idx_block.trim().parse::<usize>() {
+                data_block_started = true;
+                if id > question.id {
+                    return Some(i);
                 }
-            } else {
-                data_block = false;
             }
+        }
+        // A wrongly formatted line means the end of the data block.
+        // We did not find any index larger in the data block,
+        // meaning the question belonged after the previous one.
+        // This is done so we can still return a None if
+        // the data block ends on the last line of the file.
+        else if data_block_started {
+            return Some(i);
         }
     }
     line_idx
@@ -421,6 +418,33 @@ mod tests {
         let contents = "
         Random stuff before the interesting part.
 
+        ### Easy
+
+        | Index | Name                                                                                                                                   | Tags                                                        |
+        | ----- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+        | 0001  | [Two sum](https://leetcode.com/problems/two-sum/)                                                                                      | array, hash table                                           |
+
+        More random stuff in between.
+
+        ### Medium
+
+        | Index | Name                                                                                                                                   | Tags                                                        |
+        | ----- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+        | 0028  | [Find the index of the first occurence in a string](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | two pointers, string, string matching                       |
+        | 0035  | [Search insert position](https://leetcode.com/problems/search-insert-position/)                                                        | array, binary search                                        |
+        
+        ### 🔴 Hard
+
+        | Index | Name                                                                                      | Tags                                                               |
+        | ----- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+        | 0004  | [Median of two sorted arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | array, binary search, divide and conquer                           |
+        | 0023  | [Merge k sorted lists](https://leetcode.com/problems/merge-k-sorted-lists/)               | linked list, divide and conquer, heap (priority queue), merge sort |
+        ";
+        assert_eq!(get_readme_line(&question, contents), Some(17));
+
+        let contents = "
+        Random stuff before the interesting part.
+
         ### Medium
 
         | Index | Name                                                                                                                                   | Tags                                                        |
@@ -428,7 +452,8 @@ mod tests {
         | 0028  | [Find the index of the first occurence in a string](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | two pointers, string, string matching                       |
         | 0035  | [Search insert position](https://leetcode.com/problems/search-insert-position/)                                                        | array, binary search                                        |
         ";
-        assert_eq!(get_readme_line(&question, contents), None);
+        // There is a trailing whiteline behind the final table.
+        assert_eq!(get_readme_line(&question, contents), Some(9));
 
         let contents = "
         Random stuff before the interesting part.
