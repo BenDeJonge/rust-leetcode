@@ -10,10 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 23     |
-| 🟡  | Medium     | 16     |
+| 🟡  | Medium     | 17     |
 | 🔴  | Hard       | 6      |
-|     | **Total**  | **45** |
-
+|     | **Total**  | **46** |
 ## Fetcher
 
 A
@@ -75,6 +74,7 @@ $ cargo run fetch <problem-name>
 | 0055  | [Jump game](https://leetcode.com/problems/jump-game/)                                                                           | array, dynamic programming, greedy              |
 | 0167  | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                                                   | array, two pointers, binary search              |
 | 1306  | [Jump Game III](https://leetcode.com/problems/jump-game-iii/)                                                                   | array, depth-first-search, breadth-first-search |
+| 2001 | [Jump Game VII](https://leetcode.com/problems/jump-game-vii/) | string, dynamic-programming, sliding-window, prefix-sum |
 
 ### 🔴 Hard
 
