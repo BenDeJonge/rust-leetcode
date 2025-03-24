@@ -18,3 +18,4 @@ path = "src/fetcher/mod.rs"
 [features]
 # Avoid expensive unit tests of the fetcher when testing Leetcode solutions.
 fetcher = []
+util = []
