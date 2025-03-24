@@ -15,3 +15,4 @@ mod s0055_jump_game;
 mod s0167_two_sum_ii;
 mod s1306_jump_game_iii;
 mod s2001_jump_game_vii;
+mod s0062_unique_paths;
