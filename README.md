@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 23     |
-| 🟡  | Medium     | 19     |
+| 🟡  | Medium     | 20     |
 | 🔴  | Hard       | 7      |
-|     | **Total**  | **49** |
+|     | **Total**  | **50** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -71,6 +71,7 @@ $ cargo run fetch <problem-name>
 | 0049  | [Group anagrams](https://leetcode.com/problems/group-anagrams/)                                                                 | array, hash table, string, sorting                      |
 | 0054  | [Spiral matrix](https://leetcode.com/problems/spiral-matrix/)                                                                   | array, matrix, simulation                               |
 | 0055  | [Jump game](https://leetcode.com/problems/jump-game/)                                                                           | array, dynamic programming, greedy                      |
+| 0056  | [Merge Intervals](https://leetcode.com/problems/merge-intervals/)                                                               | array, sorting                                          |
 | 0062  | [Unique Paths](https://leetcode.com/problems/unique-paths/)                                                                     | math, dynamic-programming, combinatorics                |
 | 0167  | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                                                   | array, two pointers, binary search                      |
 | 0322  | [Coin Change](https://leetcode.com/problems/coin-change/)                                                                       | array, dynamic-programming, breadth-first-search        |
