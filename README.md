@@ -10,9 +10,10 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 23     |
-| 🟡  | Medium     | 18     |
+| 🟡  | Medium     | 19     |
 | 🔴  | Hard       | 7      |
-|     | **Total**  | **48** |
+|     | **Total**  | **49** |
+
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
 is available to make web requests to LeetCode to automatically pull in question
@@ -54,26 +55,27 @@ $ cargo run fetch <problem-name>
 
 ### 🟡 Medium
 
-| Index | Name                                                                                                                            | Tags                                            |
-| ----- | ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| 0002  | [Add two numbers](https://leetcode.com/problems/add-two-numbers/)                                                               | linked list, math, recursion                    |
-| 0003  | [Longest substring without repeating characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | hash table, string, sliding window              |
-| 0005  | [Longest palindromic substring](https://leetcode.com/problems/longest-palindromic-substring/)                                   | two pointers, string, dynamic programming       |
-| 0011  | [Container with the most water](https://leetcode.com/problems/container-with-most-water/)                                       | array, two pointers, greedy                     |
-| 0015  | [3Sum](https://leetcode.com/problems/3sum/)                                                                                     | array, two pointers, sorting                    |
-| 0017  | [Letter combinations of a phone number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)                   | hash table, string, backtracking                |
-| 0022  | [Generate parentheses](https://leetcode.com/problems/generate-parentheses/)                                                     | string, dynamic programming, backtracking       |
-| 0045  | [Jump game II](https://leetcode.com/problems/jump-game-ii/)                                                                     | array, dynamic programming, greedy              |
-| 0046  | [Permutations](https://leetcode.com/problems/permutations/)                                                                     | array, backtracking                             |
-| 0047  | [Permutations II](https://leetcode.com/problems/permutations-ii/)                                                               | array, backtracking                             |
-| 0048  | [Rotate image](https://leetcode.com/problems/rotate-image/)                                                                     | array, math, matrix                             |
-| 0049  | [Group anagrams](https://leetcode.com/problems/group-anagrams/)                                                                 | array, hash table, string, sorting              |
-| 0054  | [Spiral matrix](https://leetcode.com/problems/spiral-matrix/)                                                                   | array, matrix, simulation                       |
-| 0055  | [Jump game](https://leetcode.com/problems/jump-game/)                                                                           | array, dynamic programming, greedy              |
-| 0062 | [Unique Paths](https://leetcode.com/problems/unique-paths/) | math, dynamic-programming, combinatorics |
-| 0167  | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                                                   | array, two pointers, binary search              |
-| 1306  | [Jump Game III](https://leetcode.com/problems/jump-game-iii/)                                                                   | array, depth-first-search, breadth-first-search |
-| 2001 | [Jump Game VII](https://leetcode.com/problems/jump-game-vii/) | string, dynamic-programming, sliding-window, prefix-sum |
+| Index | Name                                                                                                                            | Tags                                                    |
+| ----- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| 0002  | [Add two numbers](https://leetcode.com/problems/add-two-numbers/)                                                               | linked list, math, recursion                            |
+| 0003  | [Longest substring without repeating characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | hash table, string, sliding window                      |
+| 0005  | [Longest palindromic substring](https://leetcode.com/problems/longest-palindromic-substring/)                                   | two pointers, string, dynamic programming               |
+| 0011  | [Container with the most water](https://leetcode.com/problems/container-with-most-water/)                                       | array, two pointers, greedy                             |
+| 0015  | [3Sum](https://leetcode.com/problems/3sum/)                                                                                     | array, two pointers, sorting                            |
+| 0017  | [Letter combinations of a phone number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)                   | hash table, string, backtracking                        |
+| 0022  | [Generate parentheses](https://leetcode.com/problems/generate-parentheses/)                                                     | string, dynamic programming, backtracking               |
+| 0045  | [Jump game II](https://leetcode.com/problems/jump-game-ii/)                                                                     | array, dynamic programming, greedy                      |
+| 0046  | [Permutations](https://leetcode.com/problems/permutations/)                                                                     | array, backtracking                                     |
+| 0047  | [Permutations II](https://leetcode.com/problems/permutations-ii/)                                                               | array, backtracking                                     |
+| 0048  | [Rotate image](https://leetcode.com/problems/rotate-image/)                                                                     | array, math, matrix                                     |
+| 0049  | [Group anagrams](https://leetcode.com/problems/group-anagrams/)                                                                 | array, hash table, string, sorting                      |
+| 0054  | [Spiral matrix](https://leetcode.com/problems/spiral-matrix/)                                                                   | array, matrix, simulation                               |
+| 0055  | [Jump game](https://leetcode.com/problems/jump-game/)                                                                           | array, dynamic programming, greedy                      |
+| 0062  | [Unique Paths](https://leetcode.com/problems/unique-paths/)                                                                     | math, dynamic-programming, combinatorics                |
+| 0167  | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                                                   | array, two pointers, binary search                      |
+| 0322  | [Coin Change](https://leetcode.com/problems/coin-change/)                                                                       | array, dynamic-programming, breadth-first-search        |
+| 1306  | [Jump Game III](https://leetcode.com/problems/jump-game-iii/)                                                                   | array, depth-first-search, breadth-first-search         |
+| 2001  | [Jump Game VII](https://leetcode.com/problems/jump-game-vii/)                                                                   | string, dynamic-programming, sliding-window, prefix-sum |
 
 ### 🔴 Hard
 
@@ -85,4 +87,4 @@ $ cargo run fetch <problem-name>
 | 0042  | [Longest valid parentheses](https://leetcode.com/problems/trapping-rain-water/)           | array, two pointer, dynamic programming, stack, monotonic stack    |
 | 0051  | [N-Queens](https://leetcode.com/problems/n-queens/)                                       | array, backtracking                                                |
 | 0052  | [N-Queens II](https://leetcode.com/problems/n-queens-ii/)                                 | backtracking                                                       |
-| 1447 | [Jump Game IV](https://leetcode.com/problems/jump-game-iv/) | array, hash-table, breadth-first-search |
+| 1447  | [Jump Game IV](https://leetcode.com/problems/jump-game-iv/)                               | array, hash-table, breadth-first-search                            |
