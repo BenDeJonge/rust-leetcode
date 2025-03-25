@@ -94,6 +94,7 @@ fn replace_readme_counter(contents: &str) -> String {
         new_buffer.push_str(line);
         new_buffer.push('\n');
     }
+    new_buffer.push('\n');
     new_buffer
 }
 
@@ -235,6 +236,9 @@ fn format_content(content: &str) -> String {
         .filter(|l| !l.is_empty())
         .collect::<Vec<&str>>()
         .join("\n//! ")
+        .replace("&nbsp;", "")
+        .replace("&lt;", "<")
+        .replace("&gt;", ">")
 }
 
 fn format_url(question: &Question) -> String {
@@ -247,7 +251,7 @@ fn format_url(question: &Question) -> String {
 
 fn get_code_definition(question: &Question) -> String {
     format!(
-        "{}\n\n{}\n",
+        "{}\n\n{}\n\n",
         STRUCT_SOLUTION,
         question
             .code_definition
