@@ -222,7 +222,7 @@ fn get_contents(question: &Question) -> String {
 /// <description>
 fn get_docs(question: &Question) -> String {
     format!(
-        "//! {}\n//! {} - {}\n//! {}\n\n",
+        "//! {}\n//! {} - {}\n//!\n//! {}\n\n",
         format_url(question),
         question.difficulty,
         question.topic_tags,
@@ -262,7 +262,7 @@ fn get_code_definition(question: &Question) -> String {
                 "{
         
     }",
-                "{}"
+                "{todo!()}"
             )
     )
 }
