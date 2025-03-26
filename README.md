@@ -23,6 +23,10 @@ data and create local resources.
 $ cargo run fetch <problem-name>
 ```
 
+Here, the problem name can be obtained from the URL:
+`https://leetcode.com/problems/<problem-name>/`. Typically, this is simply the
+title in lowercase with spaces replaced by dashes.
+
 ## Problem list
 
 ### 🟢 Easy
