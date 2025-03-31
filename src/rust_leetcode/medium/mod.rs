@@ -20,3 +20,4 @@ mod s1306_jump_game_iii;
 mod s2001_jump_game_vii;
 mod s0056_merge_intervals;
 mod s0064_minimum_path_sum;
+mod s0072_edit_distance;
