@@ -239,6 +239,7 @@ fn format_content(content: &str) -> String {
         .replace("&nbsp;", "")
         .replace("&lt;", "<")
         .replace("&gt;", ">")
+        .replace("quot;", "\"")
 }
 
 fn format_url(question: &Question) -> String {
