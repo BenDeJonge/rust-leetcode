@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 23     |
-| 🟡  | Medium     | 24     |
+| 🟡  | Medium     | 25     |
 | 🔴  | Hard       | 7      |
-|     | **Total**  | **54** |
+|     | **Total**  | **55** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -81,6 +81,7 @@ title in lowercase with spaces replaced by dashes.
 | 0064  | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)                                                             | array, dynamic-programming, matrix                      |
 | 0072  | [Edit Distance](https://leetcode.com/problems/edit-distance/)                                                                   | string, dynamic-programming                             |
 | 0074  | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)                                                         | array, binary-search, matrix                            |
+| 0079 | [Word Search](https://leetcode.com/problems/word-search/) | array, string, backtracking, depth-first-search, matrix |
 | 0167  | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                                                   | array, two pointers, binary search                      |
 | 0322  | [Coin Change](https://leetcode.com/problems/coin-change/)                                                                       | array, dynamic-programming, breadth-first-search        |
 | 1306  | [Jump Game III](https://leetcode.com/problems/jump-game-iii/)                                                                   | array, depth-first-search, breadth-first-search         |
