@@ -90,11 +90,11 @@ fn replace_readme_counter(contents: &str) -> String {
     }
     let new_counter = format_readme_overview();
     new_buffer.push_str(&new_counter);
+    new_buffer.push('\n');
     for line in contents.lines().skip(idx + new_counter.lines().count()) {
         new_buffer.push_str(line);
         new_buffer.push('\n');
     }
-    new_buffer.push('\n');
     new_buffer
 }
 
