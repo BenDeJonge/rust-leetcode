@@ -11,8 +11,8 @@ world (fight me). Hopefully learning some DSA along the way!
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 23     |
 | 🟡  | Medium     | 25     |
-| 🔴  | Hard       | 7      |
-|     | **Total**  | **55** |
+| 🔴  | Hard       | 8      |
+|     | **Total**  | **56** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -94,6 +94,7 @@ title in lowercase with spaces replaced by dashes.
 | 0004  | [Median of two sorted arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | array, binary search, divide and conquer                           |
 | 0023  | [Merge k sorted lists](https://leetcode.com/problems/merge-k-sorted-lists/)               | linked list, divide and conquer, heap (priority queue), merge sort |
 | 0032  | [Longest valid parentheses](https://leetcode.com/problems/longest-valid-parentheses/)     | string, dynamic programming, stack                                 |
+| 0041 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | array, hash-table |
 | 0042  | [Longest valid parentheses](https://leetcode.com/problems/trapping-rain-water/)           | array, two pointer, dynamic programming, stack, monotonic stack    |
 | 0051  | [N-Queens](https://leetcode.com/problems/n-queens/)                                       | array, backtracking                                                |
 | 0052  | [N-Queens II](https://leetcode.com/problems/n-queens-ii/)                                 | backtracking                                                       |
