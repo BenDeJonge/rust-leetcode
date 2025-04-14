@@ -9,10 +9,10 @@ world (fight me). Hopefully learning some DSA along the way!
 
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
-| 🟢  | Easy       | 23     |
+| 🟢  | Easy       | 24     |
 | 🟡  | Medium     | 25     |
 | 🔴  | Hard       | 8      |
-|     | **Total**  | **56** |
+|     | **Total**  | **57** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -53,6 +53,7 @@ title in lowercase with spaces replaced by dashes.
 | 0169  | [Majority element](https://leetcode.com/problems/majority-element/)                                                                    | array, hash table, divide and conquer, sorting, counting    |
 | 0226  | [Invert binary tree](https://leetcode.com/problems/invert-binary-tree/)                                                                | tree, depth-first search, breadth-first search, binary tree |
 | 0283  | [Move zeroes](https://leetcode.com/problems/move-zeroes/)                                                                              | array, two pointer                                          |
+| 0448  | [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)                    | array, hash-table                                           |
 | 0543  | [Diameter of a binary tree](https://leetcode.com/problems/diameter-of-a-binary-tree/)                                                  | tree, depth-first search, binary tree                       |
 | 0704  | [Binary search](https://leetcode.com/problems/binary-search/)                                                                          | array, binary search                                        |
 | 1518  | [Water bottles](https://leetcode.com/problems/water-bottles/)                                                                          | math, simulation                                            |
@@ -81,7 +82,7 @@ title in lowercase with spaces replaced by dashes.
 | 0064  | [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)                                                             | array, dynamic-programming, matrix                      |
 | 0072  | [Edit Distance](https://leetcode.com/problems/edit-distance/)                                                                   | string, dynamic-programming                             |
 | 0074  | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)                                                         | array, binary-search, matrix                            |
-| 0079 | [Word Search](https://leetcode.com/problems/word-search/) | array, string, backtracking, depth-first-search, matrix |
+| 0079  | [Word Search](https://leetcode.com/problems/word-search/)                                                                       | array, string, backtracking, depth-first-search, matrix |
 | 0167  | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                                                   | array, two pointers, binary search                      |
 | 0322  | [Coin Change](https://leetcode.com/problems/coin-change/)                                                                       | array, dynamic-programming, breadth-first-search        |
 | 1306  | [Jump Game III](https://leetcode.com/problems/jump-game-iii/)                                                                   | array, depth-first-search, breadth-first-search         |
@@ -94,7 +95,7 @@ title in lowercase with spaces replaced by dashes.
 | 0004  | [Median of two sorted arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | array, binary search, divide and conquer                           |
 | 0023  | [Merge k sorted lists](https://leetcode.com/problems/merge-k-sorted-lists/)               | linked list, divide and conquer, heap (priority queue), merge sort |
 | 0032  | [Longest valid parentheses](https://leetcode.com/problems/longest-valid-parentheses/)     | string, dynamic programming, stack                                 |
-| 0041 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | array, hash-table |
+| 0041  | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/)           | array, hash-table                                                  |
 | 0042  | [Longest valid parentheses](https://leetcode.com/problems/trapping-rain-water/)           | array, two pointer, dynamic programming, stack, monotonic stack    |
 | 0051  | [N-Queens](https://leetcode.com/problems/n-queens/)                                       | array, backtracking                                                |
 | 0052  | [N-Queens II](https://leetcode.com/problems/n-queens-ii/)                                 | backtracking                                                       |
