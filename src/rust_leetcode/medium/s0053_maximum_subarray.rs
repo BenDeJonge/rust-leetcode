@@ -37,10 +37,6 @@ enum Operation {
 pub struct Solution {}
 
 impl Solution {
-    pub fn max_sub_array_dc(nums: Vec<i32>) -> i32 {
-        todo!()
-    }
-
     /// The optimal subarray lies either in:
     /// - the left half of `nums`
     /// - the right half of `nums`
@@ -60,11 +56,11 @@ impl Solution {
             sum_left = sum_left.max(current_sum);
             i -= 1;
         }
-        for i in (mid + 1)..(right + 1) {
-            current_sum += nums[i];
+        for &num in nums.iter().take(right + 1).skip(mid + 1) {
+            current_sum += num;
             sum_right = sum_right.max(current_sum);
         }
-        
+
         todo!()
     }
 

@@ -20,7 +20,7 @@ impl Solution {
             return Self::find_median_sorted_arrays_logarithmic(nums2, nums1);
         }
         let n_total = nums1.len() + nums2.len();
-        let n_needed = (n_total + 1) / 2;
+        let n_needed = n_total.div_ceil(2);
         let mut left = 0;
         let mut right = nums1.len();
 
