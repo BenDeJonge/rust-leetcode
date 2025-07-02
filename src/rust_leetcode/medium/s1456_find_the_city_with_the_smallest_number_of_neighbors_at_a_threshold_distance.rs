@@ -101,6 +101,12 @@ impl Solution {
         new_edges
     }
 
+    /// Compute the shortest path from `start` to all vertices in `graph` in
+    /// `O(E log(V))` with:
+    /// - `E` the number of edges in `graph`. Linear because we have to run on
+    ///   each edge.
+    /// - `V` the number of vertices in `graph`. Logarithmic because of the
+    ///   insertion in the binary heap.
     fn dijkstra(start: usize, graph: &[Vec<Edge<usize, usize>>]) -> Vec<usize> {
         let mut costs = vec![usize::MAX; graph.len()];
         let mut min_heap = BinaryHeap::new();
@@ -137,6 +143,9 @@ impl Solution {
     /// Find the city with the least neighbors within the threshold.
     /// If multiple cities have the same minimum number of neighbors,
     /// return the city with the highest index.
+    ///
+    /// Complexity:
+    /// - time: `O(V E log(V))` because we have to run Dijkstra on each vertex.
     pub fn find_the_city(n: i32, edges: Vec<Vec<i32>>, distance_threshold: i32) -> i32 {
         let graph = Self::construct_adjacency_list(n, edges);
         let max_dist = distance_threshold as usize;
