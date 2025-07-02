@@ -9,10 +9,10 @@ world (fight me). Hopefully learning some DSA along the way!
 
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
-| 🟢  | Easy       | 24     |
+| 🟢  | Easy       | 25     |
 | 🟡  | Medium     | 28     |
 | 🔴  | Hard       | 8      |
-|     | **Total**  | **60** |
+|     | **Total**  | **61** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -57,6 +57,7 @@ title in lowercase with spaces replaced by dashes.
 | 0543  | [Diameter of a binary tree](https://leetcode.com/problems/diameter-of-a-binary-tree/)                                                  | tree, depth-first search, binary tree                       |
 | 0704  | [Binary search](https://leetcode.com/problems/binary-search/)                                                                          | array, binary search                                        |
 | 1518  | [Water bottles](https://leetcode.com/problems/water-bottles/)                                                                          | math, simulation                                            |
+| 3617 | [Find the Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i/) | string |
 
 ### 🟡 Medium
 

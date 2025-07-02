@@ -22,3 +22,4 @@ mod s0448_find_all_numbers_disappeared_in_an_array;
 mod s0543_diameter_of_a_binary_tree;
 mod s0704_binary_search;
 mod s1518_water_bottles;
+mod s3617_find_the_original_typed_string_i;
