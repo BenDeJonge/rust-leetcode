@@ -9,10 +9,10 @@ world (fight me). Hopefully learning some DSA along the way!
 
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
-| 🟢  | Easy       | 25     |
+| 🟢  | Easy       | 26     |
 | 🟡  | Medium     | 29     |
 | 🔴  | Hard       | 8      |
-|     | **Total**  | **62** |
+|     | **Total**  | **63** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -51,6 +51,7 @@ title in lowercase with spaces replaced by dashes.
 | 0121  | [Best time to buy and sell stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)                                      | array, dynamic programming                                  |
 | 0136  | [Single number](https://leetcode.com/problems/single-number/)                                                                          | array, bit manipulation                                     |
 | 0169  | [Majority element](https://leetcode.com/problems/majority-element/)                                                                    | array, hash table, divide and conquer, sorting, counting    |
+| 0206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | linked-list, recursion |
 | 0226  | [Invert binary tree](https://leetcode.com/problems/invert-binary-tree/)                                                                | tree, depth-first search, breadth-first search, binary tree |
 | 0283  | [Move zeroes](https://leetcode.com/problems/move-zeroes/)                                                                              | array, two pointer                                          |
 | 0448  | [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)                    | array, hash-table                                           |
