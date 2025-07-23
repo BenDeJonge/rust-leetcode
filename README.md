@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 25     |
-| 🟡  | Medium     | 28     |
+| 🟡  | Medium     | 29     |
 | 🔴  | Hard       | 8      |
-|     | **Total**  | **61** |
+|     | **Total**  | **62** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -88,6 +88,7 @@ title in lowercase with spaces replaced by dashes.
 | 0167  | [Two sum ii](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)                                                   | array, two pointers, binary search                      |
 | 0322  | [Coin Change](https://leetcode.com/problems/coin-change/)                                                                       | array, dynamic-programming, breadth-first-search        |
 | 0442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | array, hash-table |
+| 1171 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | array, breadth-first-search, matrix |
 | 1306  | [Jump Game III](https://leetcode.com/problems/jump-game-iii/)                                                                   | array, depth-first-search, breadth-first-search         |
 | 1456 | [Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | dynamic-programming, graph, shortest-path |
 | 2001  | [Jump Game VII](https://leetcode.com/problems/jump-game-vii/)                                                                   | string, dynamic-programming, sliding-window, prefix-sum |

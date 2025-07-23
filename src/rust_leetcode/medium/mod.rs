@@ -26,3 +26,4 @@ mod s0442_find_all_duplicates_in_an_array;
 mod s1306_jump_game_iii;
 mod s1456_find_the_city_with_the_smallest_number_of_neighbors_at_a_threshold_distance;
 mod s2001_jump_game_vii;
+mod s1171_shortest_path_in_binary_matrix;
