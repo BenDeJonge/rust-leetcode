@@ -240,6 +240,8 @@ fn format_content(content: &str) -> String {
         .replace("&lt;", "<")
         .replace("&gt;", ">")
         .replace("quot;", "\"")
+        .replace("&#39;", "'")
+        .replace("\n//! \n", "\n//!\n")
 }
 
 fn format_url(question: &Question) -> String {
@@ -263,7 +265,7 @@ fn get_code_definition(question: &Question) -> String {
                 "{
         
     }",
-                "{todo!()}"
+                "{\n        todo!()\n    }"
             )
     )
 }
@@ -310,13 +312,12 @@ mod tests {
 
     use super::{
         count_files_in_folder, get_contents, get_fn_name, get_readme_line, insert_at_line,
-        FOLDER_EASY,
     };
 
     use super::super::question::Question;
 
     const TEST_RESOURCES_FOLDER: &str = "src/fetcher/test_resources";
-    const Q_FILE: &str = "src/fetcher/test_resources/s0055_question.json";
+    const QUESTION_JSON: &str = "src/fetcher/test_resources/s0055_question.json";
     const RUST_FILE: &str = "src/fetcher/test_resources/s0055_jump_game.rs";
 
     #[test]
@@ -332,7 +333,7 @@ mod tests {
     #[cfg_attr(not(feature = "fetcher"), ignore)]
     fn test_get_file_buffer() {
         let question: Question = serde_json::from_reader(
-            std::fs::File::open(Q_FILE).expect("cannot open question file"),
+            std::fs::File::open(QUESTION_JSON).expect("cannot open question file"),
         )
         .expect("cannot convert into Question");
         let rust_code = std::fs::read_to_string(RUST_FILE).expect("cannot open rust file");
@@ -386,7 +387,7 @@ mod tests {
     #[cfg_attr(not(feature = "fetcher"), ignore)]
     fn test_get_function_name() {
         let question: Question = serde_json::from_reader(
-            std::fs::File::open(Q_FILE).expect("cannot open question file"),
+            std::fs::File::open(QUESTION_JSON).expect("cannot open question file"),
         )
         .expect("cannot convert into Question");
         assert_eq!(get_fn_name(&question), "can_jump")
@@ -397,7 +398,7 @@ mod tests {
     fn test_get_line_idx() {
         // Idx 55.
         let question: Question = serde_json::from_reader(
-            std::fs::File::open(Q_FILE).expect("cannot open question file"),
+            std::fs::File::open(QUESTION_JSON).expect("cannot open question file"),
         )
         .expect("cannot convert into Question");
         let contents = "
