@@ -9,10 +9,10 @@ world (fight me). Hopefully learning some DSA along the way!
 
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
-| 🟢  | Easy       | 26     |
+| 🟢  | Easy       | 27     |
 | 🟡  | Medium     | 29     |
 | 🔴  | Hard       | 8      |
-|     | **Total**  | **63** |
+|     | **Total**  | **64** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -53,6 +53,7 @@ title in lowercase with spaces replaced by dashes.
 | 0169  | [Majority element](https://leetcode.com/problems/majority-element/)                                                                    | array, hash table, divide and conquer, sorting, counting    |
 | 0206 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | linked-list, recursion |
 | 0226  | [Invert binary tree](https://leetcode.com/problems/invert-binary-tree/)                                                                | tree, depth-first search, breadth-first search, binary tree |
+| 0234 | [Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/) | linked-list, two-pointers, stack, recursion |
 | 0283  | [Move zeroes](https://leetcode.com/problems/move-zeroes/)                                                                              | array, two pointer                                          |
 | 0448  | [Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/)                    | array, hash-table                                           |
 | 0543  | [Diameter of a binary tree](https://leetcode.com/problems/diameter-of-a-binary-tree/)                                                  | tree, depth-first search, binary tree                       |

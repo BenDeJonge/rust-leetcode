@@ -24,3 +24,4 @@ mod s0704_binary_search;
 mod s1518_water_bottles;
 mod s3617_find_the_original_typed_string_i;
 mod s0206_reverse_linked_list;
+mod s0234_palindrome_linked_list;
