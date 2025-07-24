@@ -315,6 +315,7 @@ mod tests {
 
     use super::super::question::Question;
 
+    const TEST_RESOURCES_FOLDER: &str = "src/fetcher/test_resources";
     const Q_FILE: &str = "src/fetcher/test_resources/s0055_question.json";
     const RUST_FILE: &str = "src/fetcher/test_resources/s0055_jump_game.rs";
 
@@ -322,8 +323,8 @@ mod tests {
     #[cfg_attr(not(feature = "fetcher"), ignore)]
     fn test_count_files() {
         assert_eq!(
-            count_files_in_folder(Path::new(FOLDER_EASY), Some("rs")),
-            24
+            count_files_in_folder(Path::new(TEST_RESOURCES_FOLDER), Some("rs")),
+            1
         )
     }
 
