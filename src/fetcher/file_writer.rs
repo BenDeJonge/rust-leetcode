@@ -277,12 +277,11 @@ mod tests {{
     use super::Solution;
 
     #[test]
-    fn test_{:>04}() {{
-        assert_eq!(Solution::{}(todo!(\"input\")), todo!(\"output\"));
+    fn test_{id:>04}() {{
+        assert_eq!(Solution::{fn_name}(todo!(\"input\")), todo!(\"output\"));
     }}
 }}
 ",
-        id, fn_name
     )
 }
 
