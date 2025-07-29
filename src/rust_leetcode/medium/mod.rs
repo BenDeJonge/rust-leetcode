@@ -28,3 +28,4 @@ mod s1456_find_the_city_with_the_smallest_number_of_neighbors_at_a_threshold_dis
 mod s2001_jump_game_vii;
 mod s1171_shortest_path_in_binary_matrix;
 mod s0019_remove_nth_node_from_end_of_list;
+mod s0024_swap_nodes_in_pairs;

@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 27     |
-| 🟡  | Medium     | 30     |
+| 🟡  | Medium     | 31     |
 | 🔴  | Hard       | 8      |
-|     | **Total**  | **65** |
+|     | **Total**  | **66** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -73,6 +73,7 @@ title in lowercase with spaces replaced by dashes.
 | 0017  | [Letter combinations of a phone number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)                   | hash table, string, backtracking                        |
 | 0019 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | linked-list, two-pointers |
 | 0022  | [Generate parentheses](https://leetcode.com/problems/generate-parentheses/)                                                     | string, dynamic programming, backtracking               |
+| 0024 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | linked-list, recursion |
 | 0045  | [Jump game II](https://leetcode.com/problems/jump-game-ii/)                                                                     | array, dynamic programming, greedy                      |
 | 0046  | [Permutations](https://leetcode.com/problems/permutations/)                                                                     | array, backtracking                                     |
 | 0047  | [Permutations II](https://leetcode.com/problems/permutations-ii/)                                                               | array, backtracking                                     |
