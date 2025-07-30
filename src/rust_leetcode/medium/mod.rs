@@ -29,3 +29,4 @@ mod s2001_jump_game_vii;
 mod s1171_shortest_path_in_binary_matrix;
 mod s0019_remove_nth_node_from_end_of_list;
 mod s0024_swap_nodes_in_pairs;
+mod s0031_next_permutation;
