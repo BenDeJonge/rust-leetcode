@@ -30,3 +30,4 @@ mod s1171_shortest_path_in_binary_matrix;
 mod s0019_remove_nth_node_from_end_of_list;
 mod s0024_swap_nodes_in_pairs;
 mod s0031_next_permutation;
+mod s0319_bulb_switcher;
