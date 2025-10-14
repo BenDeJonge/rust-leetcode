@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 27     |
-| 🟡  | Medium     | 35     |
+| 🟡  | Medium     | 36     |
 | 🔴  | Hard       | 8      |
-|     | **Total**  | **70** |
+|     | **Total**  | **71** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -75,6 +75,7 @@ title in lowercase with spaces replaced by dashes.
 | 0022  | [Generate parentheses](https://leetcode.com/problems/generate-parentheses/)                                                     | string, dynamic programming, backtracking               |
 | 0024 | [Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/) | linked-list, recursion |
 | 0031 | [Next Permutation](https://leetcode.com/problems/next-permutation/) | array, two-pointers |
+| 0033 | [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) | array, binary-search |
 | 0045  | [Jump game II](https://leetcode.com/problems/jump-game-ii/)                                                                     | array, dynamic programming, greedy                      |
 | 0046  | [Permutations](https://leetcode.com/problems/permutations/)                                                                     | array, backtracking                                     |
 | 0047  | [Permutations II](https://leetcode.com/problems/permutations-ii/)                                                               | array, backtracking                                     |

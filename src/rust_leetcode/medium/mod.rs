@@ -33,3 +33,4 @@ mod s0031_next_permutation;
 mod s0319_bulb_switcher;
 mod s0131_palindrome_partitioning;
 mod s0078_subsets;
+mod s0033_search_in_rotated_sorted_array;
