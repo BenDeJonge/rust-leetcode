@@ -16,7 +16,7 @@ impl Solution {
         // Start the search.
         while left <= right {
             // Compute the pivot point.
-            let middle = left + (right - left) / 2;
+            let middle = (left + right) / 2;
             match nums[middle as usize].cmp(&target) {
                 // We found the target.
                 Ordering::Equal => return middle,
