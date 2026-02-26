@@ -14,7 +14,7 @@ impl Solution {
         let mut left = 0i32;
         let mut right = (nums.len() - 1) as i32;
         while left <= right {
-            let middle = left + (right - left) / 2;
+            let middle = (left + right) / 2;
             match nums[middle as usize].cmp(&target) {
                 // We have found the target.
                 Ordering::Equal => return middle,
@@ -29,10 +29,7 @@ impl Solution {
     }
 
     pub fn search_idiomatic(nums: Vec<i32>, target: i32) -> i32 {
-        nums.iter()
-            .enumerate()
-            .find(|(_, &x)| x == target)
-            .map_or(-1, |(i, _)| i as i32)
+        nums.binary_search(&target).map(|i| i as i32).unwrap_or(-1)
     }
 }
 
@@ -43,6 +40,7 @@ mod tests {
     #[test]
     fn test_0704() {
         assert_eq!(Solution::search(vec![5], -5), -1);
+        assert_eq!(Solution::search(vec![4], 5), -1);
         assert_eq!(Solution::search(vec![-1, 0, 3, 5, 9, 12], 9), 4);
         assert_eq!(Solution::search(vec![-1, 0, 3, 5, 9, 12], 2), -1);
     }

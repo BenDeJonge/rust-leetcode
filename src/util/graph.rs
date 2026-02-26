@@ -74,7 +74,7 @@ impl<T> Graph<T> {
         self.max_vertex < self.vertices.len()
     }
 
-    pub fn get_vertex(&self, i: usize) -> Option<Vertex<T>> {
+    pub fn get_vertex(&self, i: usize) -> Option<Vertex<'_, T>> {
         if i >= self.vertices.len() {
             None
         } else {
@@ -94,7 +94,7 @@ impl<T> Graph<T> {
         self.edges.iter().map(|e| e.len()).sum::<usize>() / 2
     }
 
-    pub fn iter(&self) -> GraphIterator<T> {
+    pub fn iter(&self) -> GraphIterator<'_, T> {
         GraphIterator {
             graph: self,
             index: 0,

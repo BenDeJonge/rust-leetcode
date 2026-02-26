@@ -46,7 +46,7 @@ impl ListNode {
 // This implementation is needed for Ord.
 impl PartialOrd<ListNode> for ListNode {
     fn partial_cmp(&self, other: &ListNode) -> Option<std::cmp::Ordering> {
-        Some(other.val.cmp(&self.val))
+        Some(self.cmp(other))
     }
 }
 

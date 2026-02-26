@@ -187,8 +187,8 @@ impl From<String> for CodeDefinitionFromLeetcode {
         let mut code_definition = None;
         let available_map: Result<Vec<HashMap<String, String>>, serde_json::Error> =
             serde_json::from_str(&value);
-        if available_map.is_ok() {
-            for mut definition in available_map.unwrap() {
+        if let Ok(definitions) = available_map {
+            for mut definition in definitions {
                 if let Some(language) = definition.get(LANGUAGE_KEY) {
                     if language == WANTED_LANGUAGE {
                         code_definition = definition.remove(CODE_DEFINITION_KEY);

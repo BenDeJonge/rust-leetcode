@@ -102,7 +102,7 @@ impl Solution {
         // `l1 <-> l2` or `r1 <-> r2`
         // The rightmost number of `l1 l2` is the median.
         // `.. l1 l2 r1 r2`
-        if total % 2 != 0 {
+        if !total.is_multiple_of(2) {
             l1.max(l2) as f64
         }
         // Find the middle two numbers (one l and one r) and average them.
@@ -149,7 +149,7 @@ impl Solution {
             }
         }
 
-        if (nums1.len() + nums2.len()) % 2 != 0 {
+        if !(nums1.len() + nums2.len()).is_multiple_of(2) {
             median1 as f64
         } else {
             (median1 + median2) as f64 / 2.0
@@ -163,7 +163,7 @@ impl Solution {
     pub fn find_median_sorted_arrays_naive<N: Copy + Into<i32>>(nums1: &[N], nums2: &[N]) -> f64 {
         let mut nums: Vec<i32> = nums1.iter().chain(nums2).map(|x| (*x).into()).collect();
         nums.sort();
-        if nums.len() % 2 != 0 {
+        if !nums.len().is_multiple_of(2) {
             nums[nums.len() / 2] as f64
         } else {
             (nums[nums.len() / 2 - 1] + nums[nums.len() / 2]) as f64 / 2.0

@@ -28,8 +28,8 @@ impl Solution {
             current.next = Some(new_node);
             current = current.next.as_mut().unwrap();
             // The list is not yet finished. Add the next value to the heap, which is automatically sorted in O(1).
-            if node.next.is_some() {
-                heap.push(*node.next.unwrap());
+            if let Some(item) = node.next {
+                heap.push(*item);
             }
         }
         dummy.next

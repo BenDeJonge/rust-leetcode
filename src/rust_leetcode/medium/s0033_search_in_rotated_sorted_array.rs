@@ -54,7 +54,7 @@ impl Solution {
         let mut left = 0i32;
         let mut right = len - 1;
         while left <= right {
-            let middle = left + (right - left) / 2;
+            let middle = (left + right) / 2;
             // https://github.com/rust-lang/rust/issues/13909
             // -2 % 7 == -2
             // (-2).rem_euclid(7) == 5
