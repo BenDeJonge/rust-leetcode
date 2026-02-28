@@ -56,7 +56,6 @@ mod tests {
         assert_eq!(Solution::diameter_of_binary_tree(tree_1), 3);
         let tree_2 = TreeNode::from_vec(&[Some(1), Some(2), None]);
         assert_eq!(Solution::diameter_of_binary_tree(tree_2), 1);
-        // TODO: this does not pass as the longest path does not pass through the root.
         let tree_3 = TreeNode::from_vec(&[
             Some(4),
             Some(-7),

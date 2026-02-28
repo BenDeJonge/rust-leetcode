@@ -36,7 +36,6 @@ impl Solution {
     pub fn roman_to_int(s: String) -> i32 {
         println!();
         let mut previous = 0;
-        // TODO this adds numbers twice.
         s.chars()
             .rev()
             .map(|c| {
