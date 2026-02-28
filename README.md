@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 27     |
-| 🟡  | Medium     | 37     |
+| 🟡  | Medium     | 38     |
 | 🔴  | Hard       | 8      |
-|     | **Total**  | **72** |
+|     | **Total**  | **73** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -98,6 +98,7 @@ title in lowercase with spaces replaced by dashes.
 | 0319 | [Bulb Switcher](https://leetcode.com/problems/bulb-switcher/) | math, brainteaser |
 | 0322  | [Coin Change](https://leetcode.com/problems/coin-change/)                                                                       | array, dynamic-programming, breadth-first-search        |
 | 0442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | array, hash-table |
+| 1036 | [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/) | array, breadth-first-search, matrix |
 | 1171 | [Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/) | array, breadth-first-search, matrix |
 | 1306  | [Jump Game III](https://leetcode.com/problems/jump-game-iii/)                                                                   | array, depth-first-search, breadth-first-search         |
 | 1456 | [Find the City With the Smallest Number of Neighbors at a Threshold Distance](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/) | dynamic-programming, graph, shortest-path |

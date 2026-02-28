@@ -35,3 +35,4 @@ mod s0131_palindrome_partitioning;
 mod s0078_subsets;
 mod s0033_search_in_rotated_sorted_array;
 mod s0034_find_first_and_last_position_of_element_in_sorted_array;
+mod s1036_rotting_oranges;
