@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 27     |
-| 🟡  | Medium     | 39     |
+| 🟡  | Medium     | 40     |
 | 🔴  | Hard       | 8      |
-|     | **Total**  | **74** |
+|     | **Total**  | **75** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -92,6 +92,7 @@ title in lowercase with spaces replaced by dashes.
 | 0072  | [Edit Distance](https://leetcode.com/problems/edit-distance/)                                                                   | string, dynamic-programming                             |
 | 0073 | [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/) | array, hash-table, matrix |
 | 0074  | [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)                                                         | array, binary-search, matrix                            |
+| 0075 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | array, two-pointers, sorting |
 | 0078 | [Subsets](https://leetcode.com/problems/subsets/) | array, backtracking, bit-manipulation |
 | 0079  | [Word Search](https://leetcode.com/problems/word-search/)                                                                       | array, string, backtracking, depth-first-search, matrix |
 | 0131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | string, dynamic-programming, backtracking |

@@ -37,3 +37,4 @@ mod s0033_search_in_rotated_sorted_array;
 mod s0034_find_first_and_last_position_of_element_in_sorted_array;
 mod s1036_rotting_oranges;
 mod s0073_set_matrix_zeroes;
+mod s0075_sort_colors;
