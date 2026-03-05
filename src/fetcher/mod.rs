@@ -37,6 +37,7 @@ async fn main() -> Result<(), reqwest::Error> {
             file_writer::create_code_file(&q);
         }
         Err(e) => {
+            println!("Could not fetch question");
             dbg!(e);
         }
     };
