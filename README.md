@@ -11,8 +11,8 @@ world (fight me). Hopefully learning some DSA along the way!
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 27     |
 | 🟡  | Medium     | 41     |
-| 🔴  | Hard       | 8      |
-|     | **Total**  | **76** |
+| 🔴  | Hard       | 9      |
+|     | **Total**  | **77** |
 
 A
 [fetcher module](https://github.com/BenDeJonge/rust-leetcode/tree/main/src/fetcher)
@@ -118,4 +118,5 @@ title in lowercase with spaces replaced by dashes.
 | 0042  | [Longest valid parentheses](https://leetcode.com/problems/trapping-rain-water/)           | array, two pointer, dynamic programming, stack, monotonic stack    |
 | 0051  | [N-Queens](https://leetcode.com/problems/n-queens/)                                       | array, backtracking                                                |
 | 0052  | [N-Queens II](https://leetcode.com/problems/n-queens-ii/)                                 | backtracking                                                       |
+| 0239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | array, queue, sliding-window, heap-priority-queue, monotonic-queue |
 | 1447  | [Jump Game IV](https://leetcode.com/problems/jump-game-iv/)                               | array, hash-table, breadth-first-search                            |
