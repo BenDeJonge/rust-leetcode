@@ -22,7 +22,7 @@ impl Solution {
             i += 1 + slice
                 .iter()
                 .enumerate()
-                .max_by_key(|(idx, &val)| val + idx)
+                .max_by_key(|&(ref idx, &val)| val + idx)
                 .unwrap()
                 .0;
             n_jumps += 1;
