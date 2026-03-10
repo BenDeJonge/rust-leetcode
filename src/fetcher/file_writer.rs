@@ -408,42 +408,41 @@ mod tests {
         let contents = "
         Random stuff before the interesting part.
 
-        ### Easy
+        ### 🟢 Easy
 
         | Index | Name                                              | Links                                                                                                                                                                      | Tags                                                        |
         | ----- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-        | 0001  | Two sum                                           | [Leetcode](https://leetcode.com/problems/two-sum/) / [File](src/rust_leetcode/easy/s0001_two_sum.rs)                                                                       | array, hash table    
+        | 0001  | Two sum                                           | [Leetcode](https://leetcode.com/problems/two-sum/), [File](src/rust_leetcode/easy/s0001_two_sum.rs)                                                                       | array, hash table    
         
         More random stuff in between.
         
-        ### Medium
+        ### 🟡 Medium
         
         | Index | Name                                              | Links                                                                                                                                                                      | Tags                                                        |
         | ----- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-        | 0028  | Find the index of the first occurence in a string | [Leetcode](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) / [File](src/rust_leetcode/easy/s0028_index_of_first_occurence_in_string.rs) | two pointers, string, string matching                       |
-        | 0035  | Search insert position                            | [Leetcode](https://leetcode.com/problems/search-insert-position/) / [File](src/rust_leetcode/easy/s0035_search_insert_position.rs)                                         | array, binary search                                        |
-        | 0070  | Climbing stairs                                   | [Leetcode](https://leetcode.com/problems/climbing-stairs/) / [File](src/rust_leetcode/easy/s0070_climbing_stairs.rs)                                                       | math, dynamic programming, memoization                      |
+        | 0028  | Find the index of the first occurence in a string | [Leetcode](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/), [File](src/rust_leetcode/easy/s0028_index_of_first_occurence_in_string.rs) | two pointers, string, string matching                       |
+        | 0035  | Search insert position                            | [Leetcode](https://leetcode.com/problems/search-insert-position/), [File](src/rust_leetcode/easy/s0035_search_insert_position.rs)                                         | array, binary search                                        |
+        | 0070  | Climbing stairs                                   | [Leetcode](https://leetcode.com/problems/climbing-stairs/), [File](src/rust_leetcode/easy/s0070_climbing_stairs.rs)                                                       | math, dynamic programming, memoization                      |
         ";
-
         assert_eq!(get_readme_line(&question, contents), Some(17));
 
         let contents = "
         Random stuff before the interesting part.
 
-        ### Easy
+        ### 🟢 Easy
 
         | Index | Name                                              | Links                                                                                                                                                                      | Tags                                                        |
         | ----- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-        | 0001  | Two sum                                           | [Leetcode](https://leetcode.com/problems/two-sum/) / [File](src/rust_leetcode/easy/s0001_two_sum.rs)                                                                       | array, hash table    
+        | 0001  | Two sum                                           | [Leetcode](https://leetcode.com/problems/two-sum/), [File](src/rust_leetcode/easy/s0001_two_sum.rs)                                                                       | array, hash table    
         
         More random stuff in between.
 
-        ### Medium
+        ### 🟡 Medium
 
         | Index | Name                                              | Links                                                                                                                                                                      | Tags                                                        |
         | ----- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-        | 0028  | Find the index of the first occurence in a string | [Leetcode](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) / [File](src/rust_leetcode/easy/s0028_index_of_first_occurence_in_string.rs) | two pointers, string, string matching                       |
-        | 0035  | Search insert position                            | [Leetcode](https://leetcode.com/problems/search-insert-position/) / [File](src/rust_leetcode/easy/s0035_search_insert_position.rs)                                         | array, binary search                                        |
+        | 0028  | Find the index of the first occurence in a string | [Leetcode](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/), [File](src/rust_leetcode/easy/s0028_index_of_first_occurence_in_string.rs) | two pointers, string, string matching                       |
+        | 0035  | Search insert position                            | [Leetcode](https://leetcode.com/problems/search-insert-position/), [File](src/rust_leetcode/easy/s0035_search_insert_position.rs)                                         | array, binary search                                        |
         
         ### 🔴 Hard
 
@@ -457,28 +456,28 @@ mod tests {
         let contents = "
         Random stuff before the interesting part.
 
-        ### Easy
+        ### 🟢 Easy
 
         | Index | Name                                              | Links                                                                                                                                                                      | Tags                                                        |
         | ----- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-        | 0001  | Two sum                                           | [Leetcode](https://leetcode.com/problems/two-sum/) / [File](src/rust_leetcode/easy/s0001_two_sum.rs)                                                                       | array, hash table    
+        | 0001  | Two sum                                           | [Leetcode](https://leetcode.com/problems/two-sum/), [File](src/rust_leetcode/easy/s0001_two_sum.rs)                                                                       | array, hash table    
         
         More random stuff in between.
 
-        ### Medium
+        ### 🟡 Medium
 
         | Index | Name                                              | Links                                                                                                                                                                      | Tags                                                        |
         | ----- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-        | 0028  | Find the index of the first occurence in a string | [Leetcode](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) / [File](src/rust_leetcode/easy/s0028_index_of_first_occurence_in_string.rs) | two pointers, string, string matching                       |
-        | 0035  | Search insert position                            | [Leetcode](https://leetcode.com/problems/search-insert-position/) / [File](src/rust_leetcode/easy/s0035_search_insert_position.rs)                                         | array, binary search                                        |
+        | 0028  | Find the index of the first occurence in a string | [Leetcode](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/), [File](src/rust_leetcode/easy/s0028_index_of_first_occurence_in_string.rs) | two pointers, string, string matching                       |
+        | 0035  | Search insert position                            | [Leetcode](https://leetcode.com/problems/search-insert-position/), [File](src/rust_leetcode/easy/s0035_search_insert_position.rs)                                         | array, binary search                                        |
         ";
         // There is a trailing whiteline behind the final table.
-        assert_eq!(get_readme_line(&question, contents), Some(9));
+        assert_eq!(get_readme_line(&question, contents), Some(17));
 
         let contents = "
         Random stuff before the interesting part.
 
-        ### Medium
+        ### 🟡 Medium
 
         | Index | Name                                                                                                                                   | Tags                                                        |
         | ----- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
@@ -489,7 +488,7 @@ mod tests {
         let contents = "
         Random stuff before the interesting part.
 
-        ### Medium
+        ### 🟡 Medium
 
         | Index | Name                                                                                                                                   | Tags                                                        |
         | ----- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
