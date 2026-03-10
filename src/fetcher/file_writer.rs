@@ -38,11 +38,16 @@ pub fn create_code_file(question: &Question) {
 }
 
 fn format_readme_line(question: &Question) -> String {
+    let mut fname = String::from("./");
+    let path = get_path(question).to_string_lossy().replace('\\', "/");
+    fname.push_str(&path);
+
     format!(
-        "| {:0>4} | [{}]({}) | {} |",
+        "| {:0>4} | {} | [Leetcode]({}), [File]({}) | {} |",
         question.id,
         question.title,
         format_url(question),
+        fname,
         question.topic_tags.0.join(", ")
     )
 }
@@ -287,14 +292,14 @@ mod tests {{
 
 fn get_fn_name(question: &Question) -> String {
     let mut buffer = String::new();
-    if let Some(def) = &question.code_definition.0 {
-        if let Some(i) = def.find(FUNCTION_DEF) {
-            for ch in def.get((i + FUNCTION_DEF.len())..).unwrap().chars() {
-                if ch == '(' {
-                    break;
-                }
-                buffer.push(ch);
+    if let Some(def) = &question.code_definition.0
+        && let Some(i) = def.find(FUNCTION_DEF)
+    {
+        for ch in def.get((i + FUNCTION_DEF.len())..).unwrap().chars() {
+            if ch == '(' {
+                break;
             }
+            buffer.push(ch);
         }
     }
     buffer
@@ -405,20 +410,21 @@ mod tests {
 
         ### Easy
 
-        | Index | Name                                                                                                                                   | Tags                                                        |
-        | ----- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-        | 0001  | [Two sum](https://leetcode.com/problems/two-sum/)                                                                                      | array, hash table                                           |
-
+        | Index | Name                                              | Links                                                                                                                                                                      | Tags                                                        |
+        | ----- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+        | 0001  | Two sum                                           | [Leetcode](https://leetcode.com/problems/two-sum/) / [File](src/rust_leetcode/easy/s0001_two_sum.rs)                                                                       | array, hash table    
+        
         More random stuff in between.
-
+        
         ### Medium
-
-        | Index | Name                                                                                                                                   | Tags                                                        |
-        | ----- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-        | 0028  | [Find the index of the first occurence in a string](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | two pointers, string, string matching                       |
-        | 0035  | [Search insert position](https://leetcode.com/problems/search-insert-position/)                                                        | array, binary search                                        |
-        | 0070  | [Climbing stairs](https://leetcode.com/problems/climbing-stairs/)                                                                      | math,
+        
+        | Index | Name                                              | Links                                                                                                                                                                      | Tags                                                        |
+        | ----- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+        | 0028  | Find the index of the first occurence in a string | [Leetcode](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) / [File](src/rust_leetcode/easy/s0028_index_of_first_occurence_in_string.rs) | two pointers, string, string matching                       |
+        | 0035  | Search insert position                            | [Leetcode](https://leetcode.com/problems/search-insert-position/) / [File](src/rust_leetcode/easy/s0035_search_insert_position.rs)                                         | array, binary search                                        |
+        | 0070  | Climbing stairs                                   | [Leetcode](https://leetcode.com/problems/climbing-stairs/) / [File](src/rust_leetcode/easy/s0070_climbing_stairs.rs)                                                       | math, dynamic programming, memoization                      |
         ";
+
         assert_eq!(get_readme_line(&question, contents), Some(17));
 
         let contents = "
@@ -426,18 +432,18 @@ mod tests {
 
         ### Easy
 
-        | Index | Name                                                                                                                                   | Tags                                                        |
-        | ----- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-        | 0001  | [Two sum](https://leetcode.com/problems/two-sum/)                                                                                      | array, hash table                                           |
-
+        | Index | Name                                              | Links                                                                                                                                                                      | Tags                                                        |
+        | ----- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+        | 0001  | Two sum                                           | [Leetcode](https://leetcode.com/problems/two-sum/) / [File](src/rust_leetcode/easy/s0001_two_sum.rs)                                                                       | array, hash table    
+        
         More random stuff in between.
 
         ### Medium
 
-        | Index | Name                                                                                                                                   | Tags                                                        |
-        | ----- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-        | 0028  | [Find the index of the first occurence in a string](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | two pointers, string, string matching                       |
-        | 0035  | [Search insert position](https://leetcode.com/problems/search-insert-position/)                                                        | array, binary search                                        |
+        | Index | Name                                              | Links                                                                                                                                                                      | Tags                                                        |
+        | ----- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+        | 0028  | Find the index of the first occurence in a string | [Leetcode](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) / [File](src/rust_leetcode/easy/s0028_index_of_first_occurence_in_string.rs) | two pointers, string, string matching                       |
+        | 0035  | Search insert position                            | [Leetcode](https://leetcode.com/problems/search-insert-position/) / [File](src/rust_leetcode/easy/s0035_search_insert_position.rs)                                         | array, binary search                                        |
         
         ### 🔴 Hard
 
@@ -451,12 +457,20 @@ mod tests {
         let contents = "
         Random stuff before the interesting part.
 
+        ### Easy
+
+        | Index | Name                                              | Links                                                                                                                                                                      | Tags                                                        |
+        | ----- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+        | 0001  | Two sum                                           | [Leetcode](https://leetcode.com/problems/two-sum/) / [File](src/rust_leetcode/easy/s0001_two_sum.rs)                                                                       | array, hash table    
+        
+        More random stuff in between.
+
         ### Medium
 
-        | Index | Name                                                                                                                                   | Tags                                                        |
-        | ----- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-        | 0028  | [Find the index of the first occurence in a string](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | two pointers, string, string matching                       |
-        | 0035  | [Search insert position](https://leetcode.com/problems/search-insert-position/)                                                        | array, binary search                                        |
+        | Index | Name                                              | Links                                                                                                                                                                      | Tags                                                        |
+        | ----- | ------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
+        | 0028  | Find the index of the first occurence in a string | [Leetcode](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) / [File](src/rust_leetcode/easy/s0028_index_of_first_occurence_in_string.rs) | two pointers, string, string matching                       |
+        | 0035  | Search insert position                            | [Leetcode](https://leetcode.com/problems/search-insert-position/) / [File](src/rust_leetcode/easy/s0035_search_insert_position.rs)                                         | array, binary search                                        |
         ";
         // There is a trailing whiteline behind the final table.
         assert_eq!(get_readme_line(&question, contents), Some(9));
