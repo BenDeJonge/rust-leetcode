@@ -189,10 +189,10 @@ impl From<String> for CodeDefinitionFromLeetcode {
             serde_json::from_str(&value);
         if let Ok(definitions) = available_map {
             for mut definition in definitions {
-                if let Some(language) = definition.get(LANGUAGE_KEY) {
-                    if language == WANTED_LANGUAGE {
-                        code_definition = definition.remove(CODE_DEFINITION_KEY);
-                    }
+                if let Some(language) = definition.get(LANGUAGE_KEY)
+                    && language == WANTED_LANGUAGE
+                {
+                    code_definition = definition.remove(CODE_DEFINITION_KEY);
                 }
             }
         }
