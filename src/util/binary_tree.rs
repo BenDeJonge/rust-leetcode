@@ -76,3 +76,84 @@ impl<T> TreeNode<T> {
         root
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use std::{cell::RefCell, rc::Rc};
+
+    use super::TreeNode;
+
+    #[test]
+    fn test_from_vec() {
+        //     3
+        //    / \
+        //   1   4
+        //    \
+        //     2
+        assert_eq!(
+            TreeNode::from_vec(&[Some(3), Some(1), Some(4), None, Some(2)]),
+            Some(Rc::new(RefCell::new(TreeNode {
+                val: 3,
+                left: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 1,
+                    left: None,
+                    right: Some(Rc::new(RefCell::new(TreeNode {
+                        val: 2,
+                        left: None,
+                        right: None
+                    })))
+                }))),
+                right: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 4,
+                    left: None,
+                    right: None
+                })))
+            })))
+        );
+
+        //       5
+        //      / \
+        //     3   6
+        //    / \
+        //   2   4
+        //  /
+        // 1
+        assert_eq!(
+            TreeNode::from_vec(&[
+                Some(5),
+                Some(3),
+                Some(6),
+                Some(2),
+                Some(4),
+                None,
+                None,
+                Some(1)
+            ]),
+            Some(Rc::new(RefCell::new(TreeNode {
+                val: 5,
+                left: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 3,
+                    left: Some(Rc::new(RefCell::new(TreeNode {
+                        val: 2,
+                        left: Some(Rc::new(RefCell::new(TreeNode {
+                            val: 1,
+                            left: None,
+                            right: None
+                        }))),
+                        right: None
+                    }))),
+                    right: Some(Rc::new(RefCell::new(TreeNode {
+                        val: 4,
+                        left: None,
+                        right: None
+                    })))
+                }))),
+                right: Some(Rc::new(RefCell::new(TreeNode {
+                    val: 6,
+                    left: None,
+                    right: None
+                })))
+            })))
+        );
+    }
+}
