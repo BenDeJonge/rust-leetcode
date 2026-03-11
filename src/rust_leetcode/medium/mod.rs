@@ -30,6 +30,7 @@ mod s0078_subsets;
 mod s0079_word_search;
 mod s0131_palindrome_partitioning;
 mod s0167_two_sum_ii;
+mod s0230_kth_smallest_element_in_a_bst;
 mod s0319_bulb_switcher;
 mod s0322_coin_change;
 mod s0442_find_all_duplicates_in_an_array;

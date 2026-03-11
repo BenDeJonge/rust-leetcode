@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 27     |
-| 🟡  | Medium     | 41     |
-| 🔴  | Hard       | 10     |
-|     | **Total**  | **78** |
+| 🟡  | Medium     | 42     |
+| 🔴  | Hard       | 10      |
+|     | **Total**  | **79** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -95,6 +95,7 @@ title in lowercase with spaces replaced by dashes.
 | 0079  | Word Search                                                                 | [LeetCode](https://leetcode.com/problems/word-search/), [File](./src/rust_leetcode/medium/s0079_word_search.rs)                                                                                                                                 | array, string, backtracking, depth-first-search, matrix |
 | 0131  | Palindrome Partitioning                                                     | [LeetCode](https://leetcode.com/problems/palindrome-partitioning/), [File](./src/rust_leetcode/medium/s0131_palindrome_partitioning.rs)                                                                                                         | string, dynamic-programming, backtracking               |
 | 0167  | Two sum ii                                                                  | [LeetCode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/), [File](./src/rust_leetcode/medium/s0167_two_sum_ii.rs)                                                                                                             | array, two pointers, binary search                      |
+| 0230 | Kth Smallest Element in a BST | [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-bst/), [File](./src/rust_leetcode/medium/s0230_kth_smallest_element_in_a_bst.rs) | tree, depth-first-search, binary-search-tree, binary-tree |
 | 0319  | Bulb Switcher                                                               | [LeetCode](https://leetcode.com/problems/bulb-switcher/), [File](./src/rust_leetcode/medium/s0319_bulb_switcher.rs)                                                                                                                             | math, brainteaser                                       |
 | 0322  | Coin Change                                                                 | [LeetCode](https://leetcode.com/problems/coin-change/), [File](./src/rust_leetcode/medium/s0322_coin_change.rs)                                                                                                                                 | array, dynamic-programming, breadth-first-search        |
 | 0442  | Find All Duplicates in an Array                                             | [LeetCode](https://leetcode.com/problems/find-all-duplicates-in-an-array/), [File](./src/rust_leetcode/medium/s0442_find_all_duplicates_in_an_array.rs)                                                                                         | array, hash-table                                       |
