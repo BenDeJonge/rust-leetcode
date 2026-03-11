@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 27     |
-| 🟡  | Medium     | 42     |
+| 🟡  | Medium     | 43     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **79** |
+|     | **Total**  | **80** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -93,6 +93,7 @@ title in lowercase with spaces replaced by dashes.
 | 0075  | Sort Colors                                                                 | [LeetCode](https://leetcode.com/problems/sort-colors/), [File](./src/rust_leetcode/medium/s0075_sort_colors.rs)                                                                                                                                 | array, two-pointers, sorting                            |
 | 0078  | Subsets                                                                     | [LeetCode](https://leetcode.com/problems/subsets/), [File](./src/rust_leetcode/medium/s0078_subsets.rs)                                                                                                                                         | array, backtracking, bit-manipulation                   |
 | 0079  | Word Search                                                                 | [LeetCode](https://leetcode.com/problems/word-search/), [File](./src/rust_leetcode/medium/s0079_word_search.rs)                                                                                                                                 | array, string, backtracking, depth-first-search, matrix |
+| 0098 | Validate Binary Search Tree | [Leetcode](https://leetcode.com/problems/validate-binary-search-tree/), [File](./src/rust_leetcode/medium/s0098_validate_binary_search_tree.rs) | tree, depth-first-search, binary-search-tree, binary-tree |
 | 0131  | Palindrome Partitioning                                                     | [LeetCode](https://leetcode.com/problems/palindrome-partitioning/), [File](./src/rust_leetcode/medium/s0131_palindrome_partitioning.rs)                                                                                                         | string, dynamic-programming, backtracking               |
 | 0167  | Two sum ii                                                                  | [LeetCode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/), [File](./src/rust_leetcode/medium/s0167_two_sum_ii.rs)                                                                                                             | array, two pointers, binary search                      |
 | 0230 | Kth Smallest Element in a BST | [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-bst/), [File](./src/rust_leetcode/medium/s0230_kth_smallest_element_in_a_bst.rs) | tree, depth-first-search, binary-search-tree, binary-tree |
