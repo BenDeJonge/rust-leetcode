@@ -56,7 +56,6 @@ impl Bracket {
 
 impl Solution {
     pub fn is_valid(s: String) -> bool {
-        // let mut open_count = [0; 3];
         let mut next_needed_close = <Vec<BracketType>>::new();
         for (i, c) in s.chars().enumerate() {
             // We need to close more brackets than there are remaining.

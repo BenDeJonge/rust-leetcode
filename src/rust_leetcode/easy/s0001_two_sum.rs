@@ -11,12 +11,12 @@ pub struct Solution {}
 impl Solution {
     /// Store each number in a hashmap with its index.
     /// We have found a solution when the map already contains the difference between a number and the target.
-    fn two_sum_option(nums: Vec<i32>, target: i32) -> Option<Vec<i32>> {
+    fn two_sum_option(nums: &[i32], target: i32) -> Option<[i32; 2]> {
         let mut hash_map = HashMap::<i32, usize>::new();
         for (i, num) in nums.iter().enumerate() {
             let difference = target - *num;
             match hash_map.get(&difference) {
-                Some(j) => return Some(vec![i as i32, *j as i32]),
+                Some(j) => return Some([i as i32, *j as i32]),
                 None => {
                     hash_map.insert(*num, i);
                 }
@@ -27,7 +27,7 @@ impl Solution {
 
     /// Convert to wanted return type.
     fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        Self::two_sum_option(nums, target).unwrap()
+        Self::two_sum_option(&nums, target).unwrap().to_vec()
     }
 }
 

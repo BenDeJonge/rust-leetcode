@@ -7,36 +7,9 @@ pub struct Solution {}
 
 impl Solution {
     pub fn longest_common_prefix(strs: Vec<String>) -> String {
-        // The current prefix.
-        let mut prefix = strs
-            .first()
-            .expect("strs is empty")
-            .chars()
-            .collect::<Vec<char>>();
-        for s in strs.iter() {
-            // The prefix is no longer matching with the latest string.
-            if prefix.is_empty() {
-                break;
-            }
-            // Constructing a new prefix.
-            let mut new_prefix = <Vec<char>>::new();
-            for (c_p, c_s) in prefix.iter().zip(s.chars()) {
-                // The prefix only matches until here with the current word.
-                if *c_p != c_s {
-                    break;
-                }
-                // Add a new matching letter.
-                new_prefix.push(c_s);
-            }
-            prefix = new_prefix;
-        }
-        prefix.iter().collect()
-    }
-
-    pub fn longest_common_prefix_ideomatic(strs: Vec<String>) -> String {
         strs.into_iter()
             // Recursively apply the function. The output (intially the 1st element) is stored in acc (accumulated) and
-            // every element is processed one after the other. The ouput is then stored again in acc.
+            // every element is processed one after the other. The output is then stored again in acc.
             .reduce(|acc, s| {
                 acc.chars()
                     .zip(s.chars())
@@ -45,6 +18,33 @@ impl Solution {
                     .collect()
             })
             .unwrap()
+    }
+
+    pub fn longest_common_prefix_simple(strs: Vec<String>) -> String {
+        // The current prefix is the first word.
+        let mut prefix = strs
+            .first()
+            .expect("strs is empty")
+            .chars()
+            .collect::<Vec<char>>();
+        // Check all other words.
+        for s in strs.iter().skip(1) {
+            // Prefix cannot be longer than shortest word.
+            if prefix.len() > s.len() {
+                prefix.drain(s.len()..);
+            }
+            for (i, c_s) in s.chars().enumerate() {
+                if i >= prefix.len() {
+                    break;
+                }
+                // The prefix only matches until here with the current word.
+                if prefix[i] != c_s {
+                    prefix.drain(i..);
+                    break;
+                }
+            }
+        }
+        prefix.iter().collect()
     }
 }
 
