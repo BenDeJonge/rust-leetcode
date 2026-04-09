@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 27     |
-| 🟡  | Medium     | 45     |
+| 🟡  | Medium     | 46     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **82** |
+|     | **Total**  | **83** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -97,6 +97,7 @@ title in lowercase with spaces replaced by dashes.
 | 0102 | Binary Tree Level Order Traversal | [Leetcode](https://leetcode.com/problems/binary-tree-level-order-traversal/), [File](./src/rust_leetcode/medium/s0102_binary_tree_level_order_traversal.rs) | tree, breadth-first-search, binary-tree |
 | 0131  | Palindrome Partitioning                                                     | [LeetCode](https://leetcode.com/problems/palindrome-partitioning/), [File](./src/rust_leetcode/medium/s0131_palindrome_partitioning.rs)                                                                                                         | string, dynamic-programming, backtracking               |
 | 0167  | Two sum ii                                                                  | [LeetCode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/), [File](./src/rust_leetcode/medium/s0167_two_sum_ii.rs)                                                                                                             | array, two pointers, binary search                      |
+| 0215 | Kth Largest Element in an Array | [Leetcode](https://leetcode.com/problems/kth-largest-element-in-an-array/), [File](./src/rust_leetcode/medium/s0215_kth_largest_element_in_an_array.rs) | array, divide-and-conquer, sorting, heap-priority-queue, quickselect |
 | 0230 | Kth Smallest Element in a BST | [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-bst/), [File](./src/rust_leetcode/medium/s0230_kth_smallest_element_in_a_bst.rs) | tree, depth-first-search, binary-search-tree, binary-tree |
 | 0319  | Bulb Switcher                                                               | [LeetCode](https://leetcode.com/problems/bulb-switcher/), [File](./src/rust_leetcode/medium/s0319_bulb_switcher.rs)                                                                                                                             | math, brainteaser                                       |
 | 0322  | Coin Change                                                                 | [LeetCode](https://leetcode.com/problems/coin-change/), [File](./src/rust_leetcode/medium/s0322_coin_change.rs)                                                                                                                                 | array, dynamic-programming, breadth-first-search        |
