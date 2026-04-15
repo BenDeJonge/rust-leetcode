@@ -59,7 +59,7 @@ impl Solution {
             match coin.cmp(&amount) {
                 cmp::Ordering::Equal => return Some(n_taken + 1),
                 cmp::Ordering::Less => {
-                    return Self::coin_change_recursive(coins, amount - coin, n_taken + 1)
+                    return Self::coin_change_recursive(coins, amount - coin, n_taken + 1);
                 }
                 cmp::Ordering::Greater => continue,
             }

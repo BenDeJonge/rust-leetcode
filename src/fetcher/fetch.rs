@@ -1,4 +1,4 @@
-use super::question::{Question, RawQuestion, QUESTION_QUERY_STRING};
+use super::question::{QUESTION_QUERY_STRING, Question, RawQuestion};
 
 use reqwest::Client;
 use serde_json::json;
