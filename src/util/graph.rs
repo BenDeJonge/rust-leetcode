@@ -30,6 +30,7 @@ pub struct Vertex<'g, T> {
     pub edges: &'g [usize],
 }
 
+/// Adjacency list representation of a graph.
 #[derive(Debug, PartialEq)]
 pub struct Graph<T> {
     vertices: Vec<T>,
