@@ -9,10 +9,10 @@ world (fight me). Hopefully learning some DSA along the way!
 
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
-| 🟢  | Easy       | 27     |
+| 🟢  | Easy       | 28     |
 | 🟡  | Medium     | 46     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **83** |
+|     | **Total**  | **84** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -54,6 +54,7 @@ title in lowercase with spaces replaced by dashes.
 | 0234  | Palindrome Linked List                            | [LeetCode](https://leetcode.com/problems/palindrome-linked-list/), [File](./src/rust_leetcode/easy/s0234_palindrome_linked_list.rs)                                                        | linked-list, two-pointers, stack, recursion                 |
 | 0283  | Move zeroes                                       | [LeetCode](https://leetcode.com/problems/move-zeroes/), [File](./src/rust_leetcode/easy/s0283_move_zeroes.rs)                                                                              | array, two pointer                                          |
 | 0448  | Find All Numbers Disappeared in an Array          | [LeetCode](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/), [File](./src/rust_leetcode/easy/s0448_find_all_numbers_disappeared_in_an_array.rs)                    | array, hash-table                                           |
+| 0496 | Next Greater Element I | [Leetcode](https://leetcode.com/problems/next-greater-element-i/), [File](./src/rust_leetcode/easy/s0496_next_greater_element_i.rs) | array, hash-table, stack, monotonic-stack |
 | 0543  | Diameter of a binary tree                         | [LeetCode](https://leetcode.com/problems/diameter-of-a-binary-tree/), [File](./src/rust_leetcode/easy/s0543_diameter_of_a_binary_tree.rs)                                                  | tree, depth-first search, binary tree                       |
 | 0704  | Binary search                                     | [LeetCode](https://leetcode.com/problems/binary-search/), [File](./src/rust_leetcode/easy/s0704_binary_search.rs)                                                                          | array, binary search                                        |
 | 1518  | Water bottles                                     | [LeetCode](https://leetcode.com/problems/water-bottles/), [File](./src/rust_leetcode/easy/s1518_water_bottles.rs)                                                                          | math, simulation                                            |

@@ -21,6 +21,7 @@ mod s0226_invert_binary_tree;
 mod s0234_palindrome_linked_list;
 mod s0283_move_zeroes;
 mod s0448_find_all_numbers_disappeared_in_an_array;
+mod s0496_next_greater_element_i;
 mod s0543_diameter_of_a_binary_tree;
 mod s0704_binary_search;
 mod s1518_water_bottles;
