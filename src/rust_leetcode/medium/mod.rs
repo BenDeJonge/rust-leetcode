@@ -37,6 +37,7 @@ mod s0230_kth_smallest_element_in_a_bst;
 mod s0319_bulb_switcher;
 mod s0322_coin_change;
 mod s0442_find_all_duplicates_in_an_array;
+mod s0503_next_greater_element_ii;
 mod s0560_subarray_sum_equals_k;
 mod s0739_daily_temperatures;
 mod s1036_rotting_oranges;

@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 28     |
-| 🟡  | Medium     | 46     |
+| 🟡  | Medium     | 47     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **84** |
+|     | **Total**  | **85** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -103,6 +103,7 @@ title in lowercase with spaces replaced by dashes.
 | 0319  | Bulb Switcher                                                               | [LeetCode](https://leetcode.com/problems/bulb-switcher/), [File](./src/rust_leetcode/medium/s0319_bulb_switcher.rs)                                                                                                                             | math, brainteaser                                       |
 | 0322  | Coin Change                                                                 | [LeetCode](https://leetcode.com/problems/coin-change/), [File](./src/rust_leetcode/medium/s0322_coin_change.rs)                                                                                                                                 | array, dynamic-programming, breadth-first-search        |
 | 0442  | Find All Duplicates in an Array                                             | [LeetCode](https://leetcode.com/problems/find-all-duplicates-in-an-array/), [File](./src/rust_leetcode/medium/s0442_find_all_duplicates_in_an_array.rs)                                                                                         | array, hash-table                                       |
+| 0503 | Next Greater Element II | [Leetcode](https://leetcode.com/problems/next-greater-element-ii/), [File](./src/rust_leetcode/medium/s0503_next_greater_element_ii.rs) | array, stack, monotonic-stack |
 | 0560 | Subarray Sum Equals K | [Leetcode](https://leetcode.com/problems/subarray-sum-equals-k/), [File](./src/rust_leetcode/medium/s0560_subarray_sum_equals_k.rs) | array, hash-table, prefix-sum |
 | 0739  | Daily Temperatures                                                          | [LeetCode](https://leetcode.com/problems/daily-temperatures/), [File](./src/rust_leetcode/medium/s0739_daily_temperatures.rs)                                                                                                                   | array, stack, monotonic-stack                           |
 | 1036  | Rotting Oranges                                                             | [LeetCode](https://leetcode.com/problems/rotting-oranges/), [File](./src/rust_leetcode/medium/s1036_rotting_oranges.rs)                                                                                                                         | array, breadth-first-search, matrix                     |
