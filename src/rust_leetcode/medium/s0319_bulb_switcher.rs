@@ -49,6 +49,14 @@ impl Solution {
     ///
     /// The only values of `i` that qualify are 1, 4 and 9,
     /// which are the square numbers.
+    ///
+    /// This can be trivially explained mathematically.
+    /// An integer `i` is divisible by `d` if `i / d` is also an integer.
+    /// Therefore, every divisor `d` has a second, paired, divisor `i / d`.
+    /// So, for most numbers there is an even number of (paired) divisors.
+    /// However, for a perfect square, `s`, division by `r = sqrt(d)` is
+    /// `s / r = r`. Therefore, the root is paired with itself, adding 1 to
+    /// the otherwise equal number of divisors, making this odd.
     pub fn bulb_switch(n: i32) -> i32 {
         n.isqrt()
     }
