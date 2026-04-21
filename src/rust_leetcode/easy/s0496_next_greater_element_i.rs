@@ -41,7 +41,7 @@ pub struct Solution {}
 impl Solution {
     /// Solve in O(n(nums1) + n(nums2))
     ///
-    /// Make a monotonically increasing stack.
+    /// Make a monotonically decreasing stack.
     /// For each number, keep popping the stack until a larger number is found.
     /// For every popped number, we know the current is a larger one.
     /// We can track this in a Hashmap.
