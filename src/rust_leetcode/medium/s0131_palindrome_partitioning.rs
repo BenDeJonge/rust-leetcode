@@ -20,13 +20,13 @@ pub struct Solution {}
 impl Solution {
     // LeetCode does not use reasonable Rust function signatures.
     pub fn partition(s: String) -> Vec<Vec<String>> {
-        Solution::partition_as_ref(&s)
+        Self::partition_as_ref(&s)
     }
 
     fn partition_as_ref(s: &str) -> Vec<Vec<String>> {
         let mut current = vec![];
         let mut solutions = vec![];
-        Solution::helper(s.as_bytes(), 0, &mut current, &mut solutions);
+        Self::helper(s.as_bytes(), 0, &mut current, &mut solutions);
         solutions
     }
 
@@ -39,9 +39,9 @@ impl Solution {
         // Explore until s.len because slicing is exclusive at the upper bound.
         for end in (start + 1)..=s.len() {
             let substring = &s[start..end];
-            if Solution::is_palindrome(substring) {
+            if Self::is_palindrome(substring) {
                 current.push(String::from_utf8(substring.to_vec()).unwrap());
-                Solution::helper(s, end, current, solutions);
+                Self::helper(s, end, current, solutions);
                 // Backtracking.
                 current.pop();
             }

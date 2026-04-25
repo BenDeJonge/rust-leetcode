@@ -27,7 +27,7 @@ impl Solution {
     pub fn subsets(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut current = vec![];
         let mut solutions = vec![];
-        Solution::helper(&nums, 0, &mut current, &mut solutions);
+        Self::helper(&nums, 0, &mut current, &mut solutions);
         Vec::from_iter(solutions)
     }
 
@@ -37,7 +37,7 @@ impl Solution {
         for end in start..nums.len() {
             // Add the current number.
             current.push(nums[end]);
-            Solution::helper(nums, end + 1, current, solutions);
+            Self::helper(nums, end + 1, current, solutions);
             current.pop();
         }
     }

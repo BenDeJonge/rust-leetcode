@@ -36,7 +36,7 @@ impl Solution {
                 .pow(digits.len() as u32),
         );
         let mut current_word: Vec<char> = Vec::with_capacity(digits.len());
-        Solution::letter_combinations_helper(
+        Self::letter_combinations_helper(
             &mut words,
             &mut current_word,
             &digits.chars().collect::<Vec<char>>(),
@@ -64,7 +64,7 @@ impl Solution {
             for letter in letters {
                 // ... add the letter to the current word ...
                 current_word.push(letter);
-                Solution::letter_combinations_helper(
+                Self::letter_combinations_helper(
                     words,
                     current_word,
                     digits,

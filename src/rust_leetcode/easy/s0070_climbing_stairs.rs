@@ -41,7 +41,7 @@ impl Solution {
     /// | f(n) | 1 | 1 | 2 | 3 | 5 | 8 | 13 |
     pub fn climb_stairs(n: i32) -> i32 {
         let mut cache = <HashMap<i32, i32>>::new();
-        Solution::fib(n, &mut cache)
+        Self::fib(n, &mut cache)
     }
 
     pub fn fib(n: i32, cache: &mut HashMap<i32, i32>) -> i32 {
@@ -51,7 +51,7 @@ impl Solution {
         let answer = if n < 2 {
             1
         } else {
-            Solution::fib(n - 1, cache) + Solution::fib(n - 2, cache)
+            Self::fib(n - 1, cache) + Self::fib(n - 2, cache)
         };
         cache.insert(n, answer);
         answer

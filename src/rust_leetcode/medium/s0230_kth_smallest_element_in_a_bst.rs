@@ -29,13 +29,13 @@ pub struct Solution {}
 
 impl Solution {
     pub fn kth_smallest(root: OptNode<i32>, k: i32) -> i32 {
-        Solution::kth_smallest_ref(root.as_ref(), k as usize)
+        Self::kth_smallest_ref(root.as_ref(), k as usize)
     }
 
     pub fn kth_smallest_ref<T: Copy>(root: Option<&Rc<RefCell<TreeNode<T>>>>, k: usize) -> T {
         let mut sol = None;
         let mut k = k;
-        Solution::visit(root.unwrap(), &mut k, &mut sol);
+        Self::visit(root.unwrap(), &mut k, &mut sol);
         sol.unwrap()
     }
 
@@ -54,7 +54,7 @@ impl Solution {
 
         // Explore the left subtree.
         if let Some(left) = &current.left {
-            Solution::visit(left, k, sol);
+            Self::visit(left, k, sol);
         }
         // Explore the node itself.
         if sol.is_none() {
@@ -65,7 +65,7 @@ impl Solution {
         }
         // Explore the right subtree.
         if let Some(right) = &current.right {
-            Solution::visit(right, k, sol);
+            Self::visit(right, k, sol);
         }
     }
 }

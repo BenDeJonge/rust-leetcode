@@ -24,12 +24,12 @@ impl Solution {
             (Some(l1), Some(l2)) => {
                 if l1.val < l2.val {
                     Some(Box::new(ListNode {
-                        next: Solution::merge_two_lists(l1.next, Some(l2)),
+                        next: Self::merge_two_lists(l1.next, Some(l2)),
                         val: l1.val,
                     }))
                 } else {
                     Some(Box::new(ListNode {
-                        next: Solution::merge_two_lists(Some(l1), l2.next),
+                        next: Self::merge_two_lists(Some(l1), l2.next),
                         val: l2.val,
                     }))
                 }

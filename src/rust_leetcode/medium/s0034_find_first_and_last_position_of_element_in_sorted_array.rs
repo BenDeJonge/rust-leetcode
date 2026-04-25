@@ -49,7 +49,7 @@ impl Solution {
     /// - Time complexity: `O(log(n)) + 2 * O(log(n / 2)) = O(log(n))`
     /// - Space complexity: `O(1)`  
     pub fn search_range(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        Solution::search_range_manual(&nums, target)
+        Self::search_range_manual(&nums, target)
             .map(|arr| vec![arr[0] as i32, arr[1] as i32])
             .unwrap_or(vec![-1, -1])
     }
@@ -85,10 +85,8 @@ impl Solution {
             let i_min_usize = i_min as usize;
             let i_max_usize = i_max as usize;
             Some([
-                i_min_usize
-                    + (Solution::get_bound(&nums[i_min_usize..=i_usize], &target, Bound::Left)),
-                i_usize
-                    + (Solution::get_bound(&nums[i_usize..=i_max_usize], &target, Bound::Right)),
+                i_min_usize + (Self::get_bound(&nums[i_min_usize..=i_usize], &target, Bound::Left)),
+                i_usize + (Self::get_bound(&nums[i_usize..=i_max_usize], &target, Bound::Right)),
             ])
         } else {
             None

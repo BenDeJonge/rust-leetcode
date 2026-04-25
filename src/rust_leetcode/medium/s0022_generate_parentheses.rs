@@ -11,7 +11,7 @@ impl Solution {
         let n_usize = n as usize;
         let mut done = <Vec<String>>::with_capacity(2usize.pow(n as u32));
         let mut current = <Vec<char>>::with_capacity(n_usize * 2);
-        Solution::dfs(&mut done, &mut current, n_usize, 0, 0);
+        Self::dfs(&mut done, &mut current, n_usize, 0, 0);
         done
     }
 
@@ -44,12 +44,12 @@ impl Solution {
         // There is room for open parentheses.
         if left < n {
             current.push(P_OPEN);
-            Solution::dfs(done, current, n, left + 1, right)
+            Self::dfs(done, current, n, left + 1, right)
         }
         // There are parentheses to be closed.
         if right < left {
             current.push(P_CLOSED);
-            Solution::dfs(done, current, n, left, right + 1)
+            Self::dfs(done, current, n, left, right + 1)
         }
         // Backtracking.
         current.pop();
@@ -59,7 +59,7 @@ impl Solution {
         let n_usize = n as usize;
         let mut done = <Vec<String>>::with_capacity(2usize.pow(n as u32));
         let mut current = <Vec<char>>::with_capacity(n_usize * 2);
-        Solution::generate_parenthesis_helper(&mut done, &mut current, n_usize, 0, 0);
+        Self::generate_parenthesis_helper(&mut done, &mut current, n_usize, 0, 0);
         done
     }
 
@@ -77,19 +77,19 @@ impl Solution {
         // All parenthesis are currently closed, so we have to add an open one.
         else if n_open == n_closed {
             current.push(P_OPEN);
-            Solution::generate_parenthesis_helper(done, current, n, n_open + 1, n_closed);
+            Self::generate_parenthesis_helper(done, current, n, n_open + 1, n_closed);
         }
         // We can only close parentheses. The opposite scenario does not exist, as those parentheses would be invalid.
         else if n_open == n {
             current.push(P_CLOSED);
-            Solution::generate_parenthesis_helper(done, current, n, n_open, n_closed + 1);
+            Self::generate_parenthesis_helper(done, current, n, n_open, n_closed + 1);
         }
         // We can both open or close a pair of parentheses.
         else {
             current.push(P_OPEN);
-            Solution::generate_parenthesis_helper(done, current, n, n_open + 1, n_closed);
+            Self::generate_parenthesis_helper(done, current, n, n_open + 1, n_closed);
             current.push(P_CLOSED);
-            Solution::generate_parenthesis_helper(done, current, n, n_open, n_closed + 1);
+            Self::generate_parenthesis_helper(done, current, n, n_open, n_closed + 1);
         }
         // Backtracking.
         current.pop();

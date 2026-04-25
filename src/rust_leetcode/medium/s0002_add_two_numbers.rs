@@ -25,7 +25,7 @@ impl Solution {
                 if sum < 10 {
                     Some(Box::new(ListNode {
                         val: sum,
-                        next: Solution::add_two_numbers(node1.next, node2.next),
+                        next: Self::add_two_numbers(node1.next, node2.next),
                     }))
                 }
                 // We need to carry over the one.
@@ -34,9 +34,9 @@ impl Solution {
                     Some(Box::new(ListNode {
                         // Move the carry.
                         val: sum - 10,
-                        next: Solution::add_two_numbers(
+                        next: Self::add_two_numbers(
                             // Recursively add the carry to the first node's value.
-                            Solution::add_two_numbers(carry, node1.next),
+                            Self::add_two_numbers(carry, node1.next),
                             // Add the second node's value.
                             node2.next,
                         ),
