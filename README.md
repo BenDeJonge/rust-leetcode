@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 28     |
-| 🟡  | Medium     | 49     |
+| 🟡  | Medium     | 50     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **87** |
+|     | **Total**  | **88** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -101,6 +101,7 @@ title in lowercase with spaces replaced by dashes.
 | 0215 | Kth Largest Element in an Array | [Leetcode](https://leetcode.com/problems/kth-largest-element-in-an-array/), [File](./src/rust_leetcode/medium/s0215_kth_largest_element_in_an_array.rs) | array, divide-and-conquer, sorting, heap-priority-queue, quickselect |
 | 0230 | Kth Smallest Element in a BST | [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-bst/), [File](./src/rust_leetcode/medium/s0230_kth_smallest_element_in_a_bst.rs) | tree, depth-first-search, binary-search-tree, binary-tree |
 | 0238 | Product of Array Except Self | [Leetcode](https://leetcode.com/problems/product-of-array-except-self/), [File](./src/rust_leetcode/medium/s0238_product_of_array_except_self.rs) | array, prefix-sum |
+| 0240 | Search a 2D Matrix II | [Leetcode](https://leetcode.com/problems/search-a-2d-matrix-ii/), [File](./src/rust_leetcode/medium/s0240_search_a_2d_matrix_ii.rs) | array, binary-search, divide-and-conquer, matrix |
 | 0319  | Bulb Switcher                                                               | [LeetCode](https://leetcode.com/problems/bulb-switcher/), [File](./src/rust_leetcode/medium/s0319_bulb_switcher.rs)                                                                                                                             | math, brainteaser                                       |
 | 0322  | Coin Change                                                                 | [LeetCode](https://leetcode.com/problems/coin-change/), [File](./src/rust_leetcode/medium/s0322_coin_change.rs)                                                                                                                                 | array, dynamic-programming, breadth-first-search        |
 | 0442  | Find All Duplicates in an Array                                             | [LeetCode](https://leetcode.com/problems/find-all-duplicates-in-an-array/), [File](./src/rust_leetcode/medium/s0442_find_all_duplicates_in_an_array.rs)                                                                                         | array, hash-table                                       |
