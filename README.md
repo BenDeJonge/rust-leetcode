@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 28     |
-| 🟡  | Medium     | 51     |
+| 🟡  | Medium     | 52     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **89** |
+|     | **Total**  | **90** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -67,6 +67,7 @@ title in lowercase with spaces replaced by dashes.
 | 0002  | Add two numbers                                                             | [LeetCode](https://leetcode.com/problems/add-two-numbers/), [File](./src/rust_leetcode/medium/s0002_add_two_numbers.rs)                                                                                                                         | linked list, math, recursion                            |
 | 0003  | Longest substring without repeating characters                              | [LeetCode](https://leetcode.com/problems/longest-substring-without-repeating-characters/), [File](./src/rust_leetcode/medium/s0003_longest_substring_without_repeating_characters.rs)                                                           | hash table, string, sliding window                      |
 | 0005  | Longest palindromic substring                                               | [LeetCode](https://leetcode.com/problems/longest-palindromic-substring/), [File](./src/rust_leetcode/medium/s0005_longest_palindromic_substring.rs)                                                                                             | two pointers, string, dynamic programming               |
+| 0006 | Zigzag Conversion | [Leetcode](https://leetcode.com/problems/zigzag-conversion/), [File](./src/rust_leetcode/medium/s0006_zigzag_conversion.rs) | string |
 | 0011  | Container with most water                                                   | [LeetCode](https://leetcode.com/problems/container-with-most-water/), [File](./src/rust_leetcode/medium/s0011_container_with_most_water.rs)                                                                                                     | array, two pointers, greedy                             |
 | 0015  | 3Sum                                                                        | [LeetCode](https://leetcode.com/problems/3sum/), [File](./src/rust_leetcode/medium/s0015_3sum.rs)                                                                                                                                               | array, two pointers, sorting                            |
 | 0017  | Letter combinations of a phone number                                       | [LeetCode](https://leetcode.com/problems/letter-combinations-of-a-phone-number/), [File](./src/rust_leetcode/medium/s0017_letter_combinations_of_a_phone_number.rs)                                                                             | hash table, string, backtracking                        |
