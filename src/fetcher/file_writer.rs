@@ -242,6 +242,8 @@ fn format_content(content: &str) -> String {
         .collect::<Vec<&str>>()
         .join("\n//! ")
         .replace("&nbsp;", "")
+        // This is only used to list the constraints.
+        .replace("\t", "- ")
         .replace("&lt;", "<")
         .replace("&gt;", ">")
         .replace("quot;", "\"")
