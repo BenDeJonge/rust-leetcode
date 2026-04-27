@@ -15,9 +15,9 @@
 //! Explanation: Intervals `[1,4]` and `[4,5]` are considered overlapping.
 //!
 //! Constraints:
-//! - `1 <= intervals.length <= 10^4`
+//! - `1 <= intervals.length <= 10**4`
 //! - `intervals[i].length == 2`
-//! - `0 <= start_i <= end_i <= 10^4`
+//! - `0 <= start_i <= end_i <= 10**4`
 
 pub struct Solution {}
 

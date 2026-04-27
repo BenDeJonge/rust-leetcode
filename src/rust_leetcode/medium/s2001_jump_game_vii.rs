@@ -20,7 +20,7 @@
 //! Output: `false`
 //!
 //! Constraints:
-//! `2 <= s.length <= 10^5`
+//! `2 <= s.length <= 10**5`
 //! `s[i]` is either `"0"` or `"1"`.
 //! `s[0] == "0"`
 //! `1 <= minJump <= maxJump < s.length``

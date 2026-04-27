@@ -21,8 +21,8 @@
 //! Explanation: The smallest positive integer 1 is missing.
 //!
 //! Constraints:
-//! - `1 <= nums.length <= 10^5`
-//! - `-2^31 <= nums[i] <= 2^31 - 1`
+//! - `1 <= nums.length <= 10**5`
+//! - `-2**31 <= nums[i] <= 2**31 - 1`
 
 use std::collections::HashSet;
 

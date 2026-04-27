@@ -16,10 +16,10 @@
 //! - m == matrix.length
 //! - n == matrix[i].length
 //! - 1 <= n, m <= 300
-//! - -109 <= matrix[i][j] <= 109
+//! - -10**9 <= matrix[i][j] <= 10**9
 //! - All the integers in each row are sorted in ascending order.
 //! - All the integers in each column are sorted in ascending order.
-//! - -109 <= target <= 109
+//! - -10**9 <= target <= 10**9
 
 use std::cmp::Ordering;
 

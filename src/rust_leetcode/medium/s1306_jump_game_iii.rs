@@ -27,7 +27,7 @@
 //! Explanation: There is no way to reach at index 1 with value 0.
 //!
 //! Constraints:
-//! `arr.length <= 5 * 10^4`
+//! `arr.length <= 5 * 10**4`
 //! `arr[i] < arr.length`
 //! `start < arr.length`
 

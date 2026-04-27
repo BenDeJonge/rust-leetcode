@@ -17,10 +17,10 @@
 //! Output: [-1,-1]
 //!
 //! Constraints:
-//! - `0 <= nums.length <= 10^5`
-//! - `-10^9<= nums[i]<= 10^9`
+//! - `0 <= nums.length <= 10**5`
+//! - `-10**9<= nums[i]<= 10**9`
 //! - nums is a non-decreasing array.
-//! - `-10^9<= target<= 10^9`
+//! - `-10**9<= target<= 10**9`
 
 use std::cmp::Ordering;
 

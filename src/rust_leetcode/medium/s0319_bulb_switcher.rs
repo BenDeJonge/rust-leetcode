@@ -25,7 +25,7 @@
 //! Output: `1`
 //!
 //! Constraints:
-//! - 0 <= n <= 109
+//! - 0 <= n <= 10**9
 
 pub struct Solution {}
 

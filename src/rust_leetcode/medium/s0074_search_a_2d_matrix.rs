@@ -20,7 +20,7 @@
 //! - ``m == matrix.length`
 //! - ``n == matrix[i].length`
 //! - ``1 <= m, n <= 100`
-//! - ``-10^4 <= matrix[i][j], target <= 10^4`
+//! - ``-10**4 <= matrix[i][j], target <= 10**4`
 
 use std::cmp::Ordering;
 

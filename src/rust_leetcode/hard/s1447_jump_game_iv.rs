@@ -24,8 +24,8 @@
 //! Explanation: You can jump directly from index 0 to index 7 which is last index of the array.
 //! &nbsp;
 //! Constraints:
-//! - `1 <= arr.length <= 5 * 10^4`
-//! - `-10^8 <= arr[i] <= 10^8`
+//! - `1 <= arr.length <= 5 * 10**4`
+//! - `-10**8 <= arr[i] <= 10**8`
 
 use std::collections::HashMap;
 

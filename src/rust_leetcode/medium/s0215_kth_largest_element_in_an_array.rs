@@ -13,8 +13,8 @@
 //! Output: 4
 //!
 //! Constraints:
-//! - 1 <= k <= nums.length <= 105
-//! - -104 <= nums[i] <= 104
+//! - 1 <= k <= nums.length <= 10**5
+//! - -10**4 <= nums[i] <= 10**4
 
 use std::{cmp::Reverse, collections::BinaryHeap};
 
