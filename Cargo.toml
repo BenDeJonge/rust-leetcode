@@ -19,3 +19,6 @@ path = "src/fetcher/mod.rs"
 # Avoid expensive unit tests of the fetcher when testing Leetcode solutions.
 fetcher = []
 util = []
+
+[dev-dependencies]
+pretty_assertions = "1.4.1"

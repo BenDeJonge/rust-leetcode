@@ -236,7 +236,8 @@ fn get_docs(question: &Question) -> String {
 }
 
 fn format_content(content: &str) -> String {
-    voca_rs::strip::strip_tags(content)
+    // First convert the superscript tag to MD notation.
+    voca_rs::strip::strip_tags(&content.replace("<sup>", "**"))
         .lines()
         .filter(|l| !l.is_empty())
         .collect::<Vec<&str>>()
@@ -343,7 +344,7 @@ mod tests {
         )
         .expect("cannot convert into Question");
         let rust_code = std::fs::read_to_string(RUST_FILE).expect("cannot open rust file");
-        assert_eq!(get_contents(&question), rust_code);
+        pretty_assertions::assert_eq!(get_contents(&question), rust_code);
     }
 
     #[test]
@@ -386,7 +387,7 @@ mod tests {
     }
 
     fn insert_at_line_helper(buffer: &str, idx: Option<usize>, line: &str, expected: &str) {
-        assert_eq!(insert_at_line(buffer, idx, line), expected)
+        pretty_assertions::assert_eq!(insert_at_line(buffer, idx, line), expected)
     }
 
     #[test]
@@ -426,7 +427,7 @@ mod tests {
         | 0035  | Search insert position                            | [Leetcode](https://leetcode.com/problems/search-insert-position/), [File](src/rust_leetcode/easy/s0035_search_insert_position.rs)                                         | array, binary search                                        |
         | 0070  | Climbing stairs                                   | [Leetcode](https://leetcode.com/problems/climbing-stairs/), [File](src/rust_leetcode/easy/s0070_climbing_stairs.rs)                                                       | math, dynamic programming, memoization                      |
         ";
-        assert_eq!(get_readme_line(&question, contents), Some(17));
+        pretty_assertions::assert_eq!(get_readme_line(&question, contents), Some(17));
 
         let contents = "
         Random stuff before the interesting part.
@@ -453,7 +454,7 @@ mod tests {
         | 0004  | [Median of two sorted arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | array, binary search, divide and conquer                           |
         | 0023  | [Merge k sorted lists](https://leetcode.com/problems/merge-k-sorted-lists/)               | linked list, divide and conquer, heap (priority queue), merge sort |
         ";
-        assert_eq!(get_readme_line(&question, contents), Some(17));
+        pretty_assertions::assert_eq!(get_readme_line(&question, contents), Some(17));
 
         let contents = "
         Random stuff before the interesting part.
@@ -474,7 +475,7 @@ mod tests {
         | 0035  | Search insert position                            | [Leetcode](https://leetcode.com/problems/search-insert-position/), [File](src/rust_leetcode/easy/s0035_search_insert_position.rs)                                         | array, binary search                                        |
         ";
         // There is a trailing whiteline behind the final table.
-        assert_eq!(get_readme_line(&question, contents), Some(17));
+        pretty_assertions::assert_eq!(get_readme_line(&question, contents), Some(17));
 
         let contents = "
         Random stuff before the interesting part.
@@ -485,7 +486,7 @@ mod tests {
         | ----- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
         | 0070  | [Climbing stairs](https://leetcode.com/problems/climbing-stairs/)                                                                      | math,
         ";
-        assert_eq!(get_readme_line(&question, contents), Some(7));
+        pretty_assertions::assert_eq!(get_readme_line(&question, contents), Some(7));
 
         let contents = "
         Random stuff before the interesting part.
@@ -495,6 +496,6 @@ mod tests {
         | Index | Name                                                                                                                                   | Tags                                                        |
         | ----- | -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
         ";
-        assert_eq!(get_readme_line(&question, contents), None);
+        pretty_assertions::assert_eq!(get_readme_line(&question, contents), None);
     }
 }
