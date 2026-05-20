@@ -12,16 +12,18 @@ impl Solution {
     pub fn search_insert<T: Ord>(nums: &[T], target: &T) -> usize {
         // Initialize two pointer for the binary search.
         let mut left = 0;
-        let mut right = nums.len() - 1;
+        let mut right = Some(nums.len() - 1);
         // Start the search.
-        while left <= right {
+        while let Some(r) = right
+            && left <= r
+        {
             // Compute the pivot point.
-            let middle = left.midpoint(right);
+            let middle = left.midpoint(r);
             match nums[middle].cmp(target) {
                 // We found the target.
                 Ordering::Equal => return middle,
                 // The number is bigger than the target, so we need to lower the upper bound.
-                Ordering::Greater => right = middle - 1,
+                Ordering::Greater => right = middle.checked_sub(1),
                 // And conversely so if the number is smaller than the target.
                 Ordering::Less => left = middle + 1,
             }

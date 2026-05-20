@@ -12,14 +12,16 @@ impl Solution {
         // Initialize two pointer for the binary search.
         // Type casting is required if middle becomes 0 and we subtract 1 to get right.
         let mut left = 0;
-        let mut right = nums.len() - 1;
-        while left <= right {
-            let middle = left.midpoint(right);
+        let mut right = Some(nums.len() - 1);
+        while let Some(r) = right
+            && left <= r
+        {
+            let middle = left.midpoint(r);
             match nums[middle].cmp(&target) {
                 // We have found the target.
                 Ordering::Equal => return Some(middle),
                 // The number is bigger than the target, so we need to decrease the upper bound.
-                Ordering::Greater => right = middle - 1,
+                Ordering::Greater => right = middle.checked_sub(1),
                 // The number is smaller than the target, so we need to increase the lower bound.
                 Ordering::Less => left = middle + 1,
             }
