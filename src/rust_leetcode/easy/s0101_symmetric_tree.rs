@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/symmetric-tree/
+//! <https://leetcode.com/problems/symmetric-tree/>
 //! Easy - [tree, depth-first search, breadth-first search, binary tree]
 //! Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).
 

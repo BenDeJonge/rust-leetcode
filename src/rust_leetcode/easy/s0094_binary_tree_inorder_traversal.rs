@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/binary-tree-inorder-traversal/
+//! <https://leetcode.com/problems/binary-tree-inorder-traversal/>
 //! Easy - [stack, tree, depth-first search, binary tree]
 //! Given the root of a binary tree, return the inorder of its nodes' values.
 

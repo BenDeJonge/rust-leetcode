@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/single-number
+//! <https://leetcode.com/problems/single-number>
 //! Easy - [array, bit manipulation]
 //! Given a non-empty array of integers nums, every element appears twice except for one.
 //! Find that single one.

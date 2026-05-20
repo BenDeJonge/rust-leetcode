@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+//! <https://leetcode.com/problems/remove-nth-node-from-end-of-list/>
 //! Medium - [linked-list, two-pointers]
 //!
 //! Given the head of a linked list,
@@ -41,11 +41,13 @@ impl Solution {
     /// A fast and slow pointer solution.
     /// - Time complexity: `O(n)`.
     /// - Space complexity: `O(1)`.
+    // We need to unsafely get a mutable and immutable reference at the same time.
+    #[allow(clippy::deref_addrof)]
     pub fn remove_nth_from_end(mut head: Option<Box<ListNode>>, n: i32) -> Option<Box<ListNode>> {
         // Get a mutable and immutable reference to head at the same time
         // by casting head to a raw pointer (head as *mut _) and back.
         // https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/raw-pointers.html
-        let mut slow: &mut Option<Box<ListNode>> = unsafe { &mut *(&mut head as *mut _) };
+        let mut slow: &mut Option<Box<ListNode>> = unsafe { &mut *(&raw mut head) };
         let mut fast = &head;
 
         // Move the fast pointer n spots.

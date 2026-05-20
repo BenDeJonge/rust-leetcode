@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/merge-k-sorted-lists/
+//! <https://leetcode.com/problems/merge-k-sorted-lists/>
 //! Hard - [linked list, divide and conquer, heap (priority queue), merge sort]
 //! You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
 //! Merge all the linked-lists into one sorted linked-list and return it.
@@ -15,7 +15,7 @@ impl Solution {
         let mut heap = <BinaryHeap<ListNode>>::with_capacity(lists.len());
         // Initialize the heap with the starting nodes from each non-exhausted list.
         for node in lists.into_iter().flatten() {
-            heap.push(*node)
+            heap.push(*node);
         }
         // Initialize a dummy node and the current node.
         let mut dummy = Box::new(ListNode::new(0));

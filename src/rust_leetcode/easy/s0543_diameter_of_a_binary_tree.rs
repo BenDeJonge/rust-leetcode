@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/diameter-of-binary-tree//problems/move-zeroes/
+//! <https://leetcode.com/problems/diameter-of-binary-tree//problems/move-zeroes/>
 //! Easy - [tree, depth-first search, binary tree]
 //! Given the root of a binary tree, return the diameter of the tree.
 //! The diameter is defined as the longest path, counted as the number of edges,
@@ -12,9 +12,9 @@ pub struct Solution {}
 impl Solution {
     /// Compute the diameter of a tree, defined as the longest path by number of
     /// edges, by computing the heights of the left and right subtrees.
-    pub fn diameter_of_binary_tree<T>(root: OptNode<T>) -> isize {
+    pub fn diameter_of_binary_tree<T>(root: &OptNode<T>) -> isize {
         let mut diameter = 0isize;
-        Self::height(&root, &mut diameter);
+        Self::height(root, &mut diameter);
         diameter
     }
 
@@ -53,9 +53,9 @@ mod tests {
     #[test]
     fn test_0543() {
         let tree_1 = TreeNode::from_vec(&[Some(1), Some(2), Some(3), Some(4), Some(5), None, None]);
-        assert_eq!(Solution::diameter_of_binary_tree(tree_1), 3);
+        assert_eq!(Solution::diameter_of_binary_tree(&tree_1), 3);
         let tree_2 = TreeNode::from_vec(&[Some(1), Some(2), None]);
-        assert_eq!(Solution::diameter_of_binary_tree(tree_2), 1);
+        assert_eq!(Solution::diameter_of_binary_tree(&tree_2), 1);
         let tree_3 = TreeNode::from_vec(&[
             Some(4),
             Some(-7),
@@ -88,6 +88,6 @@ mod tests {
             None,
             Some(-2),
         ]);
-        assert_eq!(Solution::diameter_of_binary_tree(tree_3), 8);
+        assert_eq!(Solution::diameter_of_binary_tree(&tree_3), 8);
     }
 }

@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/sliding-window-maximum/
+//! <https://leetcode.com/problems/sliding-window-maximum/>
 //! Hard - [array, queue, sliding-window, heap-priority-queue, monotonic-queue]
 //!
 //! You are given an array of integers nums,
@@ -33,8 +33,8 @@ use std::collections::{BTreeSet, VecDeque};
 
 /// Fields are compared in order when deriving (Partial)Ord.
 #[derive(PartialEq, Eq, PartialOrd, Ord)]
-struct Number {
-    val: i32,
+struct Number<T> {
+    val: T,
     i: usize,
 }
 
@@ -66,17 +66,16 @@ impl Solution {
     }
 
     /// Solves in O(n log k) time: get the min and max from a Binary Tree Set.
-    pub fn max_sliding_window_btreeset(nums: Vec<i32>, k: i32) -> Vec<i32> {
-        let k_usize = k as usize;
-        let mut set = BTreeSet::from_iter(
-            nums.iter()
-                .take(k_usize)
-                .enumerate()
-                .map(|(i, val)| Number { val: *val, i }),
-        );
+    pub fn max_sliding_window_btreeset<T: Ord + Copy>(nums: &[T], k: usize) -> Vec<T> {
+        let mut set: BTreeSet<Number<T>> = nums
+            .iter()
+            .take(k)
+            .enumerate()
+            .map(|(i, val)| Number { val: *val, i })
+            .collect();
 
-        let n = nums.len() + 1 - k_usize;
-        let mut max: Vec<i32> = Vec::with_capacity(n);
+        let n = nums.len() + 1 - k;
+        let mut max: Vec<T> = Vec::with_capacity(n);
         max.push(set.last().unwrap().val);
 
         for left in 0..n - 1 {
@@ -85,7 +84,7 @@ impl Solution {
                 i: left,
             });
 
-            let right = left + k_usize;
+            let right = left + k;
             set.insert(Number {
                 val: nums[right],
                 i: right,
@@ -98,16 +97,15 @@ impl Solution {
     }
 
     /// Solves in O(n * k) time: check k numbers in (n + 1 - k) windows.
-    pub fn max_sliding_window_naive<T: Ord + Clone>(nums: &[T], k: usize) -> Vec<T> {
+    pub fn max_sliding_window_naive<T: Ord + Copy>(nums: &[T], k: usize) -> Vec<T> {
         nums.windows(k)
             .map(|window| window.iter().max().unwrap())
-            .cloned()
+            .copied()
             .collect()
     }
 
     /// Leetcode is still stuck on some version <1.93.0.
-    pub fn max_sliding_window_leetcode(nums: Vec<i32>, k: i32) -> Vec<i32> {
-        let k = k as usize;
+    pub fn max_sliding_window_leetcode<T: Ord + Copy>(nums: &[T], k: usize) -> Vec<T> {
         let mut idxs: VecDeque<usize> = VecDeque::new();
         let mut max = Vec::with_capacity(nums.len() + 1 - k);
 
@@ -137,16 +135,13 @@ mod tests {
 
     #[test]
     fn test_0239() {
-        helper(vec![1, 3, -1, -3, 5, 3, 6, 7], 3, &[3, 3, 5, 5, 6, 7]);
-        helper(vec![1], 1, &[1]);
+        helper(&[1, 3, -1, -3, 5, 3, 6, 7], 3, &[3, 3, 5, 5, 6, 7]);
+        helper(&[1], 1, &[1]);
     }
 
-    fn helper(nums: Vec<i32>, k: i32, expected: &[i32]) {
-        assert_eq!(
-            Solution::max_sliding_window_naive(&nums, k as usize),
-            expected
-        );
-        assert_eq!(Solution::max_sliding_window(&nums, k as usize), expected);
+    fn helper(nums: &[i32], k: usize, expected: &[i32]) {
+        assert_eq!(Solution::max_sliding_window_naive(nums, k), expected);
+        assert_eq!(Solution::max_sliding_window(nums, k), expected);
         assert_eq!(Solution::max_sliding_window_btreeset(nums, k), expected);
     }
 }

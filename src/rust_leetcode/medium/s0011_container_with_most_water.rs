@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/container-with-most-water/
+//! <https://leetcode.com/problems/container-with-most-water/>
 //! Medium - [array, two pointer, greedy]
 //! You are given an integer array height of length n.
 //! There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).
@@ -9,31 +9,31 @@
 pub struct Solution {}
 
 impl Solution {
-    pub fn max_area_naive(height: Vec<i32>) -> i32 {
+    pub fn max_area_naive(height: &[usize]) -> usize {
         let mut best_area = 0;
         for left in 0..height.len() - 1 {
             for right in left..height.len() {
                 // The left side is so low that no matter the horizontal length, we will never beat the best area.
-                if height[left] * ((height.len() - left) as i32) < best_area {
+                if height[left] * (height.len() - left) < best_area {
                     break;
                 }
                 // Compute and compare the new area.
-                let horizontal = (right - left) as i32;
+                let horizontal = right - left;
                 let vertical = height[left].min(height[right]);
-                best_area = best_area.max(horizontal * vertical)
+                best_area = best_area.max(horizontal * vertical);
             }
         }
         best_area
     }
 
-    pub fn max_area(height: Vec<i32>) -> i32 {
+    pub fn max_area(height: &[usize]) -> usize {
         // Start the boundaries as the widest container.
         let mut left = 0;
         let mut right = height.len() - 1;
         let mut best_area = 0;
         while left < right {
             // Compute the current area and overwrite the max if it is bigger.
-            best_area = best_area.max(((right - left) as i32) * height[left].min(height[right]));
+            best_area = best_area.max((right - left) * height[left].min(height[right]));
             // Greedy approach: try to improve the worst height.
             if height[left] < height[right] {
                 left += 1;
@@ -51,7 +51,7 @@ mod tests {
 
     #[test]
     fn test_0011() {
-        assert_eq!(Solution::max_area(vec![1, 8, 6, 2, 5, 4, 8, 3, 7]), 49);
-        assert_eq!(Solution::max_area(vec![1, 1]), 1)
+        assert_eq!(Solution::max_area(&[1, 8, 6, 2, 5, 4, 8, 3, 7]), 49);
+        assert_eq!(Solution::max_area(&[1, 1]), 1);
     }
 }

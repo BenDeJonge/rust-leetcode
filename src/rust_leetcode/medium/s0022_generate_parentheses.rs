@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/generate-parentheses/
+//! <https://leetcode.com/problems/generate-parentheses/>
 //! Medium - [string, dynamic programming, backtracking]
 //! Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
 
@@ -7,11 +7,10 @@ const P_CLOSED: char = ')';
 
 pub struct Solution {}
 impl Solution {
-    pub fn generate_parenthesis(n: i32) -> Vec<String> {
-        let n_usize = n as usize;
-        let mut done = <Vec<String>>::with_capacity(2usize.pow(n as u32));
-        let mut current = <Vec<char>>::with_capacity(n_usize * 2);
-        Self::dfs(&mut done, &mut current, n_usize, 0, 0);
+    pub fn generate_parenthesis(n: usize) -> Vec<String> {
+        let mut done = <Vec<String>>::with_capacity(2usize.pow(u32::try_from(n).unwrap()));
+        let mut current = <Vec<char>>::with_capacity(n * 2);
+        Self::dfs(&mut done, &mut current, n, 0, 0);
         done
     }
 
@@ -44,22 +43,21 @@ impl Solution {
         // There is room for open parentheses.
         if left < n {
             current.push(P_OPEN);
-            Self::dfs(done, current, n, left + 1, right)
+            Self::dfs(done, current, n, left + 1, right);
         }
         // There are parentheses to be closed.
         if right < left {
             current.push(P_CLOSED);
-            Self::dfs(done, current, n, left, right + 1)
+            Self::dfs(done, current, n, left, right + 1);
         }
         // Backtracking.
         current.pop();
     }
 
-    pub fn generate_parenthesis_naive(n: i32) -> Vec<String> {
-        let n_usize = n as usize;
-        let mut done = <Vec<String>>::with_capacity(2usize.pow(n as u32));
-        let mut current = <Vec<char>>::with_capacity(n_usize * 2);
-        Self::generate_parenthesis_helper(&mut done, &mut current, n_usize, 0, 0);
+    pub fn generate_parenthesis_naive(n: usize) -> Vec<String> {
+        let mut done = <Vec<String>>::with_capacity(2usize.pow(u32::try_from(n).unwrap()));
+        let mut current = <Vec<char>>::with_capacity(n * 2);
+        Self::generate_parenthesis_helper(&mut done, &mut current, n, 0, 0);
         done
     }
 

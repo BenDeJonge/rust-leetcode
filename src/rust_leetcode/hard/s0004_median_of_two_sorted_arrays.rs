@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/median-of-two-sorted-arrays/
+//! <https://leetcode.com/problems/median-of-two-sorted-arrays/>
 //! Hard - [array, binary search, divide and conquer]
 //! Given two sorted arrays nums1 and nums2 of size `m` and `n` respectively,
 //! return the median of the two sorted arrays.
@@ -39,7 +39,7 @@ impl Solution {
             // The two arrays combined must house half of all the elements.
             // For performance, the first (short) array is bisected and the
             // corresponding fraction of the second (long) array is computed.
-            mid1 = (left + right) / 2;
+            mid1 = left.midpoint(right);
             mid2 = n_needed - mid1;
 
             // We can potentially partition at the edge of either array,
@@ -57,7 +57,7 @@ impl Solution {
                 r2 = i32::MAX;
             }
             if mid1 >= 1 {
-                l1 = nums1[mid1 - 1].into()
+                l1 = nums1[mid1 - 1].into();
             } else {
                 l1 = i32::MIN;
             }
@@ -82,9 +82,7 @@ impl Solution {
                     return Self::calc_median(l1, l2, r1, r2, n_total);
                 }
                 // The partition of nums1 is too small.
-                else {
-                    left = mid1 + 1;
-                }
+                left = mid1 + 1;
             }
             // The partition of nums1 is too big.
             else {
@@ -102,12 +100,12 @@ impl Solution {
         // `l1 <-> l2` or `r1 <-> r2`
         // The rightmost number of `l1 l2` is the median.
         // `.. l1 l2 r1 r2`
-        if !total.is_multiple_of(2) {
-            l1.max(l2) as f64
+        if total.is_multiple_of(2) {
+            f64::from(l1.max(l2) + r1.min(r2)) / 2.0
         }
         // Find the middle two numbers (one l and one r) and average them.
         else {
-            (l1.max(l2) + r1.min(r2)) as f64 / 2.0
+            f64::from(l1.max(l2))
         }
     }
 
@@ -122,7 +120,7 @@ impl Solution {
         let mut num_l: i32;
         let mut num_r: i32;
 
-        let i_median = (nums1.len() + nums2.len()) / 2 + 1;
+        let i_median = nums1.len().midpoint(nums2.len()) + 1;
         while left + right < i_median {
             median2 = median1;
             // Can advance both pointers, so advance the smaller one.
@@ -149,10 +147,10 @@ impl Solution {
             }
         }
 
-        if !(nums1.len() + nums2.len()).is_multiple_of(2) {
-            median1 as f64
+        if (nums1.len() + nums2.len()).is_multiple_of(2) {
+            f64::from(median1 + median2) / 2.0
         } else {
-            (median1 + median2) as f64 / 2.0
+            f64::from(median1)
         }
     }
 
@@ -162,31 +160,41 @@ impl Solution {
     /// where `k = n + m` as both vectors have been combined first.
     pub fn find_median_sorted_arrays_naive<N: Copy + Into<i32>>(nums1: &[N], nums2: &[N]) -> f64 {
         let mut nums: Vec<i32> = nums1.iter().chain(nums2).map(|x| (*x).into()).collect();
-        nums.sort();
-        if !nums.len().is_multiple_of(2) {
-            nums[nums.len() / 2] as f64
+        nums.sort_unstable();
+        if nums.len().is_multiple_of(2) {
+            f64::from(nums[nums.len() / 2 - 1] + nums[nums.len() / 2]) / 2.0
         } else {
-            (nums[nums.len() / 2 - 1] + nums[nums.len() / 2]) as f64 / 2.0
+            f64::from(nums[nums.len() / 2])
         }
     }
 }
 
 #[cfg(test)]
 mod tests {
+    use std::ops::Sub;
+
     use super::Solution;
+    const ABS_TOL: f64 = 1e-5;
+
+    fn assert_is_close(a: f64, b: f64, abs_tol: f64) {
+        assert!(a.sub(b).abs() < abs_tol);
+    }
 
     fn test_helper<N: Copy + Into<i32>>(nums1: &[N], nums2: &[N], expected: f64) {
-        assert_eq!(
+        assert_is_close(
             Solution::find_median_sorted_arrays_naive(nums1, nums2),
-            expected
+            expected,
+            ABS_TOL,
         );
-        assert_eq!(
+        assert_is_close(
             Solution::find_median_sorted_arrays_linear(nums1, nums2),
-            expected
+            expected,
+            ABS_TOL,
         );
-        assert_eq!(
+        assert_is_close(
             Solution::find_median_sorted_arrays_logarithmic(nums1, nums2),
-            expected
+            expected,
+            ABS_TOL,
         );
     }
 

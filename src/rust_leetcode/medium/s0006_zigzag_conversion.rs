@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/zigzag-conversion/
+//! <https://leetcode.com/problems/zigzag-conversion/>
 //! Medium - [string]
 //!
 //! The string &"PAYPALISHIRING&" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
@@ -48,10 +48,11 @@ impl Solution {
             arr[r].push(ch);
             // Keep moving down until back at the first row.
             // Switch to up when at the bottom row.
-            down = down & (r > 0) || r == n_rows - 1;
-            match down {
-                true => r = r.saturating_sub(1),
-                false => r += 1,
+            down = down && (r > 0) || r == n_rows - 1;
+            if down {
+                r = r.saturating_sub(1);
+            } else {
+                r += 1;
             }
         }
 

@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/jump-game-iv/
+//! <https://leetcode.com/problems/jump-game-iv/>
 //! Hard - [array, hash-table, breadth-first-search]
 //! Given an array of integers `arr`, you are initially positioned at the first
 //! index of the array. In one step you can jump from index `i` to index:
@@ -27,18 +27,18 @@
 //! - `1 <= arr.length <= 5 * 10**4`
 //! - `-10**8 <= arr[i] <= 10**8`
 
-use std::collections::HashMap;
+use std::{collections::HashMap, hash::Hash};
 
 pub struct Solution {}
 
 impl Solution {
-    pub fn min_jumps(arr: Vec<i32>) -> i32 {
+    pub fn min_jumps<T: Eq + Hash + Copy>(arr: &[T]) -> usize {
         // Track all vertices of each number.
         let mut occurrences =
             arr.iter()
                 .enumerate()
-                .fold(HashMap::<i32, Vec<usize>>::new(), |mut acc, (i, &int)| {
-                    acc.entry(int).or_default().push(i);
+                .fold(HashMap::<T, Vec<usize>>::new(), |mut acc, (i, int)| {
+                    acc.entry(*int).or_default().push(i);
                     acc
                 });
 
@@ -89,10 +89,10 @@ mod tests {
     #[test]
     fn test_1447() {
         assert_eq!(
-            Solution::min_jumps(vec![100, -23, -23, 404, 100, 23, 23, 23, 3, 404]),
+            Solution::min_jumps(&[100, -23, -23, 404, 100, 23, 23, 23, 3, 404]),
             3
         );
-        assert_eq!(Solution::min_jumps(vec![7]), 0);
-        assert_eq!(Solution::min_jumps(vec![7, 6, 9, 6, 9, 6, 9, 7]), 1);
+        assert_eq!(Solution::min_jumps(&[7]), 0);
+        assert_eq!(Solution::min_jumps(&[7, 6, 9, 6, 9, 6, 9, 7]), 1);
     }
 }

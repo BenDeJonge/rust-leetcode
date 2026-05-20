@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/roman-to-integer/
+//! <https://leetcode.com/problems/roman-to-integer/>
 //! Easy - [hash table, math, string]
 //! Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 //! Given a roman numeral, convert it to an integer.
@@ -33,7 +33,7 @@ impl RomanDigits {
 }
 
 impl Solution {
-    pub fn roman_to_int(s: String) -> i32 {
+    pub fn roman_to_int(s: &str) -> i32 {
         println!();
         let mut previous = 0;
         s.chars()
@@ -60,8 +60,8 @@ mod tests {
     use super::Solution;
     #[test]
     fn test_0013() {
-        assert_eq!(Solution::roman_to_int("III".to_string()), 3);
-        assert_eq!(Solution::roman_to_int("LVIII".to_string()), 58);
-        assert_eq!(Solution::roman_to_int("MCMXCIV".to_string()), 1994);
+        assert_eq!(Solution::roman_to_int("III"), 3);
+        assert_eq!(Solution::roman_to_int("LVIII"), 58);
+        assert_eq!(Solution::roman_to_int("MCMXCIV"), 1994);
     }
 }

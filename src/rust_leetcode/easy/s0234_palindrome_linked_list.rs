@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/palindrome-linked-list/
+//! <https://leetcode.com/problems/palindrome-linked-list/>
 //! Easy - [linked-list, two-pointers, stack, recursion]
 //!
 //! Given the head of a singly linked list,

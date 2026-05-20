@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/longest-common-prefix/
+//! <https://leetcode.com/problems/longest-common-prefix/>
 //! Easy - [string, trie]
 //! Write a function to find the longest common prefix string amongst an array of strings.
 //! If there is no common prefix, return an empty string "".
@@ -20,7 +20,7 @@ impl Solution {
             .unwrap()
     }
 
-    pub fn longest_common_prefix_simple(strs: Vec<String>) -> String {
+    pub fn longest_common_prefix_simple(strs: &[&str]) -> String {
         // The current prefix is the first word.
         let mut prefix = strs
             .first()

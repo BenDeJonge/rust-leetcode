@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/invert-binary-tree/
+//! <https://leetcode.com/problems/invert-binary-tree/>
 //! Easy - [tree, depth-first search, breadth-first search, binary tree]
 //! Given the root of a binary tree, invert the tree, and return its root.
 
@@ -55,6 +55,6 @@ mod tests {
         assert_eq!(
             Solution::invert_tree(TreeNode::from_vec(tree1)),
             TreeNode::from_vec(tree2)
-        )
+        );
     }
 }

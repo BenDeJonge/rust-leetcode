@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+//! <https://leetcode.com/problems/remove-duplicates-from-sorted-array/>
 //! Easy - [array, two pointers]
 //! Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique
 //! element appears only once. The relative order of the elements should be kept the same. Then return the number of
@@ -11,7 +11,7 @@
 pub struct Solution {}
 
 impl Solution {
-    pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
+    pub fn remove_duplicates(nums: &mut Vec<i32>) -> usize {
         // Edge case to avoid nums[i+1] out of bounds errors.
         if nums.len() == 1 {
             return 1;
@@ -31,11 +31,11 @@ impl Solution {
             // Check number i + 1 against i + 2. If we do not put this in the else, we will skip numbers, as moving a
             // number to the end, brings the next one in to compare against the previous i.
             else {
-                i += 1
+                i += 1;
             }
         }
         // As we only advance i every time a number is unique, we can simply return this.
-        i as i32
+        i
     }
 }
 
@@ -43,20 +43,16 @@ impl Solution {
 mod tests {
     use super::Solution;
 
-    fn test_helper(vec: &mut Vec<i32>, n_unique: i32, vec_unique: Vec<i32>) {
+    fn test_helper(vec: &mut Vec<i32>, n_unique: usize, vec_unique: &[i32]) {
         assert_eq!(Solution::remove_duplicates(vec), n_unique);
-        assert_eq!(vec[..n_unique as usize], vec_unique);
+        assert_eq!(vec[..n_unique], *vec_unique);
     }
 
     #[test]
     fn test_0026() {
-        test_helper(&mut vec![1, 1, 2], 2, vec![1, 2]);
-        test_helper(
-            &mut vec![0, 0, 1, 1, 1, 2, 2, 3, 3, 4],
-            5,
-            vec![0, 1, 2, 3, 4],
-        );
-        test_helper(&mut vec![1], 1, vec![1]);
-        test_helper(&mut vec![1, 1], 1, vec![1]);
+        test_helper(&mut vec![1, 1, 2], 2, &[1, 2]);
+        test_helper(&mut vec![0, 0, 1, 1, 1, 2, 2, 3, 3, 4], 5, &[0, 1, 2, 3, 4]);
+        test_helper(&mut vec![1], 1, &[1]);
+        test_helper(&mut vec![1, 1], 1, &[1]);
     }
 }

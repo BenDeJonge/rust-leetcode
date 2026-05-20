@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/swap-nodes-in-pairs/
+//! <https://leetcode.com/problems/swap-nodes-in-pairs/>
 //! Medium - [linked-list, recursion]
 //!
 //! Given alinked list, swap every two adjacent nodes and return its head.

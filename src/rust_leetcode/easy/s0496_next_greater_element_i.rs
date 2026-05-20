@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/next-greater-element-i/
+//! <https://leetcode.com/problems/next-greater-element-i/>
 //! Easy - [array, hash-table, stack, monotonic-stack]
 //!
 //! The next greater element of some element x in an array is the first greater
@@ -48,7 +48,7 @@ impl Solution {
     pub fn next_greater_element<T: Ord + Hash + Copy>(nums1: &[T], nums2: &[T]) -> Vec<Option<T>> {
         let mut stack = Vec::with_capacity(nums2.len());
         let mut map: HashMap<T, T> = HashMap::with_capacity(nums2.len());
-        for number in nums2.iter() {
+        for number in nums2 {
             while let Some(smaller) = stack.pop_if(|top| *top < *number) {
                 map.insert(smaller, *number);
             }

@@ -39,6 +39,7 @@ pub struct Graph<T> {
 }
 
 impl<T> Graph<T> {
+    #[must_use]
     pub fn new() -> Self {
         Graph {
             vertices: vec![],
@@ -71,10 +72,12 @@ impl<T> Graph<T> {
         self.add_edge(destination, origin);
     }
 
+    #[must_use]
     pub fn is_valid(&self) -> bool {
         self.max_vertex < self.vertices.len()
     }
 
+    #[must_use]
     pub fn get_vertex(&self, i: usize) -> Option<Vertex<'_, T>> {
         if i >= self.vertices.len() {
             None
@@ -86,20 +89,31 @@ impl<T> Graph<T> {
         }
     }
 
+    #[must_use]
     pub fn n_vertices(&self) -> usize {
         self.vertices.len()
     }
 
+    #[must_use]
     pub fn n_edges(&self) -> usize {
         // Edges are counted in both directions.
-        self.edges.iter().map(|e| e.len()).sum::<usize>() / 2
+        self.edges.iter().map(std::vec::Vec::len).sum::<usize>() / 2
     }
 
+    #[must_use]
     pub fn iter(&self) -> GraphIterator<'_, T> {
         GraphIterator {
             graph: self,
             index: 0,
         }
+    }
+}
+
+impl<'g, T: 'g> IntoIterator for &'g Graph<T> {
+    type Item = Vertex<'g, T>;
+    type IntoIter = GraphIterator<'g, T>;
+    fn into_iter(self) -> Self::IntoIter {
+        self.iter()
     }
 }
 
@@ -184,7 +198,7 @@ mod tests {
     }
 
     #[test]
-    #[cfg_attr(not(feature = "util"), ignore)]
+    #[cfg_attr(not(feature = "util"), ignore = "library test")]
     fn test_is_valid() {
         let mut g = get_graph();
         assert!(g.is_valid());
@@ -193,7 +207,7 @@ mod tests {
     }
 
     #[test]
-    #[cfg_attr(not(feature = "util"), ignore)]
+    #[cfg_attr(not(feature = "util"), ignore = "library test")]
     fn looped_add_vertex_is_equivalent_to_add_vertices() {
         let mut g1 = Graph::new();
         for i in 1..6 {
@@ -202,11 +216,11 @@ mod tests {
         let mut g2 = Graph::new();
         g2.add_vertices(1..6);
 
-        assert_eq!(g1, g2)
+        assert_eq!(g1, g2);
     }
 
     #[test]
-    #[cfg_attr(not(feature = "util"), ignore)]
+    #[cfg_attr(not(feature = "util"), ignore = "library test")]
     fn depth_first_search() {
         fn dfs_longest_path_2_to_5(
             g: &Graph<i32>,
@@ -243,7 +257,7 @@ mod tests {
     }
 
     #[test]
-    #[cfg_attr(not(feature = "util"), ignore)]
+    #[cfg_attr(not(feature = "util"), ignore = "library test")]
     fn breadth_first_search() {
         fn bfs_shortest_path_2_to_5(g: &Graph<i32>) -> Option<usize> {
             let mut queue = VecDeque::new();
@@ -279,7 +293,7 @@ mod tests {
     }
 
     #[test]
-    #[cfg_attr(not(feature = "util"), ignore)]
+    #[cfg_attr(not(feature = "util"), ignore = "library test")]
     fn test_display() {
         let s1 = format!("{}", get_graph());
         let s2 = "1: 2, 4

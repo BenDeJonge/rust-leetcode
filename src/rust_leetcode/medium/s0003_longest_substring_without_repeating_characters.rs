@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/longest-substring-without-repeating-characters/
+//! <https://leetcode.com/problems/longest-substring-without-repeating-characters/>
 //! Medium - [hash table, string, sliding window]
 //! Given a string s, find the length of the longest substring without repeating characters.
 
@@ -7,7 +7,7 @@ use std::collections::HashSet;
 pub struct Solution {}
 
 impl Solution {
-    pub fn length_of_longest_substring_better(s: String) -> i32 {
+    pub fn length_of_longest_substring(s: &str) -> usize {
         let mut best = 0;
         let mut byte_cache = [0; 256];
         let chars = s.bytes().collect::<Vec<u8>>();
@@ -23,12 +23,12 @@ impl Solution {
             }
             // Update the cache and best results.
             byte_cache[ch as usize] = i_stop + 1;
-            best = best.max(i_stop - i_start + 1)
+            best = best.max(i_stop - i_start + 1);
         }
-        best as i32
+        best
     }
 
-    pub fn length_of_longest_substring(s: String) -> i32 {
+    pub fn length_of_longest_substring_naive(s: &str) -> usize {
         let mut i_start = 0;
         let mut best = 0;
         let chars = s.chars().collect::<Vec<char>>();
@@ -44,12 +44,12 @@ impl Solution {
             }
             // A duplicate has been reached. Store the current result.
             if i_stop - i_start > best {
-                best = i_stop - i_start
+                best = i_stop - i_start;
             }
             // Advance to the next window.
             i_start += 1;
         }
-        best as i32
+        best
     }
 }
 
@@ -59,29 +59,11 @@ mod tests {
 
     #[test]
     fn test_0003() {
-        assert_eq!(
-            Solution::length_of_longest_substring_better(" ".to_string()),
-            1
-        );
-        assert_eq!(
-            Solution::length_of_longest_substring_better("au".to_string()),
-            2
-        );
-        assert_eq!(
-            Solution::length_of_longest_substring_better("abcabcbb".to_string()),
-            3
-        );
-        assert_eq!(
-            Solution::length_of_longest_substring_better("bbbbb".to_string()),
-            1
-        );
-        assert_eq!(
-            Solution::length_of_longest_substring_better("pwwkew".to_string()),
-            3
-        );
-        assert_eq!(
-            Solution::length_of_longest_substring_better("abcdafghija".to_string()),
-            9
-        );
+        assert_eq!(Solution::length_of_longest_substring(" "), 1);
+        assert_eq!(Solution::length_of_longest_substring("au"), 2);
+        assert_eq!(Solution::length_of_longest_substring("abcabcbb"), 3);
+        assert_eq!(Solution::length_of_longest_substring("bbbbb"), 1);
+        assert_eq!(Solution::length_of_longest_substring("pwwkew"), 3);
+        assert_eq!(Solution::length_of_longest_substring("abcdafghija"), 9);
     }
 }

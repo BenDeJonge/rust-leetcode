@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize};
 use super::difficulty::Difficulty;
 
 /// The attributes of the question that will be retrieved.
-pub const QUESTION_QUERY_STRING: &str = r#"
+pub const QUESTION_QUERY_STRING: &str = r"
 query questionData($titleSlug: String!) {
     question(titleSlug: $titleSlug) {
         title
@@ -19,14 +19,14 @@ query questionData($titleSlug: String!) {
         difficulty
         isPaidOnly
         }
-    }"#;
+    }";
 
 const TOPIC_TAG_KEY: &str = "slug";
 const LANGUAGE_KEY: &str = "value";
 const WANTED_LANGUAGE: &str = "rust";
 const CODE_DEFINITION_KEY: &str = "defaultCode";
 
-/// A Question object from the LeetCode API.
+/// A Question object from the leetcode API.
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
 pub struct QuestionFromLeetcode {
     pub title: String,
@@ -230,7 +230,7 @@ mod test {
     const Q_FILE: &str = "src/fetcher/test_resources/s0055_question.json";
 
     #[test]
-    #[cfg_attr(not(feature = "fetcher"), ignore)]
+    #[cfg_attr(not(feature = "fetcher"), ignore = "infrastructure test")]
     fn can_read_write_question() {
         let question = Question {
             title: "Jump Game".to_string(),

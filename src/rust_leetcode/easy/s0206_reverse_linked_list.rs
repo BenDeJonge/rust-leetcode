@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/reverse-linked-list/
+//! <https://leetcode.com/problems/reverse-linked-list/>
 //! Easy - [linked-list, recursion]
 //!
 //! Given the head of a singly linked list return the reversed list.

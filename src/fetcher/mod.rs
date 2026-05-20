@@ -18,7 +18,7 @@ impl Display for ArgCountError {
 
 fn unpack_args(args: &[String]) -> Result<&str, ArgCountError> {
     match args {
-        [_main, _fname, arg1] => Ok(arg1.as_str()),
+        [_main, _fname, first] => Ok(first.as_str()),
         _ => Err(ArgCountError {}),
     }
 }
@@ -40,6 +40,6 @@ async fn main() -> Result<(), reqwest::Error> {
             println!("Could not fetch question");
             dbg!(e);
         }
-    };
+    }
     Ok(())
 }

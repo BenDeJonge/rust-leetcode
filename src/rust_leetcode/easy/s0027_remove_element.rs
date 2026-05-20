@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/remove-element/
+//! <https://leetcode.com/problems/remove-element/>
 //! Easy - [array, two pointers]
 //! Given an integer array nums and an integer val, remove all occurrences of val in nums in-place.
 //! The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
@@ -14,7 +14,7 @@ impl Solution {
     /// Iterate over the vector and remove the wanted elements.
     /// Removing any i-th element while require reallocating
     /// the remaining (n - i) elements, which is wasteful.
-    pub fn remove_element_naive(nums: &mut Vec<i32>, val: i32) -> i32 {
+    pub fn remove_element_naive(nums: &mut Vec<i32>, val: i32) -> usize {
         let mut length = nums.len();
         let mut i = 0;
         while i < length {
@@ -26,11 +26,11 @@ impl Solution {
                 i += 1;
             }
         }
-        length as i32
+        length
     }
 
     /// Swap the wanted elements to the back of the array.
-    pub fn remove_element<T: PartialEq>(nums: &mut [T], val: T) -> usize {
+    pub fn remove_element<T: PartialEq>(nums: &mut [T], val: &T) -> usize {
         if nums.is_empty() {
             return 0;
         }
@@ -39,13 +39,13 @@ impl Solution {
         let mut swapped = 0;
 
         while left <= right {
-            if nums[right] == val {
+            if nums[right] == *val {
                 swapped += 1;
                 if right == 0 {
                     break;
                 }
                 right -= 1;
-            } else if nums[left] == val {
+            } else if nums[left] == *val {
                 nums.swap(left, right);
                 swapped += 1;
                 left += 1;
@@ -63,11 +63,11 @@ pub mod tests {
     use super::Solution;
 
     fn test_helper(nums: &mut [i32], val: i32, nums_different: &mut [i32]) {
-        let sol = Solution::remove_element(nums, val);
+        let sol = Solution::remove_element(nums, &val);
         assert_eq!(sol, nums_different.len());
-        nums_different.sort();
+        nums_different.sort_unstable();
         let solution = &mut nums[..nums_different.len()];
-        solution.sort();
+        solution.sort_unstable();
         assert_eq!(solution, nums_different);
     }
 

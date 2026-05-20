@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/longest-valid-parentheses/
+//! <https://leetcode.com/problems/longest-valid-parentheses/>
 //! Hard - [string, dynamic programming, stack]
 //! Given a string containing just the characters '(' and ')'
 //! return the length of the longest valid (well-formed) parentheses substring.
@@ -12,16 +12,15 @@ pub enum Parenthesis {
 pub struct Solution {}
 
 impl Solution {
-    pub fn longest_valid_parentheses(s: String) -> i32 {
+    pub fn longest_valid_parentheses(s: &str) -> usize {
         // In case of all open brackets.
-        let mut stack = <Vec<i32>>::with_capacity(s.len());
+        let mut stack = <Vec<Option<usize>>>::with_capacity(s.len());
         // Already push a closed bracket at the (fictitious) -1-th position.
-        stack.push(-1);
+        stack.push(None);
         let mut best = 0;
         for (i, c) in s.chars().enumerate() {
-            let i_i32 = i as i32;
             match c {
-                '(' => stack.push(i_i32),
+                '(' => stack.push(Some(i)),
                 ')' => {
                     // Whenever we encounter a closing bracket, we remove the latest index.
                     stack.pop();
@@ -30,12 +29,16 @@ impl Solution {
                     if let Some(last) = stack.last() {
                         // If the previous brace was open, we can add to the best.
                         // If the previous brace was closed, the difference is just 1, which will not replace the best.
-                        best = best.max(i_i32 - last);
+                        if let Some(l) = last {
+                            best = best.max(i - l);
+                        } else {
+                            best += 1;
+                        }
                     }
                     // There is no match, so we add the closing brace.
                     // This will be removed again if there follows another closing brace.
                     else {
-                        stack.push(i_i32);
+                        stack.push(Some(i));
                     }
                 }
                 _ => unreachable!("expect string of only '(' and ')'"),
@@ -44,7 +47,7 @@ impl Solution {
         best
     }
 
-    pub fn longest_valid_parentheses_naive(s: String) -> i32 {
+    pub fn longest_valid_parentheses_naive(s: &str) -> usize {
         // Create a stack where we can push the latest parenthesis ...
         let mut stack = <Vec<(usize, Parenthesis)>>::new();
         // ... and a boolean array where true reflects a valid parentheses pair ...
@@ -67,12 +70,12 @@ impl Solution {
                         }
                         // This does not close a pair of parentheses, so we add the closed one.
                         else {
-                            stack.push((i, Parenthesis::Closed))
+                            stack.push((i, Parenthesis::Closed));
                         }
                     }
                     // The stack was empty so just add this closed one.
                     else {
-                        stack.push((i, Parenthesis::Closed))
+                        stack.push((i, Parenthesis::Closed));
                     }
                 }
                 _ => unreachable!("expect string of only '(' and ')'"),
@@ -80,13 +83,13 @@ impl Solution {
         }
         // If there are no unmatched parentheses remaining, the whole string was valid.
         if stack.is_empty() {
-            return s.len() as i32;
+            return s.len();
         }
         // Now we have a boolean array where sections of true reflect valid parentheses.
         // We need to find the longest true section in this array.
         let mut current = 0;
         let mut best = 0;
-        for &i in match_arr.iter() {
+        for i in match_arr {
             if i {
                 current += 1;
             } else {
@@ -105,8 +108,8 @@ mod tests {
 
     #[test]
     fn test_0032() {
-        assert_eq!(Solution::longest_valid_parentheses("(()".to_string()), 2);
-        assert_eq!(Solution::longest_valid_parentheses(")()())".to_string()), 4);
-        assert_eq!(Solution::longest_valid_parentheses("".to_string()), 0);
+        assert_eq!(Solution::longest_valid_parentheses("(()"), 2);
+        assert_eq!(Solution::longest_valid_parentheses(")()())"), 4);
+        assert_eq!(Solution::longest_valid_parentheses(""), 0);
     }
 }

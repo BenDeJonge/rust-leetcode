@@ -3,6 +3,12 @@ name = "rust-leetcode"
 version = "0.1.0"
 authors = ["Ben De Jonge"]
 edition = "2024"
+description = "My solutions to LeetCode problems in Rust."
+license-file = "LICENSE"
+repository = "https://github.com/BenDeJonge/rust-leetcode"
+keywords = ["leetcode", "data structures", "algorithms"]
+categories = ["algorithms", "command line utilities", "data structures"]
+
 
 [dependencies]
 reqwest = { version = "0.12.12", features = ["json"] }
@@ -22,3 +28,11 @@ util = []
 
 [dev-dependencies]
 pretty_assertions = "1.4.1"
+
+[lints.clippy]
+correctness = "deny"
+suspicious = "deny"
+complexity = "warn"
+perf = "warn"
+style = "warn"
+cargo = "warn"

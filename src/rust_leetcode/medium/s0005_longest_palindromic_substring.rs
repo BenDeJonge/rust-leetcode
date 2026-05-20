@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/longest-palindromic-substring/
+//! <https://leetcode.com/problems/longest-palindromic-substring/>
 //! Medium - [two pointers, string, dynamic programming]
 //! Given a string s, return the longest palindromic substring in s.
 
@@ -9,7 +9,7 @@ pub struct Palindrome {
 
 impl Palindrome {
     pub fn new(length: usize, i_start: usize) -> Self {
-        Self { length, i_start }
+        Self { i_start, length }
     }
 
     pub fn update(&mut self, i_start: usize, length: usize) {
@@ -19,7 +19,7 @@ impl Palindrome {
         }
     }
 
-    pub fn to_string(&self, chars: Vec<char>) -> String {
+    pub fn to_string(&self, chars: &[char]) -> String {
         chars[self.i_start..self.i_start + self.length]
             .iter()
             .collect()
@@ -35,12 +35,12 @@ impl Default for Palindrome {
 pub struct Solution {}
 
 impl Solution {
-    fn longest_palindrome(s: String) -> String {
+    fn longest_palindrome(s: &str) -> String {
         // Edge cases on length.
         if s.is_empty() {
-            return "".to_string();
+            return String::new();
         } else if s.len() == 1 {
-            return s.chars().next().unwrap().to_string();
+            return s.to_string();
         }
         // Constructing a vec of chars for easier iteration.
         let chars = s.chars().collect::<Vec<char>>();
@@ -71,7 +71,7 @@ impl Solution {
         // Make length inclusive, as we also need to test for the whole string being palindromic.
         for length in 3..=s.len() {
             // Looping over starting positions.
-            for i in 0..s.len() - length + 1 {
+            for i in 0..=(s.len() - length) {
                 // The ending index, so we need minus 1 because we are using substring length.
                 let j = i + length - 1;
                 // It was a palindrome before we added the two outer characters.
@@ -84,7 +84,7 @@ impl Solution {
                 }
             }
         }
-        best.to_string(chars)
+        best.to_string(&chars)
     }
 }
 
@@ -94,26 +94,11 @@ mod tests {
 
     #[test]
     fn test_0005() {
-        assert_eq!(
-            Solution::longest_palindrome("babad".to_string()),
-            "bab".to_string()
-        );
-        assert_eq!(
-            Solution::longest_palindrome("cbbd".to_string()),
-            "bb".to_string()
-        );
-        assert_eq!(
-            Solution::longest_palindrome("ccc".to_string()),
-            "ccc".to_string()
-        );
-        assert_eq!(
-            Solution::longest_palindrome("ac".to_string()),
-            "a".to_string()
-        );
-        assert_eq!(
-            Solution::longest_palindrome("a".to_string()),
-            "a".to_string()
-        );
-        assert_eq!(Solution::longest_palindrome("".to_string()), "".to_string());
+        assert_eq!(Solution::longest_palindrome("babad"), "bab".to_string());
+        assert_eq!(Solution::longest_palindrome("cbbd"), "bb".to_string());
+        assert_eq!(Solution::longest_palindrome("ccc"), "ccc".to_string());
+        assert_eq!(Solution::longest_palindrome("ac"), "a".to_string());
+        assert_eq!(Solution::longest_palindrome("a"), "a".to_string());
+        assert_eq!(Solution::longest_palindrome(""), String::new());
     }
 }

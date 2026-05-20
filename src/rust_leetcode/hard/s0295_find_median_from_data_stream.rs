@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/find-median-from-data-stream/
+//! <https://leetcode.com/problems/find-median-from-data-stream/>
 //! Hard - [two-pointers, design, sorting, heap-priority-queue, data-stream]
 //!
 //! The median is the middle value in an ordered integer list.
@@ -7,26 +7,28 @@
 //! - For example, for arr = [2,3,4], the median is 3.
 //! - For example, for arr = [2,3], the median is (2 + 3) / 2 = 2.5.
 //!
-//! Implement the MedianFinder class:
-//! - MedianFinder() initializes the MedianFinder object.
+//! Implement the ``MedianFinder`` class:
+//! - ``MedianFinder()`` initializes the ``MedianFinder`` object.
 //! - void addNum(int num) adds the integer num from the data stream
 //!   to the data structure.
-//! - double findMedian() returns the median of all elements so far.
+//! - double ``findMedian()`` returns the median of all elements so far.
 //!   Answers within 10-5 of the actual answer will be accepted.
 //!
 //! Example 1:
 //! Input
-//! [&"MedianFinder&", &"addNum&", &"addNum&", &"findMedian&", &"addNum&", &"findMedian&"]
+//! ``[&"MedianFinder&", &"addNum&", &"addNum&", &"findMedian&", &"addNum&", &"findMedian&"]``
 //! [[], [1], [2], [], [3], []]
 //! Output
 //! [null, null, null, 1.5, null, 2.0]
 //! Explanation
+//! ```text
 //! MedianFinder medianFinder = new MedianFinder();
 //! medianFinder.addNum(1);    // arr = [1]
 //! medianFinder.addNum(2);    // arr = [1, 2]
 //! medianFinder.findMedian(); // return 1.5 (i.e., (1 + 2) / 2)
 //! medianFinder.addNum(3);    // arr[1, 2, 3]
 //! medianFinder.findMedian(); // return 2.0
+//! ```
 //!
 //! Constraints:
 //! - -10**5 <= num <= 10**5
@@ -103,13 +105,14 @@ impl MedianFinder {
     fn find_median(&self) -> f64 {
         match self.low.len().cmp(&self.high.len()) {
             Ordering::Equal => {
-                self.low
-                    .peek()
-                    .unwrap_or(&0)
-                    .add(self.high.peek().unwrap_or(&Reverse(0)).0) as f64
-                    / 2.0
+                f64::from(
+                    self.low
+                        .peek()
+                        .unwrap_or(&0)
+                        .add(self.high.peek().unwrap_or(&Reverse(0)).0),
+                ) / 2.0
             }
-            Ordering::Greater => *self.low.peek().unwrap() as f64,
+            Ordering::Greater => f64::from(*self.low.peek().unwrap()),
             Ordering::Less => unreachable!("low should grow faster"),
         }
     }

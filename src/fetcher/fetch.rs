@@ -5,7 +5,7 @@ use serde_json::json;
 
 /// The URL where `POST` requests can be made.
 const LEETCODE_GRAPHQL: &str = "https://leetcode.com/graphql";
-/// The operation to retrieve parameters of a LeetCode question.
+/// The operation to retrieve parameters of a leetcode question.
 const QUESTION_QUERRY_OPERATION: &str = "questionData";
 
 #[derive(Debug, serde::Serialize, serde::Deserialize)]
@@ -13,7 +13,7 @@ struct Query {
     #[serde(rename = "operationName")]
     operation_name: String,
     variables: serde_json::Value,
-    query: String,
+    request: String,
 }
 
 impl Query {
@@ -21,7 +21,7 @@ impl Query {
         Query {
             operation_name: QUESTION_QUERRY_OPERATION.to_owned(),
             variables: json!({"titleSlug": title_slug}),
-            query: QUESTION_QUERY_STRING.to_owned(),
+            request: QUESTION_QUERY_STRING.to_owned(),
         }
     }
 }
@@ -50,7 +50,7 @@ mod test {
     const Q_FILE: &str = "src/fetcher/test_resources/s0055_question.json";
 
     #[tokio::test]
-    #[cfg_attr(not(feature = "fetcher"), ignore)]
+    #[cfg_attr(not(feature = "fetcher"), ignore = "")]
     async fn test_fetch_async() {
         let question = fetch_question_async(Q_NAME)
             .await

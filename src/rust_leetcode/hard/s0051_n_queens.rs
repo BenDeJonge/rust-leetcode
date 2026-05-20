@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/n-queens/
+//! <https://leetcode.com/problems/n-queens/>
 //! Hard - [array, backtracking]
 //! The n-queens puzzle is the problem of placing n queens on an n x n chessboar
 //! such that no two queens attack each other.
@@ -9,12 +9,11 @@
 pub struct Solution {}
 
 impl Solution {
-    pub fn solve_n_queens(n: i32) -> Vec<Vec<String>> {
-        let n_usize = n as usize;
-        let mut result = <Vec<Vec<String>>>::with_capacity(n_usize);
+    pub fn solve_n_queens(n: usize) -> Vec<Vec<String>> {
+        let mut result = <Vec<Vec<String>>>::with_capacity(n);
         // Storing their locations as (row, col).
-        let mut queens = <Vec<(usize, usize)>>::with_capacity(n_usize);
-        Self::dfs(n_usize, &mut queens, (0, 0), &mut result);
+        let mut queens = <Vec<(usize, usize)>>::with_capacity(n);
+        Self::dfs(n, &mut queens, (0, 0), &mut result);
         result
     }
 
@@ -28,7 +27,7 @@ impl Solution {
         if current_queen.0 == n {
             // ... and it was accepted, meaning we have found a solution.
             if queens.len() == n {
-                result.push(Self::board_state_to_vec(queens))
+                result.push(Self::board_state_to_vec(queens));
             }
             // Either way, we can backtrack.
             return;
@@ -47,7 +46,7 @@ impl Solution {
         }
         // ... or in the next row.
         else {
-            Self::dfs(n, queens, (current_queen.0 + 1, 0), result)
+            Self::dfs(n, queens, (current_queen.0 + 1, 0), result);
         }
     }
 
@@ -58,8 +57,12 @@ impl Solution {
             // Same col.
 			|| queen.1 == current_queen.1
             // Same diagonal.
-			|| (queen.0 as i32 - current_queen.0 as i32).abs() == (queen.1 as i32 - current_queen.1 as i32).abs()
+			|| Self::delta(queen.0, current_queen.0) == Self::delta(queen.1, current_queen.1)
         })
+    }
+
+    fn delta(a: usize, b: usize) -> usize {
+        a.max(b) - a.min(b)
     }
 
     pub fn board_state_to_vec(queens: &[(usize, usize)]) -> Vec<String> {
@@ -88,6 +91,6 @@ mod tests {
                 vec![".Q..", "...Q", "Q...", "..Q."],
                 vec!["..Q.", "Q...", "...Q", ".Q.."],
             ]
-        )
+        );
     }
 }

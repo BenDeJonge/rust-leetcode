@@ -1,28 +1,33 @@
+type OptNode = Option<Box<ListNode>>;
+
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct ListNode {
     pub val: i32,
-    pub next: Option<Box<ListNode>>,
+    pub next: OptNode,
 }
 
 impl ListNode {
     #[inline]
+    #[must_use]
     pub fn new(val: i32) -> Self {
         ListNode { next: None, val }
     }
 
     // Convenience method to allow parsing of vecs.
-    pub fn from_vec(vec: &Vec<i32>) -> Option<Box<ListNode>> {
+    #[must_use]
+    pub fn from_vec(vec: &Vec<i32>) -> OptNode {
         let mut dummy = ListNode::new(0);
         let mut current = &mut dummy;
         for &v in vec {
             let node = ListNode::new(v);
             current.next = Some(Box::new(node));
-            current = current.next.as_mut().unwrap();
+            current = current.next.as_mut()?;
         }
         dummy.next
     }
 
+    #[must_use]
     pub fn to_vec(&self) -> Vec<i32> {
         let mut v = <Vec<i32>>::new();
         let mut current = Some(self);
@@ -33,7 +38,7 @@ impl ListNode {
         v
     }
 
-    pub fn print(listnode: &Option<Box<ListNode>>) {
+    pub fn print(listnode: &OptNode) {
         let mut current = listnode;
         while let Some(node) = current {
             print!("{} ", node.val);

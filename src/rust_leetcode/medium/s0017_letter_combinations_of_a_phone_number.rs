@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+//! <https://leetcode.com/problems/letter-combinations-of-a-phone-number/>
 //! Medium - [hash table, string, backtracking]
 //! Given a string containing digits from 2-9 inclusive,
 //! return all possible letter combinations that the number could represent.
@@ -22,7 +22,7 @@ const LETTERS_PER_DIGIT: [&str; 10] = [
 ];
 
 impl Solution {
-    pub fn letter_combinations(digits: String) -> Vec<String> {
+    pub fn letter_combinations(digits: &str) -> Vec<String> {
         if digits.is_empty() {
             return Vec::new();
         }
@@ -33,7 +33,7 @@ impl Solution {
                 .map(|s| s.len())
                 .max()
                 .expect("LETTERS_PER_DIGIT is empty")
-                .pow(digits.len() as u32),
+                .pow(u32::try_from(digits.len()).unwrap()),
         );
         let mut current_word: Vec<char> = Vec::with_capacity(digits.len());
         Self::letter_combinations_helper(
@@ -91,16 +91,10 @@ mod tests {
     #[test]
     fn test_0017() {
         assert_eq!(
-            Solution::letter_combinations("23".to_string()),
+            Solution::letter_combinations("23"),
             vec!["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
         );
-        assert_eq!(
-            Solution::letter_combinations("".to_string()),
-            <Vec<String>>::new()
-        );
-        assert_eq!(
-            Solution::letter_combinations("2".to_string()),
-            vec!["a", "b", "c"]
-        );
+        assert_eq!(Solution::letter_combinations(""), <Vec<String>>::new());
+        assert_eq!(Solution::letter_combinations("2"), vec!["a", "b", "c"]);
     }
 }

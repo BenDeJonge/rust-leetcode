@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/first-missing-positive/
+//! <https://leetcode.com/problems/first-missing-positive/>
 //! Hard - [array, hash-table]
 //!
 //! Given an unsorted integer array nums.
@@ -34,13 +34,13 @@ impl Solution {
     /// - Time complexity: `O_t(n)`
     /// - Space complexity: `O_s(1)`
     pub fn first_missing_positive(mut nums: Vec<i32>) -> i32 {
-        let n = nums.len() as i32;
+        let n = i32::try_from(nums.len()).expect("out of bounds");
         let out_of_bounds = n + 1;
 
         // A range of length n can at most contain all numbers from 1 to n,
         // if there are no duplicates or numbers less than 1.
         // So, the answer must then live in the range 1..(n + 1).
-        for num in nums.iter_mut() {
+        for num in &mut nums {
             if !(1i32..=n).contains(num) {
                 *num = out_of_bounds;
             }

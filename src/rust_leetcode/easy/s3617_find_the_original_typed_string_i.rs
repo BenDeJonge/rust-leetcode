@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/find-the-original-typed-string-i/
+//! <https://leetcode.com/problems/find-the-original-typed-string-i/>
 //! Easy - [string]
 //!
 //! Alice is attempting to type a specific string on her computer. However, she
@@ -32,7 +32,7 @@ pub struct Solution {}
 impl Solution {
     pub fn possible_string_count(word: &str) -> i32 {
         word.as_bytes().windows(2).fold(1, |mut acc, s| {
-            acc += (s[0] == s[1]) as i32;
+            acc += i32::from(s[0] == s[1]);
             acc
         })
     }

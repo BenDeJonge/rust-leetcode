@@ -1,4 +1,4 @@
-//! https://leetcode.com/problems/n-queens-ii/
+//! <https://leetcode.com/problems/n-queens-ii/>
 //! Hard - [backtracking]
 //! The n-queens puzzle is the problem of placing n queens on an n x n chessboar
 //!  such that no two queens attack each other.
@@ -7,12 +7,11 @@
 pub struct Solution {}
 
 impl Solution {
-    pub fn total_n_queens(n: i32) -> i32 {
-        let n_usize = n as usize;
+    pub fn total_n_queens(n: usize) -> usize {
         let mut result = 0;
         // Storing their locations as (row, col).
-        let mut queens = <Vec<(usize, usize)>>::with_capacity(n_usize);
-        Self::dfs(n_usize, &mut queens, (0, 0), &mut result);
+        let mut queens = <Vec<(usize, usize)>>::with_capacity(n);
+        Self::dfs(n, &mut queens, (0, 0), &mut result);
         result
     }
 
@@ -20,7 +19,7 @@ impl Solution {
         n: usize,
         queens: &mut Vec<(usize, usize)>,
         current_queen: (usize, usize),
-        result: &mut i32,
+        result: &mut usize,
     ) {
         // We have tried to place a queen in the bottom row ...
         if current_queen.0 == n {
@@ -45,7 +44,7 @@ impl Solution {
         }
         // ... or in the next row.
         else {
-            Self::dfs(n, queens, (current_queen.0 + 1, 0), result)
+            Self::dfs(n, queens, (current_queen.0 + 1, 0), result);
         }
     }
 
@@ -56,8 +55,12 @@ impl Solution {
             // Same col.
 			|| queen.1 == current_queen.1
             // Same diagonal.
-			|| (queen.0 as i32 - current_queen.0 as i32).abs() == (queen.1 as i32 - current_queen.1 as i32).abs()
+			|| Self::delta(queen.0, current_queen.0) == Self::delta(queen.1, current_queen.1)
         })
+    }
+
+    fn delta(a: usize, b: usize) -> usize {
+        a.max(b) - a.min(b)
     }
 }
 
@@ -65,12 +68,12 @@ impl Solution {
 mod tests {
     use super::Solution;
 
-    const SOLUTIONS: [i32; 9] = [1, 0, 0, 2, 10, 4, 40, 92, 352];
+    const SOLUTIONS: [usize; 9] = [1, 0, 0, 2, 10, 4, 40, 92, 352];
 
     #[test]
     fn test_0052() {
-        for i in 1..10 {
-            assert_eq!(Solution::total_n_queens(i), SOLUTIONS[(i - 1) as usize])
+        for (i, sol) in SOLUTIONS.into_iter().enumerate() {
+            assert_eq!(Solution::total_n_queens(i + 1), sol);
         }
     }
 }

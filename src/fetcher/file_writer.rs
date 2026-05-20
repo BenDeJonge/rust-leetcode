@@ -112,8 +112,7 @@ fn count_files_in_folder(path: &Path, ext: Option<&str>) -> usize {
                     .expect("cannot read path")
                     .path()
                     .extension()
-                    .map(|ext| ext == e)
-                    .unwrap_or(false)
+                    .is_some_and(|ext| ext == e)
             })
             .count()
     } else {
@@ -244,7 +243,7 @@ fn format_content(content: &str) -> String {
         .join("\n//! ")
         .replace("&nbsp;", "")
         // This is only used to list the constraints.
-        .replace("\t", "- ")
+        .replace('\t', "- ")
         .replace("&lt;", "<")
         .replace("&gt;", ">")
         .replace("quot;", "\"")
@@ -254,7 +253,7 @@ fn format_content(content: &str) -> String {
 
 fn format_url(question: &Question) -> String {
     format!(
-        "{}{}/",
+        "<{}{}/>",
         LEETCODE_QUESTION_URL,
         question.title.to_lowercase().replace(' ', "-")
     )
@@ -328,16 +327,16 @@ mod tests {
     const RUST_FILE: &str = "src/fetcher/test_resources/s0055_jump_game.rs";
 
     #[test]
-    #[cfg_attr(not(feature = "fetcher"), ignore)]
+    #[cfg_attr(not(feature = "fetcher"), ignore = "infrastructure test")]
     fn test_count_files() {
         assert_eq!(
             count_files_in_folder(Path::new(TEST_RESOURCES_FOLDER), Some("rs")),
             1
-        )
+        );
     }
 
     #[test]
-    #[cfg_attr(not(feature = "fetcher"), ignore)]
+    #[cfg_attr(not(feature = "fetcher"), ignore = "infrastructure test")]
     fn test_get_file_buffer() {
         let question: Question = serde_json::from_reader(
             std::fs::File::open(QUESTION_JSON).expect("cannot open question file"),
@@ -348,7 +347,7 @@ mod tests {
     }
 
     #[test]
-    #[cfg_attr(not(feature = "fetcher"), ignore)]
+    #[cfg_attr(not(feature = "fetcher"), ignore = "infrastructure test")]
     fn test_insert_at_line() {
         let buffer = "line0\nline1\nline2\nline3\n";
         let line = "NEWLINE";
@@ -387,21 +386,21 @@ mod tests {
     }
 
     fn insert_at_line_helper(buffer: &str, idx: Option<usize>, line: &str, expected: &str) {
-        pretty_assertions::assert_eq!(insert_at_line(buffer, idx, line), expected)
+        pretty_assertions::assert_eq!(insert_at_line(buffer, idx, line), expected);
     }
 
     #[test]
-    #[cfg_attr(not(feature = "fetcher"), ignore)]
+    #[cfg_attr(not(feature = "fetcher"), ignore = "infrastructure test")]
     fn test_get_function_name() {
         let question: Question = serde_json::from_reader(
             std::fs::File::open(QUESTION_JSON).expect("cannot open question file"),
         )
         .expect("cannot convert into Question");
-        assert_eq!(get_fn_name(&question), "can_jump")
+        assert_eq!(get_fn_name(&question), "can_jump");
     }
 
     #[test]
-    #[cfg_attr(not(feature = "fetcher"), ignore)]
+    #[cfg_attr(not(feature = "fetcher"), ignore = "infrastructure test")]
     fn test_get_line_idx() {
         // Idx 55.
         let question: Question = serde_json::from_reader(
