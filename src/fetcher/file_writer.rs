@@ -342,8 +342,11 @@ mod tests {
             std::fs::File::open(QUESTION_JSON).expect("cannot open question file"),
         )
         .expect("cannot convert into Question");
-        let rust_code = std::fs::read_to_string(RUST_FILE).expect("cannot open rust file");
-        pretty_assertions::assert_eq!(get_contents(&question), rust_code);
+        // Avoid Windows newlines.
+        let rust_code = std::fs::read_to_string(RUST_FILE)
+            .expect("cannot open rust file")
+            .replace("\r\n", "\n");
+        assert_eq!(get_contents(&question), rust_code);
     }
 
     #[test]
