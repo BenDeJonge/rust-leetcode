@@ -1,6 +1,6 @@
 use super::question::{QUESTION_QUERY_STRING, Question, RawQuestion};
 
-use reqwest::{Client, Error, Response};
+use reqwest::Client;
 use serde_json::json;
 
 /// The URL where `POST` requests can be made.
@@ -13,7 +13,7 @@ struct Query {
     #[serde(rename = "operationName")]
     operation_name: String,
     variables: serde_json::Value,
-    request: String,
+    query: String,
 }
 
 impl Query {
@@ -21,7 +21,7 @@ impl Query {
         Query {
             operation_name: QUESTION_QUERRY_OPERATION.to_owned(),
             variables: json!({"titleSlug": title_slug}),
-            request: QUESTION_QUERY_STRING.to_owned(),
+            query: QUESTION_QUERY_STRING.to_owned(),
         }
     }
 }
@@ -59,7 +59,7 @@ mod test {
         let from_json: Question =
             serde_json::from_reader(fs::File::open(Q_FILE).expect("cannot open file"))
                 .expect("cannot convert into Question");
-        assert_eq!(question, from_json);
+        pretty_assertions::assert_eq!(question, from_json);
     }
 
     #[tokio::test]
