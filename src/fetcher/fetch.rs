@@ -1,6 +1,6 @@
 use super::question::{QUESTION_QUERY_STRING, Question, RawQuestion};
 
-use reqwest::Client;
+use reqwest::{Client, Error, Response};
 use serde_json::json;
 
 /// The URL where `POST` requests can be made.
@@ -48,6 +48,7 @@ mod test {
 
     const Q_NAME: &str = "jump-game";
     const Q_FILE: &str = "src/fetcher/test_resources/s0055_question.json";
+    const ABSENT_NAME: &str = "i-am-a-nonexistent-question";
 
     #[tokio::test]
     #[cfg_attr(not(feature = "fetcher"), ignore = "")]
@@ -59,5 +60,11 @@ mod test {
             serde_json::from_reader(fs::File::open(Q_FILE).expect("cannot open file"))
                 .expect("cannot convert into Question");
         assert_eq!(question, from_json);
+    }
+
+    #[tokio::test]
+    #[cfg_attr(not(feature = "fetcher"), ignore = "")]
+    async fn fetch_async_raises() {
+        assert!(fetch_question_async(ABSENT_NAME).await.is_err());
     }
 }
