@@ -65,17 +65,17 @@ impl Solution {
     pub fn decode_string(s: &str) -> String {
         let mut res = String::new();
         let mut stack = Vec::<Encoding>::new();
-        let mut digits = String::with_capacity(3);
+        let mut digits = 0;
         for ch in s.chars() {
             match ch {
-                char if char.is_numeric() => {
-                    // Assumes digits only appear in front of [
-                    digits.push(ch);
+                '0'..='9' => {
+                    digits = digits * 10
+                        + usize::try_from(ch.to_digit(10).expect("is 0..=9"))
+                            .expect("is positive i32");
                 }
                 '[' => {
-                    let n = digits.parse::<usize>().expect("every [ preceded by digits");
-                    digits.clear();
-                    stack.push(Encoding::new(n));
+                    stack.push(Encoding::new(digits));
+                    digits = 0;
                 }
                 ']' => {
                     let last = stack.pop().expect("every ] preceded by [");
