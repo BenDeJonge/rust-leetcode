@@ -36,7 +36,7 @@
 //! - 0 <= value <= 10**5
 //! - At most 2 * 10**5 calls will be made to get and put.
 
-use std::{collections::HashMap, hash::Hash, ops::Deref};
+use std::{collections::HashMap, hash::Hash, num::NonZero, ops::Deref};
 
 #[derive(Debug)]
 struct CacheNode<K: Hash, V> {
@@ -70,17 +70,17 @@ struct LRUCacheInner<K: Eq + Hash + Clone, V> {
     oldest: Option<usize>,
     indices: HashMap<K, usize>,
     nodes: Vec<CacheNode<K, V>>,
-    capacity: usize,
+    capacity: NonZero<usize>,
 }
 
 impl<K: Hash + Eq + Clone, V> LRUCacheInner<K, V> {
     /// Initialize a Least Recently Used cache of `capacity` elements.
-    pub fn new(capacity: usize) -> Self {
+    pub fn new(capacity: NonZero<usize>) -> Self {
         Self {
             newest: None,
             oldest: None,
-            indices: HashMap::with_capacity(capacity),
-            nodes: Vec::with_capacity(capacity),
+            indices: HashMap::with_capacity(capacity.get()),
+            nodes: Vec::with_capacity(capacity.get()),
             capacity,
         }
     }
@@ -105,8 +105,11 @@ impl<K: Hash + Eq + Clone, V> LRUCacheInner<K, V> {
             self.replace_existing(value, index);
         } else {
             let index = self.indices.len();
-            if index == self.capacity {
-                self.insert_instead_of_oldest(key, value);
+            if index == self.capacity.get() {
+                // SAFETY: ensured by the NonZero bound on the capacity.
+                // The index must at least be one, meaning some element
+                // is present and oldest must be a Some.
+                self.overwrite(key, value, self.oldest.expect("oldest already set"));
             } else {
                 self.insert(key, value, index);
             }
@@ -118,15 +121,14 @@ impl<K: Hash + Eq + Clone, V> LRUCacheInner<K, V> {
         self.set_to_newest(index);
     }
 
-    fn insert_instead_of_oldest(&mut self, key: K, value: V) {
-        let oldest = self.oldest.unwrap();
-        self.indices.remove(&self.nodes[oldest].key);
-        self.indices.insert(key.clone(), oldest);
+    fn overwrite(&mut self, key: K, value: V, index: usize) {
+        self.indices.remove(&self.nodes[index].key);
+        self.indices.insert(key.clone(), index);
 
-        self.nodes[oldest].key = key;
-        self.nodes[oldest].value = value;
+        self.nodes[index].key = key;
+        self.nodes[index].value = value;
 
-        self.set_to_newest(oldest);
+        self.set_to_newest(index);
     }
 
     fn insert(&mut self, key: K, value: V, index: usize) {
@@ -198,7 +200,9 @@ struct LRUCache {
 impl LRUCache {
     pub fn new(capacity: i32) -> Self {
         Self {
-            inner: LRUCacheInner::new(capacity as usize),
+            inner: LRUCacheInner::new(
+                NonZero::<usize>::new(capacity as usize).expect("capacity must be non-zero"),
+            ),
         }
     }
     pub fn get(&mut self, key: i32) -> i32 {
@@ -211,11 +215,16 @@ impl LRUCache {
 
 #[cfg(test)]
 mod tests {
+    use std::num::NonZero;
+
     use crate::rust_leetcode::medium::s0146_lru_cache::LRUCacheInner;
+
+    const CAPACITY_2: NonZero<usize> = NonZero::<usize>::new(2).unwrap();
+    const CAPACITY_3: NonZero<usize> = NonZero::<usize>::new(3).unwrap();
 
     #[test]
     fn put_get_without_evict() {
-        let mut cache = LRUCacheInner::new(2);
+        let mut cache = LRUCacheInner::new(CAPACITY_2);
         cache.put(1, 1);
         cache.put(2, 2);
         for _ in 0..3 {
@@ -226,7 +235,7 @@ mod tests {
 
     #[test]
     fn put_replace_does_not_evict() {
-        let mut cache = LRUCacheInner::new(2);
+        let mut cache = LRUCacheInner::new(CAPACITY_2);
 
         cache.put(1, 1);
         cache.put(2, 2);
@@ -237,7 +246,7 @@ mod tests {
 
     #[test]
     fn put_new_evicts() {
-        let mut cache = LRUCacheInner::new(2);
+        let mut cache = LRUCacheInner::new(CAPACITY_2);
 
         cache.put(1, 1);
         cache.put(2, 2);
@@ -249,7 +258,7 @@ mod tests {
 
     #[test]
     fn get_absent_does_not_bump_priority() {
-        let mut cache = LRUCacheInner::new(2);
+        let mut cache = LRUCacheInner::new(CAPACITY_2);
 
         cache.put(1, 1); // 1
         cache.put(2, 2); // 2 > 1
@@ -260,7 +269,7 @@ mod tests {
 
     #[test]
     fn get_bumps_priority() {
-        let mut cache = LRUCacheInner::new(3);
+        let mut cache = LRUCacheInner::new(CAPACITY_3);
 
         cache.put(1, 1); // 1
         cache.put(2, 2); // 2 > 1
