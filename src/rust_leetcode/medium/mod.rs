@@ -33,6 +33,7 @@ mod s0098_validate_binary_search_tree;
 mod s0102_binary_tree_level_order_traversal;
 mod s0131_palindrome_partitioning;
 mod s0139_word_break;
+mod s0146_lru_cache;
 mod s0167_two_sum_ii;
 mod s0215_kth_largest_element_in_an_array;
 mod s0230_kth_smallest_element_in_a_bst;
