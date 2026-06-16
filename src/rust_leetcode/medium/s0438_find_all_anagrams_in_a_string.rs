@@ -98,8 +98,18 @@ impl Solution {
         needle: &'a str,
         haystack: &'a str,
     ) -> Box<dyn Iterator<Item = usize> + 'a> {
-        // In order to return a different iterator in this case,
-        // a trait object must be returned instead of an Impl.
+        // There are two ways to return a trait object from a function:
+        // - impl Trait: this is a static, compile-time only construct, referring
+        // to a single, concrete type known to the compiler. This type is intentionally
+        // hidden from the developer to avoid e.g. depending on concrete properties of
+        // the type that are unimportant or prone to change.
+        // - Box<dyn Trait>: this is a dynamically dispatched type that can be created
+        // from an arbitrary number of distinct, concrete types.
+        // The reason both return types exist is to make the trade-offs transparent.
+        // Box<dyn Trait> is more flexible but relies on an additional pointer dereference
+        // (one for the data and one for the method vtable).
+        // In this specific case, the return type is either an Empty<usize> or a FilterMap<Enumerate>,
+        // hence, the dynamically dispatched Box<dyn Trait> is required.
         if needle.len() > haystack.len() {
             return Box::new(iter::empty::<usize>());
         }
