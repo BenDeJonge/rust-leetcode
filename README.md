@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 28     |
-| 🟡  | Medium     | 58     |
+| 🟡  | Medium     | 59     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **96** |
+|     | **Total**  | **97** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -97,6 +97,7 @@ title in lowercase with spaces replaced by dashes.
 | 0079  | Word Search                                                                 | [LeetCode](https://leetcode.com/problems/word-search/), [File](./src/rust_leetcode/medium/s0079_word_search.rs)                                                                                                                                 | array, string, backtracking, depth-first-search, matrix |
 | 0098 | Validate Binary Search Tree | [Leetcode](https://leetcode.com/problems/validate-binary-search-tree/), [File](./src/rust_leetcode/medium/s0098_validate_binary_search_tree.rs) | tree, depth-first-search, binary-search-tree, binary-tree |
 | 0102 | Binary Tree Level Order Traversal | [Leetcode](https://leetcode.com/problems/binary-tree-level-order-traversal/), [File](./src/rust_leetcode/medium/s0102_binary_tree_level_order_traversal.rs) | tree, breadth-first-search, binary-tree |
+| 0128 | Longest Consecutive Sequence | [Leetcode](<https://leetcode.com/problems/longest-consecutive-sequence/>), [File](./src/rust_leetcode/medium/s0128_longest_consecutive_sequence.rs) | array, hash-table, union-find |
 | 0131  | Palindrome Partitioning                                                     | [LeetCode](https://leetcode.com/problems/palindrome-partitioning/), [File](./src/rust_leetcode/medium/s0131_palindrome_partitioning.rs)                                                                                                         | string, dynamic-programming, backtracking               |
 | 0139 | Word Break | [Leetcode](https://leetcode.com/problems/word-break/), [File](./src/rust_leetcode/medium/s0139_word_break.rs) | array, hash-table, string, dynamic-programming, trie, memoization |
 | 0146 | LRU Cache | [Leetcode](<https://leetcode.com/problems/lru-cache/>), [File](./src/rust_leetcode/medium/s0146_lru_cache.rs) | hash-table, linked-list, design, doubly-linked-list |
