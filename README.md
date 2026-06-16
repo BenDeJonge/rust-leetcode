@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 28     |
-| 🟡  | Medium     | 56     |
+| 🟡  | Medium     | 57     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **94** |
+|     | **Total**  | **95** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -114,6 +114,7 @@ title in lowercase with spaces replaced by dashes.
 | 0503 | Next Greater Element II | [Leetcode](https://leetcode.com/problems/next-greater-element-ii/), [File](./src/rust_leetcode/medium/s0503_next_greater_element_ii.rs) | array, stack, monotonic-stack |
 | 0556 | Next Greater Element III | [Leetcode](https://leetcode.com/problems/next-greater-element-iii/), [File](./src/rust_leetcode/medium/s0556_next_greater_element_iii.rs) | math, two-pointers, string |
 | 0560 | Subarray Sum Equals K | [Leetcode](https://leetcode.com/problems/subarray-sum-equals-k/), [File](./src/rust_leetcode/medium/s0560_subarray_sum_equals_k.rs) | array, hash-table, prefix-sum |
+| 0567 | Permutation in String | [Leetcode](<https://leetcode.com/problems/permutation-in-string/>), [File](./src/rust_leetcode/medium/s0567_permutation_in_string.rs) | hash-table, two-pointers, string, sliding-window |
 | 0739  | Daily Temperatures                                                          | [LeetCode](https://leetcode.com/problems/daily-temperatures/), [File](./src/rust_leetcode/medium/s0739_daily_temperatures.rs)                                                                                                                   | array, stack, monotonic-stack                           |
 | 1036  | Rotting Oranges                                                             | [LeetCode](https://leetcode.com/problems/rotting-oranges/), [File](./src/rust_leetcode/medium/s1036_rotting_oranges.rs)                                                                                                                         | array, breadth-first-search, matrix                     |
 | 1171  | Shortest Path in Binary Matrix                                              | [LeetCode](https://leetcode.com/problems/shortest-path-in-binary-matrix/), [File](./src/rust_leetcode/medium/s1171_shortest_path_in_binary_matrix.rs)                                                                                           | array, breadth-first-search, matrix                     |
