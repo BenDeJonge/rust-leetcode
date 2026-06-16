@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 28     |
-| 🟡  | Medium     | 57     |
+| 🟡  | Medium     | 58     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **95** |
+|     | **Total**  | **96** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -110,6 +110,7 @@ title in lowercase with spaces replaced by dashes.
 | 0322  | Coin Change                                                                 | [LeetCode](https://leetcode.com/problems/coin-change/), [File](./src/rust_leetcode/medium/s0322_coin_change.rs)                                                                                                                                 | array, dynamic-programming, breadth-first-search        |
 | 0347 | Top K Frequent Elements | [Leetcode](<https://leetcode.com/problems/top-k-frequent-elements/>), [File](./src/rust_leetcode/medium/s0347_top_k_frequent_elements.rs) | array, hash-table, divide-and-conquer, sorting, heap-priority-queue, bucket-sort, counting, quickselect |
 | 0394 | Decode String | [Leetcode](<https://leetcode.com/problems/decode-string/>), [File](./src/rust_leetcode/medium/s0394_decode_string.rs) | string, stack, recursion |
+| 0438 | Find All Anagrams in a String | [Leetcode](<https://leetcode.com/problems/find-all-anagrams-in-a-string/>), [File](./src/rust_leetcode/medium/s0438_find_all_anagrams_in_a_string.rs) | hash-table, string, sliding-window |
 | 0442  | Find All Duplicates in an Array                                             | [LeetCode](https://leetcode.com/problems/find-all-duplicates-in-an-array/), [File](./src/rust_leetcode/medium/s0442_find_all_duplicates_in_an_array.rs)                                                                                         | array, hash-table                                       |
 | 0503 | Next Greater Element II | [Leetcode](https://leetcode.com/problems/next-greater-element-ii/), [File](./src/rust_leetcode/medium/s0503_next_greater_element_ii.rs) | array, stack, monotonic-stack |
 | 0556 | Next Greater Element III | [Leetcode](https://leetcode.com/problems/next-greater-element-iii/), [File](./src/rust_leetcode/medium/s0556_next_greater_element_iii.rs) | math, two-pointers, string |
