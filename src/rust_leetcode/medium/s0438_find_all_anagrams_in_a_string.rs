@@ -21,7 +21,10 @@
 //! - 1 <= s.length, p.length <= 3 * 10**4
 //! - s and p consist of lowercase English letters.
 
-use std::iter;
+use std::{
+    iter,
+    ops::{Deref, DerefMut},
+};
 
 #[derive(PartialEq, Debug)]
 struct Alphabet([usize; 26]);
@@ -32,10 +35,15 @@ impl Alphabet {
     }
 
     pub fn replace(&mut self, old: u8, new: u8) {
-        let i_old = Self::byte_to_idx(old);
-        self.0[i_old] = self.0[i_old].saturating_sub(1);
-        let i_new = Self::byte_to_idx(new);
-        self.0[i_new] = self.0[i_new].saturating_add(1);
+        let old_val = self
+            .get_mut(Self::byte_to_idx(old))
+            .expect("old out of bounds");
+        *old_val = old_val.saturating_sub(1);
+
+        let new_val = self
+            .get_mut(Self::byte_to_idx(new))
+            .expect("new out of bounds");
+        *new_val = new_val.saturating_add(1);
     }
 
     fn byte_to_idx(byte: u8) -> usize {
@@ -57,10 +65,23 @@ impl From<&str> for Alphabet {
 impl From<&Alphabet> for String {
     fn from(val: &Alphabet) -> Self {
         let mut bytes = vec![];
-        for (byte, count) in val.0.iter().enumerate() {
+        for (byte, count) in val.iter().enumerate() {
             bytes.extend(iter::repeat_n(byte as u8 + b'a', *count));
         }
         String::from_utf8_lossy(&bytes).to_string()
+    }
+}
+
+impl Deref for Alphabet {
+    type Target = [usize; 26];
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+
+impl DerefMut for Alphabet {
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
     }
 }
 
