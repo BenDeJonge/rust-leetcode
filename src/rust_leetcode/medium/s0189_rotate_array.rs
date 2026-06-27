@@ -69,7 +69,7 @@ impl Solution {
             return;
         }
 
-        let cycles = Self::gcd(NonZero::<usize>::try_from(len).unwrap(), step);
+        let cycles = Self::gcd(len.try_into().unwrap(), step.try_into().unwrap());
         for i in 0..cycles {
             let mut element = nums[i].clone();
             // Good use case for itertools peeking_take_while
@@ -84,13 +84,17 @@ impl Solution {
     }
 
     /// Euclidian method to find greates common denominator.
-    fn gcd(a: NonZero<usize>, b: usize) -> usize {
+    fn gcd(a: NonZero<usize>, b: NonZero<usize>) -> usize {
+        Self::gcd_inner(a.get(), b.get())
+    }
+
+    fn gcd_inner(a: usize, b: usize) -> usize {
         if b == 0 {
-            a.get()
-        } else if b < a.get() {
-            Self::gcd(NonZero::try_from(b).unwrap(), a.get())
+            a
+        } else if b < a {
+            Self::gcd_inner(b, a)
         } else {
-            Self::gcd(a, b % a)
+            Self::gcd_inner(a, b % a)
         }
     }
 }
@@ -129,12 +133,33 @@ mod tests {
 
     #[test]
     fn test_gcd() {
-        assert_eq!(Solution::gcd(1.try_into().unwrap(), 6), 1);
-        assert_eq!(Solution::gcd(2.try_into().unwrap(), 6), 2);
-        assert_eq!(Solution::gcd(3.try_into().unwrap(), 6), 3);
-        assert_eq!(Solution::gcd(4.try_into().unwrap(), 6), 2);
-        assert_eq!(Solution::gcd(5.try_into().unwrap(), 6), 1);
-        assert_eq!(Solution::gcd(6.try_into().unwrap(), 6), 6);
-        assert_eq!(Solution::gcd(7.try_into().unwrap(), 6), 1);
+        assert_eq!(
+            Solution::gcd(1.try_into().unwrap(), 6.try_into().unwrap()),
+            1
+        );
+        assert_eq!(
+            Solution::gcd(2.try_into().unwrap(), 6.try_into().unwrap()),
+            2
+        );
+        assert_eq!(
+            Solution::gcd(3.try_into().unwrap(), 6.try_into().unwrap()),
+            3
+        );
+        assert_eq!(
+            Solution::gcd(4.try_into().unwrap(), 6.try_into().unwrap()),
+            2
+        );
+        assert_eq!(
+            Solution::gcd(5.try_into().unwrap(), 6.try_into().unwrap()),
+            1
+        );
+        assert_eq!(
+            Solution::gcd(6.try_into().unwrap(), 6.try_into().unwrap()),
+            6
+        );
+        assert_eq!(
+            Solution::gcd(7.try_into().unwrap(), 6.try_into().unwrap()),
+            1
+        );
     }
 }
