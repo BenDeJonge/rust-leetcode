@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 28     |
-| 🟡  | Medium     | 59     |
+| 🟡  | Medium     | 60     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **97** |
+|     | **Total**  | **98** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -102,6 +102,7 @@ title in lowercase with spaces replaced by dashes.
 | 0139 | Word Break | [Leetcode](https://leetcode.com/problems/word-break/), [File](./src/rust_leetcode/medium/s0139_word_break.rs) | array, hash-table, string, dynamic-programming, trie, memoization |
 | 0146 | LRU Cache | [Leetcode](<https://leetcode.com/problems/lru-cache/>), [File](./src/rust_leetcode/medium/s0146_lru_cache.rs) | hash-table, linked-list, design, doubly-linked-list |
 | 0167  | Two sum ii                                                                  | [LeetCode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/), [File](./src/rust_leetcode/medium/s0167_two_sum_ii.rs)                                                                                                             | array, two pointers, binary search                      |
+| 0189 | Rotate Array | [Leetcode](<https://leetcode.com/problems/rotate-array/>), [File](./src/rust_leetcode/medium/s0189_rotate_array.rs) | array, math, two-pointers |
 | 0215 | Kth Largest Element in an Array | [Leetcode](https://leetcode.com/problems/kth-largest-element-in-an-array/), [File](./src/rust_leetcode/medium/s0215_kth_largest_element_in_an_array.rs) | array, divide-and-conquer, sorting, heap-priority-queue, quickselect |
 | 0230 | Kth Smallest Element in a BST | [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-bst/), [File](./src/rust_leetcode/medium/s0230_kth_smallest_element_in_a_bst.rs) | tree, depth-first-search, binary-search-tree, binary-tree |
 | 0238 | Product of Array Except Self | [Leetcode](https://leetcode.com/problems/product-of-array-except-self/), [File](./src/rust_leetcode/medium/s0238_product_of_array_except_self.rs) | array, prefix-sum |
