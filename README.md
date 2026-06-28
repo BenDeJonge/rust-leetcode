@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 28     |
-| 🟡  | Medium     | 60     |
+| 🟡  | Medium     | 61     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **98** |
+|     | **Total**  | **99** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -101,6 +101,7 @@ title in lowercase with spaces replaced by dashes.
 | 0131  | Palindrome Partitioning                                                     | [LeetCode](https://leetcode.com/problems/palindrome-partitioning/), [File](./src/rust_leetcode/medium/s0131_palindrome_partitioning.rs)                                                                                                         | string, dynamic-programming, backtracking               |
 | 0139 | Word Break | [Leetcode](https://leetcode.com/problems/word-break/), [File](./src/rust_leetcode/medium/s0139_word_break.rs) | array, hash-table, string, dynamic-programming, trie, memoization |
 | 0146 | LRU Cache | [Leetcode](<https://leetcode.com/problems/lru-cache/>), [File](./src/rust_leetcode/medium/s0146_lru_cache.rs) | hash-table, linked-list, design, doubly-linked-list |
+| 0153 | Find Minimum in Rotated Sorted Array | [Leetcode](<https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/>), [File](./src/rust_leetcode/medium/s0153_find_minimum_in_rotated_sorted_array.rs) | array, binary-search |
 | 0167  | Two sum ii                                                                  | [LeetCode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/), [File](./src/rust_leetcode/medium/s0167_two_sum_ii.rs)                                                                                                             | array, two pointers, binary search                      |
 | 0189 | Rotate Array | [Leetcode](<https://leetcode.com/problems/rotate-array/>), [File](./src/rust_leetcode/medium/s0189_rotate_array.rs) | array, math, two-pointers |
 | 0215 | Kth Largest Element in an Array | [Leetcode](https://leetcode.com/problems/kth-largest-element-in-an-array/), [File](./src/rust_leetcode/medium/s0215_kth_largest_element_in_an_array.rs) | array, divide-and-conquer, sorting, heap-priority-queue, quickselect |

@@ -58,3 +58,4 @@ mod s1456_find_the_city_with_the_smallest_number_of_neighbors_at_a_threshold_dis
 mod s2001_jump_game_vii;
 mod s0128_longest_consecutive_sequence;
 mod s0189_rotate_array;
+mod s0153_find_minimum_in_rotated_sorted_array;
