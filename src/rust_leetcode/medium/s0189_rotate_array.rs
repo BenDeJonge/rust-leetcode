@@ -59,8 +59,23 @@ impl Solution {
     }
 
     /// O(n)
+    ///
+    /// When iterating over a sequence of length l with step s, there will be n
+    /// non-overlapping subcycles, where n is the gcd(l, s). Note that steps are
+    /// periodic (extending beyond the right bound means reentry at the left).
+    /// E.g., for [0, 1, 2, 3, 4, 5], l = 6
+    ///
+    ///  s | cycles
+    /// ---|------------------------------
+    ///  0 | /
+    ///  1 | (0, 1, 2, 3, 4, 5)
+    ///  2 | (0, 2, 4), (1, 3, 5)
+    ///  3 | (0, 3), (1, 4), (2, 5)
+    ///  4 | (0, 4, 2), (1, 5, 3)
+    ///  5 | (0, 5, 4, 3, 2, 1)
+    ///  6 | (0), (1), (2), (3), (4), (5)
     fn rotate_typed<T: Debug + Clone>(nums: &mut [T], k: usize) {
-        if nums.is_empty() {
+        if nums.len() < 2 {
             return;
         }
         let len = nums.len();
@@ -72,8 +87,8 @@ impl Solution {
         let cycles = Self::gcd(len.try_into().unwrap(), step.try_into().unwrap());
         for i in 0..cycles {
             let mut element = nums[i].clone();
-            // Good use case for itertools peeking_take_while
-            // https://docs.rs/itertools/0.10.0/itertools/trait.Itertools.html#method.peeking_take_while
+            // Good use case for itertools take_while_inclusive
+            // https://docs.rs/itertools/0.10.0/itertools/trait.Itertools.html#method.take_while_inclusive
             for n in (i..).step_by(step).map(|c| c % len).skip(1) {
                 std::mem::swap(&mut nums[n], &mut element);
                 if n == i {
