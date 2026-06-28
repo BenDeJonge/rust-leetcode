@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 28     |
-| 🟡  | Medium     | 61     |
+| 🟡  | Medium     | 62     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **99** |
+|     | **Total**  | **100** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -104,6 +104,7 @@ title in lowercase with spaces replaced by dashes.
 | 0153 | Find Minimum in Rotated Sorted Array | [Leetcode](<https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/>), [File](./src/rust_leetcode/medium/s0153_find_minimum_in_rotated_sorted_array.rs) | array, binary-search |
 | 0167  | Two sum ii                                                                  | [LeetCode](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/), [File](./src/rust_leetcode/medium/s0167_two_sum_ii.rs)                                                                                                             | array, two pointers, binary search                      |
 | 0189 | Rotate Array | [Leetcode](<https://leetcode.com/problems/rotate-array/>), [File](./src/rust_leetcode/medium/s0189_rotate_array.rs) | array, math, two-pointers |
+| 0200 | Number of Islands | [Leetcode](<https://leetcode.com/problems/number-of-islands/>), [File](./src/rust_leetcode/medium/s0200_number_of_islands.rs) | array, depth-first-search, breadth-first-search, union-find, matrix |
 | 0215 | Kth Largest Element in an Array | [Leetcode](https://leetcode.com/problems/kth-largest-element-in-an-array/), [File](./src/rust_leetcode/medium/s0215_kth_largest_element_in_an_array.rs) | array, divide-and-conquer, sorting, heap-priority-queue, quickselect |
 | 0230 | Kth Smallest Element in a BST | [Leetcode](https://leetcode.com/problems/kth-smallest-element-in-a-bst/), [File](./src/rust_leetcode/medium/s0230_kth_smallest_element_in_a_bst.rs) | tree, depth-first-search, binary-search-tree, binary-tree |
 | 0238 | Product of Array Except Self | [Leetcode](https://leetcode.com/problems/product-of-array-except-self/), [File](./src/rust_leetcode/medium/s0238_product_of_array_except_self.rs) | array, prefix-sum |
