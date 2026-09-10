@@ -10,9 +10,9 @@ world (fight me). Hopefully learning some DSA along the way!
 |     | Difficulty | Solved |
 | --- | ---------- | ------ |
 | 🟢  | Easy       | 28     |
-| 🟡  | Medium     | 62     |
+| 🟡  | Medium     | 63     |
 | 🔴  | Hard       | 10      |
-|     | **Total**  | **100** |
+|     | **Total**  | **101** |
 
 A [fetcher module](./src/fetcher) is available to make web requests to LeetCode
 to automatically pull in question data and create local resources.
@@ -123,6 +123,7 @@ title in lowercase with spaces replaced by dashes.
 | 0739  | Daily Temperatures                                                          | [LeetCode](https://leetcode.com/problems/daily-temperatures/), [File](./src/rust_leetcode/medium/s0739_daily_temperatures.rs)                                                                                                                   | array, stack, monotonic-stack                           |
 | 1036  | Rotting Oranges                                                             | [LeetCode](https://leetcode.com/problems/rotting-oranges/), [File](./src/rust_leetcode/medium/s1036_rotting_oranges.rs)                                                                                                                         | array, breadth-first-search, matrix                     |
 | 1171  | Shortest Path in Binary Matrix                                              | [LeetCode](https://leetcode.com/problems/shortest-path-in-binary-matrix/), [File](./src/rust_leetcode/medium/s1171_shortest_path_in_binary_matrix.rs)                                                                                           | array, breadth-first-search, matrix                     |
+| 1250 | Longest Common Subsequence | [Leetcode](<https://leetcode.com/problems/longest-common-subsequence/>), [File](./src/rust_leetcode/medium/s1250_longest_common_subsequence.rs) | string, dynamic-programming, longest-common-subsequence |
 | 1306  | Jump Game III                                                               | [LeetCode](https://leetcode.com/problems/jump-game-iii/), [File](./src/rust_leetcode/medium/s1306_jump_game_iii.rs)                                                                                                                             | array, depth-first-search, breadth-first-search         |
 | 1456  | Find the City With the Smallest Number of Neighbors at a Threshold Distance | [LeetCode](https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/), [File](./src/rust_leetcode/medium/s1456_find_the_city_with_the_smallest_number_of_neighbors_at_a_threshold_distance.rs) | dynamic-programming, graph, shortest-path               |
 | 2001  | Jump Game VII                                                               | [LeetCode](https://leetcode.com/problems/jump-game-vii/), [File](./src/rust_leetcode/medium/s2001_jump_game_vii.rs)                                                                                                                             | string, dynamic-programming, sliding-window, prefix-sum |

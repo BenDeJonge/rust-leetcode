@@ -60,3 +60,4 @@ mod s0128_longest_consecutive_sequence;
 mod s0189_rotate_array;
 mod s0153_find_minimum_in_rotated_sorted_array;
 mod s0200_number_of_islands;
+mod s1250_longest_common_subsequence;
