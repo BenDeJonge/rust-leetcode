@@ -67,7 +67,7 @@ impl Solution {
                     .unwrap_or(Vec::new())
                     .into_iter()
                     // ... or are neigboring.
-                    .chain(vec![i.saturating_sub(1), i + 1].into_iter())
+                    .chain(vec![i.saturating_sub(1), i + 1])
                 {
                     if visited[j] {
                         continue;
