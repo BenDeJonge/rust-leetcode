@@ -62,3 +62,4 @@ mod s0153_find_minimum_in_rotated_sorted_array;
 mod s0200_number_of_islands;
 mod s1250_longest_common_subsequence;
 mod s1183_statistics_from_a_large_sample;
+mod s0198_house_robber;
